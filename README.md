@@ -1,6 +1,4 @@
-### G'day! 👋🇦🇺🇺🇸
-
-<h1 align="center">Hello! My name is Cameron Rutherford</h1>
+<h1 align="center">G'day! 👋🇦🇺🇺🇸! My name is Cameron Rutherford</h1>
 <h3 align="center">Software developer and Adult Chess Improver ♟</h3>
 
 - 👔 I’m currently working at **PNNL as a Software Engineer**
