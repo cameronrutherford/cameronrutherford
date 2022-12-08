@@ -7,7 +7,7 @@
 
 - 📫 How to reach me: **cameron.rutherford@me.com**
 
-- 📄 Most recent Resume: [12-11-22 Resume](./latest_resume.pdf)
+- 📄 Most recent Resume: [12-11-22 Resume](./resume_latest.pdf)
 
 <h3 align="left">Connect with me:</h3>
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
