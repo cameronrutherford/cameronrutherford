@@ -1,8 +1,18 @@
 project:
+  type: website
   title: "Personal Repository"
+  output-dir: _site
+  post-render: 
+    - cp _site/README.md .
 
 website:
   navbar:
     search: true
+    left:
+      - text: "Home"
+        file: personal-repo.qmd
+      - text: "Resume"
+        menu:
+          - quarto/executive-summary.qmd 
 
 

@@ -1,7 +1,51 @@
 ---
-title: "personal-repo"
+title: "Home Page"
+filters:
+    - include-code-files
+format: 
+    gfm:
+        toc: true
+        toc-depth: 1
+        output-file: README.md
+    html:
+        toc: true
 ---
 
-## Quarto
+## About
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+This origin file is `personal-repo.qmd`. I render this using [Quarto](https://quarto.org/), and build with [VSCode](https://vscode.dev/) using a [Development Container](https://containers.dev/).
+
+## Quick Start
+
+Install [Docker](https://www.docker.com/), VSCode, and configure the [Dev Container Extension](https://code.visualstudio.com/docs/devcontainers/containers). Then using the command pallette, build the container and open this folder.
+
+## Dev Container Configuration
+
+I used Python as the base image, and then install Quarto in the Dockerfile:
+
+```{.Dockerfile include=".devcontainer/Dockerfile"}
+```
+
+## Quarto Configuration
+
+### Workflow
+
+Build and render the project using:
+
+```bash
+quarto render && quarto preview
+```
+
+### Extensions
+
+These all are installed manually from the command line, and are not included in
+the Dockerfile. This is because the whole extesion ecosystem works through the
+`_extensions` directory.
+
+To install the first extension, I ran:
+
+```bash
+quarto add --no-prompt quarto-ext/include-code-files
+```
+
+- []`include-code-files`](https://github.com/quarto-ext/include-code-files)
