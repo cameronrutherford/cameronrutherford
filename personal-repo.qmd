@@ -100,3 +100,9 @@ I ran this initially per [the docs](https://quarto.org/docs/publishing/github-pa
 ```bash
 quarto publish gh-pages
 ```
+
+I then added a GitHub action to auto publish based on what is in the repository,
+and I decided to render this website locally before publishing to make things easier:
+
+```{.YAML include=".github/workflows/publish.yml"}
+```
