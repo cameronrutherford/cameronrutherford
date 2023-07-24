@@ -190,3 +190,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+This method does somewhat clutter git history with updates of the
+website along with the files, which isn’t ideal. I think I will shift to
+CI builds in the future.
