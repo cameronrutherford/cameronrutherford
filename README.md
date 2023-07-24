@@ -1,4 +1,4 @@
-# Home Page
+# Personal Website
 
 - [About](#about)
 - [Quick Start](#quick-start)
@@ -7,6 +7,7 @@
   - [Workflow](#workflow)
   - [Output Formats](#output-formats)
   - [Extensions](#extensions)
+    - [Extension List](#extension-list)
 
 ## About
 

@@ -1,16 +1,17 @@
 ---
-title: "Home Page"
+title: "Personal Website"
 filters:
     - include-code-files
 format: 
     gfm:
         toc: true
-        toc-depth: 3
+        toc-depth: 4
+        toc-title: "Table Of Contents"
         output-file: README.md
         preview-mode: raw
     html:
         toc: true
-        toc-depth: 3
+        toc-depth: 4
 ---
 
 ## About
