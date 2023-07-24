@@ -1,13 +1,16 @@
 project:
   type: website
   title: "Personal Repository"
-  output-dir: _site
+  output-dir: docs
   post-render: 
-    - cp _site/README.md .
+    - cp docs/README.md .
 
 format:
   html: 
     theme: vapor
+
+execute:
+  freeze: auto
 
 website:
   navbar:
@@ -16,5 +19,4 @@ website:
       - text: "Home"
         file: personal-repo.qmd
       - text: "Resume"
-        menu:
-          - quarto/executive-summary.qmd 
+        file: quarto/resume.qmd 

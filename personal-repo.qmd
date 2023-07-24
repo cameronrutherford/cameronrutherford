@@ -84,3 +84,19 @@ quarto add --no-prompt quarto-ext/include-code-files
 #### Extension List
 
 - [`include-code-files`](https://github.com/quarto-ext/include-code-files)
+
+## GitHub Pages Configuration
+
+There are many ways to deploy Quarto pages. You can read more about choices in 
+[rendering Quarto in CI](https://quarto.org/docs/publishing/ci.html#rendering-for-ci)
+here. I am choosing to render locally, and simply point GitHub pages to the folder
+that is stored in git. This isn't the gold standard in reproducibility, but the
+trade off is that this is much faster to iterate on.
+
+### Initial Config
+
+I ran this initially per [the docs](https://quarto.org/docs/publishing/github-pages.html#publish-action):
+
+```bash
+quarto publish gh-pages
+```
