@@ -158,3 +158,39 @@ docs](https://quarto.org/docs/publishing/github-pages.html#publish-action):
 ``` bash
 quarto publish gh-pages
 ```
+
+I then added a GitHub action to auto publish based on what is in the
+repository, and I decided to render this website locally before
+publishing to make things easier:
+
+``` YAML
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+This method does somewhat clutter git history with updates of the
+website along with the files, which isn’t ideal. I think I will shift to
+CI builds in the future.
