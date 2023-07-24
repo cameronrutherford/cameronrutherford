@@ -1,11 +1,3 @@
-*.aux
 *.log
-*.nav
-*.snm
-*.toc
-*.fls
-*.log
-*.out
-*.gz
-*.fdb_latexmk
-*DS_Store
+resume.tex
+.DS_Store
