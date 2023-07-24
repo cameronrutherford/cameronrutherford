@@ -70,6 +70,15 @@ Build and render the project using:
 quarto render && quarto preview
 ```
 
+<div>
+
+> **Tip**
+>
+> This assumes that Quarto is installed, or you are running in the dev
+> container.
+
+</div>
+
 ### Output Formats
 
 As you can see in the sidebar, this is also rendered into raw [GitHub

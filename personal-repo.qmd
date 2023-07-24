@@ -47,6 +47,10 @@ Build and render the project using:
 quarto render && quarto preview
 ```
 
+::: {.callout-tip}
+This assumes that Quarto is installed, or you are running in the dev container. 
+:::
+
 ### Output Formats
 
 As you can see in the sidebar, this is also rendered into raw [GitHub Flavored 
