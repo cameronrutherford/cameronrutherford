@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Website
 
 - [About](#about)
@@ -158,3 +159,234 @@ docs](https://quarto.org/docs/publishing/github-pages.html#publish-action):
 ``` bash
 quarto publish gh-pages
 ```
+||||||| parent of 082c8fc... Update pages.
+<h1 align="center">G'day! 👋🇦🇺🇺🇸! My name is Cameron Rutherford</h1>
+<h3 align="center">Software developer and Adult Chess Improver ♟</h3>
+
+- 👔 I’m currently working at **PNNL as a Software Engineer**
+
+- 📫 How to reach me: **cameron.rutherford@me.com**
+
+- 📄 Most recent Resume: [12-11-22 Resume](./resume_latest.pdf)
+
+<h3 align="left">Connect with me:</h3>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/jdmacam/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/jdmacam/" height="30" width="40" /></a>
+<a href="https://instagram.com/https://www.instagram.com/daijoebu.cpp/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/daijoebu.cpp/" height="30" width="40" /></a> -->
+
+[![Linkedin Badge](https://img.shields.io/twitter/url?label=LinkedIn&logo=LinkedIn&style=for-the-badge&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Frobert-c-rutherford%2F)](https://www.linkedin.com/in/robert-c-rutherford/)
+[![Twitter Badge](https://img.shields.io/twitter/url?label=Twitter&logo=Twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fcam_rutherford_%3Flang%3Den)](https://twitter.com/cam_rutherford_?lang=en)
+[![Instagram Badge](https://img.shields.io/twitter/url?label=Instagram&logo=Instagram&style=for-the-badge&url=https%3A%2F%2Fwww.instagram.com%2Fcameron.rutherford%2F%3Fhl%3Den)](https://www.instagram.com/cameron.rutherford/?hl=en)
+
+<h3 align="left">Languages and Tools:</h3>
+<a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> 
+<a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> 
+<a href="https://www.ansible.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-plain.svg" alt="ansible" width="40" height="40"/> </a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> 
+<a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> 
+<a href="https://www.rust-lang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/> </a> 
+<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
+<a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" alt="django" width="40" height="40"/> </a> 
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> 
+<a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> 
+<a href="https://grafana.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="grafana" width="40" height="40"/> </a> 
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> 
+<a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a>
+
+<!-- <a href="" target="_blank" rel="noreferrer"> <img src="" alt="" width="40" height="40"/> </a> -->
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=CameronRutherford&show_icons=true&locale=en" alt="CameronRutherford" /></p>
+=======
+# Personal Website
+
+- [About](#about)
+- [Quick Start](#quick-start)
+- [Dev Container Configuration](#dev-container-configuration)
+- [Quarto Configuration](#quarto-configuration)
+  - [Workflow](#workflow)
+  - [Output Formats](#output-formats)
+  - [Extensions](#extensions)
+    - [Extension List](#extension-list)
+- [GitHub Pages Configuration](#github-pages-configuration)
+  - [Initial Config](#initial-config)
+
+## About
+
+This document is generated by `personal-repo.qmd`.
+
+I render this using [Quarto](https://quarto.org/), and build with
+[VSCode](https://vscode.dev/) using a [Development
+Container](https://containers.dev/).
+
+This serves as my resume, blog, and self-referential documentation!
+
+## Quick Start
+
+Install [Docker](https://www.docker.com/), VSCode, and configure the
+[Dev Container
+Extension](https://code.visualstudio.com/docs/devcontainers/containers).
+Then using the command pallette, build the container and open this
+folder.
+
+## Dev Container Configuration
+
+I used Python as the base image, and then install Quarto in the
+Dockerfile:
+
+``` Dockerfile
+# Lets use the latest Python (3.11 was latest at the time)
+# https://github.com/devcontainers/images/tree/main/src/python
+FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
+
+# Install quarto
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
+RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
+# I don't really like how this works, but it works...
+ENV PATH=$PATH:/quarto-1.4.251/bin
+```
+
+And this is my json config:
+
+``` json
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"quarto.quarto"
+			]
+		}
+	}
+}
+```
+
+## Quarto Configuration
+
+### Workflow
+
+Build and render the project using:
+
+``` bash
+quarto render && quarto preview
+```
+
+<div>
+
+> **Tip**
+>
+> This assumes that Quarto is installed, or you are running in the dev
+> container.
+
+</div>
+
+### Output Formats
+
+As you can see in the sidebar, this is also rendered into raw [GitHub
+Flavored Markdown](https://quarto.org/docs/output-formats/gfm.html) with
+Quarto.
+
+This is configured in the top of this file’s source code. Other output
+formats are used for other files in this repository. In order to ensure
+the main GitHub `README.md` has the correct file, we specify a
+`post-render` stage that copies the file over:
+
+``` YAML
+project:
+  type: website
+  title: "Personal Repository"
+  output-dir: docs
+  post-render: 
+    - cp docs/README.md .
+
+format:
+  html: 
+    theme: vapor
+
+execute:
+  freeze: auto
+
+website:
+  navbar:
+    search: true
+    left:
+      - text: "Home"
+        file: personal-repo.qmd
+      - text: "Resume"
+        file: quarto/resume.qmd 
+```
+
+As you can see, some other configuration is also specified, such as the
+[HTML theme](https://quarto.org/docs/output-formats/html-themes.html),
+\[navbar config\]
+(https://quarto.org/docs/websites/website-navigation.html), and the
+output dir.
+
+### Extensions
+
+These all are installed manually from the command line, and are not
+included in the Dockerfile. This is because the whole extesion ecosystem
+works through the `_extensions` directory.
+
+To install the first extension, I ran:
+
+``` bash
+quarto add --no-prompt quarto-ext/include-code-files
+```
+
+#### Extension List
+
+- [`include-code-files`](https://github.com/quarto-ext/include-code-files)
+
+## GitHub Pages Configuration
+
+There are many ways to deploy Quarto pages. You can read more about
+choices in [rendering Quarto in
+CI](https://quarto.org/docs/publishing/ci.html#rendering-for-ci) here. I
+am choosing to render locally, and simply point GitHub pages to the
+folder that is stored in git. This isn’t the gold standard in
+reproducibility, but the trade off is that this is much faster to
+iterate on.
+
+### Initial Config
+
+I ran this initially per [the
+docs](https://quarto.org/docs/publishing/github-pages.html#publish-action):
+
+``` bash
+quarto publish gh-pages
+```
+
+I then added the github action specified in this YAML, and merged this
+in PR
+[\#2](https://github.com/CameronRutherford/CameronRutherford/pull/2):
+
+``` YAML
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+>>>>>>> 082c8fc... Update pages.
