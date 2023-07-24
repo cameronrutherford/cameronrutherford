@@ -5,6 +5,10 @@ project:
   post-render: 
     - cp _site/README.md .
 
+format:
+  html: 
+    theme: vapor
+
 website:
   navbar:
     search: true
@@ -14,5 +18,3 @@ website:
       - text: "Resume"
         menu:
           - quarto/executive-summary.qmd 
-
-
