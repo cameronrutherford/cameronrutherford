@@ -1,0 +1,8 @@
+project:
+  title: "Personal Repository"
+
+website:
+  navbar:
+    search: true
+
+
