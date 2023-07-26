@@ -11,8 +11,8 @@
 - [GitHub Pages Configuration](#github-pages-configuration)
   - [Initial Config](#initial-config)
 
-If you just want my resume, click [here](./quarto/resume.qmd), or see
-the link in the navbar.
+If you just want my resume, click [here](/quarto/resume.qmd), or see the
+link in the navbar.
 
 ## About
 
@@ -65,7 +65,8 @@ And this is my json config:
 			"extensions": [
 				"quarto.quarto",
 				"sumneko.lua",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"GitHub.vscode-github-actions"
 			]
 		}
 	}
@@ -199,7 +200,7 @@ name: Quarto Publish
 jobs:
   build-deploy:
     # Need this for potential python deps so why not
-    runs-on: jupyter/base-notebook
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
