@@ -8,7 +8,7 @@ name: Quarto Publish
 jobs:
   build-deploy:
     # Need this for potential python deps so why not
-    runs-on: jupyter/base-notebook
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:

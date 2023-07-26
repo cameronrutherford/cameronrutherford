@@ -51,10 +51,6 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/qua
 RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
 # I don't really like how this works, but it works...
 ENV PATH=$PATH:/quarto-1.4.251/bin
-
-# I guess I need Jupyter
-RUN pipx install --upgrade pip && \
-    pipx install jupyter
 ```
 
 And this is my json config:
@@ -67,7 +63,9 @@ And this is my json config:
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"quarto.quarto"
+				"quarto.quarto",
+				"sumneko.lua",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}

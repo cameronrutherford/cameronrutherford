@@ -5,7 +5,10 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"quarto.quarto"
+				"quarto.quarto",
+				"sumneko.lua",
+				"ms-azuretools.vscode-docker",
+				"GitHub.vscode-github-actions"
 			]
 		}
 	}
