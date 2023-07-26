@@ -11,6 +11,9 @@
 - [GitHub Pages Configuration](#github-pages-configuration)
   - [Initial Config](#initial-config)
 
+If you just want my resume, click [here](./quarto/resume.qmd), or see
+the link in the navbar.
+
 ## About
 
 Check out the rendered HTML version hosted in GitHub pages here:
@@ -48,6 +51,10 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/qua
 RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
 # I don't really like how this works, but it works...
 ENV PATH=$PATH:/quarto-1.4.251/bin
+
+# I guess I need Jupyter
+RUN pipx install --upgrade pip && \
+    pipx install jupyter
 ```
 
 And this is my json config:
@@ -104,6 +111,11 @@ project:
   output-dir: docs
   post-render: 
     - cp docs/README.md .
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    # No need to render files in more than one place - this file is just included in another
+    - "!quarto/old_resume.qmd"
 
 format:
   html: 
@@ -113,20 +125,31 @@ execute:
   freeze: auto
 
 website:
+  repo-url: https://github.com/CameronRutherford/CameronRutherford
+  repo-actions: [edit]
+  search:
+    type: overlay
   navbar:
     search: true
     left:
-      - text: "Home"
-        file: personal-repo.qmd
-      - text: "Resume"
-        file: quarto/resume.qmd 
+      - quarto/resume.qmd 
+    tools:
+      - icon: twitter
+        href: https://twitter.com/cam_rutherford_
+        text: Quarto Twitter
+      - icon: github
+        href: https://github.com/CameronRutherford
+        text: Quarto GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/robert-c-rutherford/
+        text: LinkedIn
 ```
 
 As you can see, some other configuration is also specified, such as the
 [HTML theme](https://quarto.org/docs/output-formats/html-themes.html),
-\[navbar config\]
-(https://quarto.org/docs/websites/website-navigation.html), and the
-output dir.
+[navbar
+config](https://quarto.org/docs/websites/website-navigation.html), and
+the output dir.
 
 ### Extensions
 
@@ -177,7 +200,8 @@ name: Quarto Publish
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    # Need this for potential python deps so why not
+    runs-on: jupyter/base-notebook
     permissions:
       contents: write
     steps:

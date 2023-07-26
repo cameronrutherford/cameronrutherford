@@ -4,6 +4,11 @@ project:
   output-dir: docs
   post-render: 
     - cp docs/README.md .
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    # No need to render files in more than one place - this file is just included in another
+    - "!quarto/old_resume.qmd"
 
 format:
   html: 
@@ -13,10 +18,21 @@ execute:
   freeze: auto
 
 website:
+  repo-url: https://github.com/CameronRutherford/CameronRutherford
+  repo-actions: [edit]
+  search:
+    type: overlay
   navbar:
     search: true
     left:
-      - text: "Home"
-        file: personal-repo.qmd
-      - text: "Resume"
-        file: quarto/resume.qmd 
+      - quarto/resume.qmd 
+    tools:
+      - icon: twitter
+        href: https://twitter.com/cam_rutherford_
+        text: Quarto Twitter
+      - icon: github
+        href: https://github.com/CameronRutherford
+        text: Quarto GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/robert-c-rutherford/
+        text: LinkedIn
