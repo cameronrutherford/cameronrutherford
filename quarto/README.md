@@ -1,4 +1,4 @@
-# Personal Website
+# Home Page
 
 - [About](#about)
 - [Quick Start](#quick-start)
@@ -11,7 +11,7 @@
 - [GitHub Pages Configuration](#github-pages-configuration)
   - [Initial Config](#initial-config)
 
-If you just want my resume, click [here](./quarto/resume.qmd), or see
+If you just want my resume, click [here](../quarto/resume.qmd), or see
 the link in the navbar.
 
 ## About
@@ -42,37 +42,11 @@ I used Python as the base image, and then install Quarto in the
 Dockerfile:
 
 ``` Dockerfile
-# https://github.com/devcontainers/images/tree/main/src/python
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
-
-# Windows was being buggy so I am trying with an ubuntu base image with the same version
-# Might need to add Python back
-
-# Install quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
-RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
-# I don't really like how this works, but it works...
-ENV PATH=$PATH:/quarto-1.4.251/bin
 ```
 
 And this is my json config:
 
 ``` json
-{
-    "build": {
-        "dockerfile": "Dockerfile"
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"quarto.quarto",
-				"sumneko.lua",
-				"ms-azuretools.vscode-docker",
-				"GitHub.vscode-github-actions"
-			]
-		}
-	}
-}
 ```
 
 ## Quarto Configuration
@@ -106,48 +80,6 @@ the main GitHub `README.md` has the correct file, we specify a
 `post-render` stage that copies the file over:
 
 ``` YAML
-project:
-  type: website
-  title: "Cameron's git-site"
-  output-dir: docs
-  post-render:
-    - cp docs/README.md .
-  render:
-    - "*.qmd"
-    - "*.ipynb"
-    # No need to render files in more than one place - this file is just included in another
-    - "!quarto/old_resume.qmd"
-
-format:
-  html:
-    theme: vapor
-
-execute:
-  freeze: auto
-
-website:
-  repo-url: https://github.com/CameronRutherford/CameronRutherford
-  repo-actions: [edit]
-  search:
-    type: overlay
-  navbar:
-    search: true
-    left:
-      - personal-repo.qmd
-      - quarto/resume.qmd
-      - text: "Developer Guide"
-        menu:
-          - quarto/windows.qmd
-    tools:
-      - icon: twitter
-        href: https://twitter.com/cam_rutherford_
-        text: Quarto Twitter
-      - icon: github
-        href: https://github.com/CameronRutherford
-        text: Quarto GitHub
-      - icon: linkedin
-        href: https://www.linkedin.com/in/robert-c-rutherford/
-        text: LinkedIn
 ```
 
 As you can see, some other configuration is also specified, such as the
@@ -196,32 +128,6 @@ repository, and I decided to render this website locally before
 publishing to make things easier:
 
 ``` YAML
-on:
-  workflow_dispatch:
-  push:
-    branches: main
-
-name: Quarto Publish
-
-jobs:
-  build-deploy:
-    # Need this for potential python deps so why not
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 This method does somewhat clutter git history with updates of the

@@ -1,9 +1,9 @@
 project:
   type: website
-  title: "Personal Repository"
+  title: "Cameron's git-site"
   output-dir: docs
-  post-render: 
-    - cp docs/README.md .
+  post-render:
+    - cp docs/quarto/README.md .
   render:
     - "*.qmd"
     - "*.ipynb"
@@ -11,7 +11,7 @@ project:
     - "!quarto/old_resume.qmd"
 
 format:
-  html: 
+  html:
     theme: vapor
 
 execute:
@@ -25,7 +25,11 @@ website:
   navbar:
     search: true
     left:
-      - quarto/resume.qmd 
+      - quarto/readme.qmd
+      - quarto/resume.qmd
+      - text: "Developer Guide"
+        menu:
+          - quarto/windows.qmd
     tools:
       - icon: twitter
         href: https://twitter.com/cam_rutherford_

@@ -44,9 +44,9 @@ local function transclude (cb)
           end
         end
         number = number + 1
-      end 
+      end
       fh:close()
-    end     
+    end
     -- remove key-value pair for used keys
     cb.attributes.include = nil
     cb.attributes.startLine = nil
@@ -60,4 +60,3 @@ end
 return {
   { CodeBlock = transclude }
 }
-

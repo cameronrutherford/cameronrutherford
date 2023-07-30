@@ -2,6 +2,10 @@
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
+# Consider using more sophisticated dep management platform as this gets worse
+# Despite what the VSCode docs say, pipx doesn't work
+RUN pip3 install pre-commit
+
 # Install quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
 RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz

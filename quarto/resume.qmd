@@ -48,7 +48,7 @@ above source code comment, whereas I only used 3 in the above note
 :::
 
 ::: {.callout-warning collapse="true"}
-If I keep exaplaining this in markdown, it will be recursive. 
+If I keep exaplaining this in markdown, it will be recursive.
 Check out the source code on the right sidebar for this (and other) pages if you
  have not already. This is also partly the reason you can't self-reference a file
  and do recursion in quarto.

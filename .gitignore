@@ -2,3 +2,4 @@
 /.quarto/
 docs
 /.luarc.json
+site_libs
