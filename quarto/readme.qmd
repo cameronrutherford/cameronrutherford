@@ -61,8 +61,16 @@ Inspired by https://gdevops.gitlab.io/tuto_git/tools/pre-commit/repos_hooks/repo
 Above is the YAML config, and assuming you have pre-commit installed (in the dev-container or otherwise), run the following to install, and pre-commit will forever be a part of your git flow:
 
 ```bash
-
+pre-commit install
 ```
+
+Then to run manually without needing a `git commit`:
+
+```bash
+pre-commit run --all-files
+```
+
+TODO: Add this pre-installed in the dev-container.
 
 ## Quarto Configuration
 
