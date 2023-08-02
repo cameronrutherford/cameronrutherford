@@ -18,16 +18,45 @@ format:
     output-ext: reveal.html
     smaller: true
     toc: true
+    menu: true
+    chalkboard: true
 revealjs-plugins:
   - confetti
 ---
 
+## Growing Up
 
-## Slide 1
+### Australian / American Dual Citizenship
 
-test
+### Basketball
 
-## Slide 2
+## High School
 
-123
+### Sydney Grammar School
 
+### More Basketball
+
+## College Experience
+
+### Even More Basketball
+
+### Academics
+
+### Chess / ASWU
+
+### Ultimate Frisbee / Club Basketball
+
+### Keysight Technologies Internship
+
+### Study Abroad Program (Technology and Culture)
+
+## PNNL Work
+
+### ExaGO Internship
+
+### HPC / ML / Quantum Team
+
+### Quantum Computing
+
+
+## Thank you for listening!
