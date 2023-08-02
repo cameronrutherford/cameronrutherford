@@ -1,5 +1,5 @@
 ---
-title: "STEM Engagement - My Story"
+title: "STEM - My Story"
 subtitle: "From America to Australia and back again"
 date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
 date: today
@@ -18,11 +18,21 @@ format:
     output-ext: reveal.html
     smaller: true
     toc: true
+    toc-depth: 2
     menu: true
     chalkboard: true
+    slide-level: 3
 revealjs-plugins:
   - confetti
 ---
+
+## Intro
+
+Here is the link/QR code to view the presentation:
+
+Here is the link/QR code to the HTML version:
+
+No Multiplex plugin unfortunately
 
 ## Growing Up
 
