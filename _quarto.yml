@@ -33,7 +33,7 @@ website:
           - quarto/windows.qmd
       - text: "Presentations"
         menu:
-          - quarto/presentations/stem-outreach.qmd
+          - quarto/presentations/stem-engagement/presentation.qmd
     tools:
       - icon: twitter
         href: https://twitter.com/cam_rutherford_

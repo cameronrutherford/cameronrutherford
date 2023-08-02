@@ -1,5 +1,8 @@
 ---
 title: "STEM Engagement - My Story"
+subtitle: "From America to Australia and back again"
+date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
+date: today
 author: 
   - Cameron Rutherford
 format:
@@ -10,13 +13,15 @@ format:
   # pdf: default
   html:
     toc: true
-  revealjs: 
+  blackboard-revealjs: 
     # This is a buggy bug
     output-ext: reveal.html
-    scrollable: true
-  #  smaller: true
+    smaller: true
     toc: true
+revealjs-plugins:
+  - confetti
 ---
+
 
 ## Slide 1
 
@@ -25,3 +30,4 @@ test
 ## Slide 2
 
 123
+
