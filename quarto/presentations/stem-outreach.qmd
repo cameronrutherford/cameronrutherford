@@ -1,0 +1,27 @@
+---
+title: "STEM Engagement - My Story"
+author: 
+  - Cameron Rutherford
+format:
+  # You can do pdf and docx, but this is buggy in a container with mermaid
+  # https://quarto.org/docs/authoring/diagrams.html#chrome-install
+  # pptx:
+  #   reference-doc: template.pptx
+  # pdf: default
+  html:
+    toc: true
+  revealjs: 
+    # This is a buggy bug
+    output-ext: reveal.html
+    scrollable: true
+  #  smaller: true
+    toc: true
+---
+
+## Slide 1
+
+test
+
+## Slide 2
+
+123
