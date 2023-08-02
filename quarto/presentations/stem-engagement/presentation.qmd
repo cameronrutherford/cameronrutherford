@@ -30,9 +30,19 @@ revealjs-plugins:
 
 Here is the link/QR code to view the presentation:
 
+[https://tinyurl.com/54awnfy5](https://tinyurl.com/54awnfy5)
+{{< qrcode https://tinyurl.com/54awnfy5  reveal >}}
+
 Here is the link/QR code to the HTML version:
 
-No Multiplex plugin unfortunately
+[https://tinyurl.com/bdft727k](https://tinyurl.com/bdft727k)
+{{< qrcode https://tinyurl.com/bdft727k html >}}
+
+No Multiplex plugin unfortunately...
+
+### Slido!
+
+
 
 ## Growing Up
 
