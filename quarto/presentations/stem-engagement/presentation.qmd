@@ -3,6 +3,7 @@ title: "STEM - My Story"
 subtitle: "From America to Australia and back again"
 date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
 date: today
+fig-cap-location: top
 author: 
   - Cameron Rutherford
 format:
@@ -28,6 +29,25 @@ revealjs-plugins:
 
 ## Intro
 
+
+Scan the QR Code or go to [https://www.slido.com/](https://www.slido.com/) and enter code `#1331 479` to participate:
+
+<p align="center">
+{{< qrcode https://app.sli.do/event/9JCiBRq41fZ28eR3h2YNRb qrslido width=200 height=200 colorDark='#0022bb' >}}
+</p>
+
+[https://wall.sli.do/event/9JCiBRq41fZ28eR3h2YNRb?section=d342f0d8-08e1-4ef8-b04f-9d27809c48c4](https://wall.sli.do/event/9JCiBRq41fZ28eR3h2YNRb?section=d342f0d8-08e1-4ef8-b04f-9d27809c48c4) to watch results.
+
+### Slido
+
+<iframe src="https://wall.sli.do/event/9JCiBRq41fZ28eR3h2YNRb?section=d342f0d8-08e1-4ef8-b04f-9d27809c48c4" frameborder="0" allowfullscreen height=100% width=100%></iframe>
+
+<!-- Comment: Here is the link to present https://auth.slido.com/eu1/api/latest/the-auth/user/lifecycle-process/shareable-link/init?token=8d03d78e0994c5df3aa6604ba5916615a2930859ebc483701d9e7d20f5632599 -->
+
+
+
+### About this presentation
+
 Here is the link/QR code to view the presentation:
 
 [https://tinyurl.com/54awnfy5](https://tinyurl.com/54awnfy5)
@@ -40,11 +60,9 @@ Here is the link/QR code to the HTML version:
 
 No Multiplex plugin unfortunately...
 
-### Slido!
-
-
-
 ## Growing Up
+
+![Me as a baby for halloween](images/baby.jpeg){fig-align="center"}
 
 ### Australian / American Dual Citizenship
 
