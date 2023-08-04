@@ -13,7 +13,7 @@ pre-commit install-hooks
 
 # Configure some simple git/other aliases
 echo "alias ll='ls -alF'" >> ~/.bashrc
-echo "alias gg='git log --graph --oneline --color --pretty --all'" >> ~/.bashrc
+echo "alias gg='git log --graph --oneline --color --all'" >> ~/.bashrc
 echo "alias gc='git commit'" >> ~/.bashrc
 echo "alias gs='git status'" >> ~/.bashrc
 echo "alias ga='git add'" >> ~/.bashrc
