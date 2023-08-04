@@ -1,15 +1,8 @@
 ---
-title: "Home Page"
+title: "Core"
 filters:
     - include-code-files
 format:
-    # There is some nasty bug hiding here...
-    # gfm:
-    #    toc: true
-    #    toc-depth: 4
-    #    toc-title: "Table Of Contents"
-    #    output-file: README.md
-    #    preview-mode: raw
     html:
         default: true
         toc: true
@@ -38,12 +31,19 @@ Install [Docker](https://www.docker.com/), VSCode, and configure the [Dev Contai
 
 I used Python as the base image, and then install Quarto in the Dockerfile:
 
-```{.Dockerfile include="../.devcontainer/Dockerfile"}
+```{.Dockerfile include="../../.devcontainer/Dockerfile"}
 ```
 
 And this is my json config:
 
-```{.json include="../.devcontainer/devcontainer.json"}
+```{.json include="../../.devcontainer/devcontainer.json"}
+```
+
+### postCreateCommand.sh
+
+As you can see in the json devcontainer configuration, there is a script invoked in the postCreateCommand section. Here are it's current contents:
+
+```{.shell include="../../.devcontainer/postCreateCommand.sh"}
 ```
 
 ## Pre-Commit Configuration
@@ -56,7 +56,7 @@ This is installed in the Dockerfile for you, but you can choose to install this 
 
 Inspired by https://gdevops.gitlab.io/tuto_git/tools/pre-commit/repos_hooks/repo_pre_commit_hooks/mixed-line-ending/mixed-line-ending.html:
 
-```{.YAML include="../.pre-commit-config.yaml"}
+```{.YAML include="../../.pre-commit-config.yaml"}
 ```
 
 Above is the YAML config, and assuming you have pre-commit installed (in the dev-container or otherwise), run the following to install, and pre-commit will forever be a part of your git flow:
@@ -70,8 +70,6 @@ Then to run manually without needing a `git commit`:
 ```bash
 pre-commit run --all-files
 ```
-
-TODO: Add these hooks pre-installed in the dev-container so you don't have to think about it.
 
 ## Quarto Configuration
 
@@ -97,7 +95,7 @@ are used for other files in this repository. In order to ensure the main GitHub
 `README.md` has the correct file, we specify a `post-render` stage that copies
 the file over:
 
-```{.YAML include="../_quarto.yml"}
+```{.YAML include="../../_quarto.yml"}
 ```
 
 As you can see, some other configuration is also specified, such as the [HTML theme](https://quarto.org/docs/output-formats/html-themes.html), [navbar config](https://quarto.org/docs/websites/website-navigation.html), and the output dir.
@@ -120,7 +118,7 @@ quarto add --no-prompt quarto-ext/include-code-files
 - [`qrcode`](https://github.com/jmbuhr/quarto-qrcode)
 - [`quarto-confetti`](https://github.com/ArthurData/quarto-confetti)
 
-Note that these are the only project-wide extension installed. Other custom extensions can be installed for individual documents as needed, such as for my [stem engagement presentation](presentations/stem-engagement/presentation.qmd) where I added a blackboard theme.
+Note that these are the only project-wide extension installed. Other custom extensions can be installed for individual documents as needed, such as for my [stem engagement presentation](../presentations/stem-engagement/presentation.qmd) where I added a blackboard theme.
 
 ## GitHub Pages Configuration
 
@@ -138,11 +136,7 @@ I ran this initially per [the docs](https://quarto.org/docs/publishing/github-pa
 quarto publish gh-pages
 ```
 
-I then added a GitHub action to auto publish based on what is in the repository,
-and I decided to render this website locally before publishing to make things easier:
+I then added a GitHub action to auto publish based on what is in the repository based on other people's publish actions:
 
-```{.YAML include="../.github/workflows/publish.yml"}
+```{.YAML include="../../.github/workflows/publish.yml"}
 ```
-
-This method does somewhat clutter git history with updates of the website along with the files,
-which isn't ideal. I think I will shift to CI builds in the future.
