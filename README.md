@@ -1,8 +1,12 @@
 # README
 
+![pre-commit](https://github.com/CameronRutherford/CameronRutherford/actions/workflows/pre-commit.yml/badge.svg)
+![github
+pages](https://github.com/CameronRutherford/CameronRutherford/actions/workflows/publish.yml/badge.svg)
+
 If you just want my resume, click here
 [here](https://cameronrutherford.github.io/CameronRutherford/quarto/resume.html)
-or see the link in the navbar.
+or see the link in the navbar (if viewing on HTML site).
 
 ## About
 
