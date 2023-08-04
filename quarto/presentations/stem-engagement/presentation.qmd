@@ -4,7 +4,7 @@ subtitle: "From America to Australia and back again"
 date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
 date: today
 fig-cap-location: top
-author: 
+author:
   - Cameron Rutherford
 format:
   # You can do pdf and docx, but this is buggy in a container with mermaid
@@ -14,7 +14,7 @@ format:
   # pdf: default
   html:
     toc: true
-  blackboard-revealjs: 
+  blackboard-revealjs:
     # This is a buggy bug
     output-ext: reveal.html
     smaller: true

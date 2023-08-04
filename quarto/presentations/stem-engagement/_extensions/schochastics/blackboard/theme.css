@@ -1,7 +1,7 @@
 .framed {
  display: inline-block;
  border-style: solid;
- padding: 10px;  
+ padding: 10px;
  border-width: 15px 15px 15px 15px;
  border-image: url("frame2.png") 20% 20% 20% 20% stretch;
 }

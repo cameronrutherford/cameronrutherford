@@ -14,11 +14,11 @@ window.RevealConfetti = function () {
   return {
     id: "RevealConfetti",
     init: function (deck) {
-      
+
       deck.addKeyBinding({ keyCode: 67, key: "C" }, () => {
         const config = deck.getConfig();
         const options = config.confetti || {};
-        
+
         confetti({
           particleCount: options.particleCount,
           angle: options.angle,
@@ -38,7 +38,7 @@ window.RevealConfetti = function () {
             y: posY / window.innerHeight
           }
         });
-        
+
         console.log(`posX: ${posX} | posy: ${posY}`);
         console.log(options);
         console.log('🎊🎉');

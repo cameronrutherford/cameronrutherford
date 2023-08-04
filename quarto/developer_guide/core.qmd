@@ -59,6 +59,10 @@ Then to run manually without needing a `git commit`:
 pre-commit run --all-files
 ```
 
+::: {.callout-note}
+You may need to use this when pre-commit pipelines are failing when not in a PR where auto-fixes can be applied.
+:::
+
 ### pre-commit GitHub Actions
 
 I run pre-commit checks in CI using a GitHub action from [https://github.com/pre-commit/action](https://github.com/pre-commit/action):
