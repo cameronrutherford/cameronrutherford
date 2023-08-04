@@ -26,7 +26,7 @@ While installing on MacOS seems trivial through installing Docker, working on Wi
 
 ### Windows relate bugs
 
-1. I opened/edited some files with the file line ending in "windows mode", and so that appeared in git. I resolved this by (installing and using pre-commit?)
+1. I opened/edited some files with the file line ending in "windows mode", and so that appeared in git. I resolved this by installing and using pre-commit.
 
 ## Quarto Only
 

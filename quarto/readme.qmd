@@ -50,7 +50,7 @@ And this is my json config:
 
 Because of issues installing on Windwos and line endings getting messed up, I installed [pre-commit](https://pre-commit.com/) to fix bugs as they arised.
 
-This is installed in the Dockerfile for you, but you can choose to install this on it's own if you wish to do so without a container.
+This is installed in the Dockerfile for you, but you can choose to install this on it's own if you wish to do so without a container. It is especially nice to avoid any platform specific bugs (see [Windows Developer Guide](windows.qmd)).
 
 ### .pre-commit-config.yml
 
@@ -71,7 +71,7 @@ Then to run manually without needing a `git commit`:
 pre-commit run --all-files
 ```
 
-TODO: Add this pre-installed in the dev-container.
+TODO: Add these hooks pre-installed in the dev-container so you don't have to think about it.
 
 ## Quarto Configuration
 
@@ -106,7 +106,7 @@ As you can see, some other configuration is also specified, such as the [HTML th
 
 These all are installed manually from the command line, and are not included in
 the Dockerfile. This is because the whole extesion ecosystem works through the
-`_extensions` directory.
+`_extensions` directory. See [Quarto Extensions](https://quarto.org/docs/extensions/).
 
 To install the first extension, I ran:
 
@@ -117,6 +117,10 @@ quarto add --no-prompt quarto-ext/include-code-files
 #### Extension List
 
 - [`include-code-files`](https://github.com/quarto-ext/include-code-files)
+- [`qrcode`](https://github.com/jmbuhr/quarto-qrcode)
+- [`quarto-confetti`](https://github.com/ArthurData/quarto-confetti)
+
+Note that these are the only project-wide extension installed. Other custom extensions can be installed for individual documents as needed, such as for my [stem engagement presentation](presentations/stem-engagement/presentation.qmd) where I added a blackboard theme.
 
 ## GitHub Pages Configuration
 
