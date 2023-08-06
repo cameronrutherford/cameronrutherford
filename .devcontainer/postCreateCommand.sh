@@ -6,6 +6,8 @@ set -x
 # Configure pre-commit hooks\
 # It would nice to have this be a part of the container, but it is nice to be able to disable
 # TODO: make a part of the container
+# mkdir only necessary in GitHub Actions??
+mkdir -p /workspaces/personal-repo
 cd /workspaces/personal-repo
 git config --global --add safe.directory /workspaces/personal-repo
 pre-commit install-hooks
