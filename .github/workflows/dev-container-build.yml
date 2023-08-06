@@ -25,6 +25,6 @@ jobs:
       - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/CameronRutherford/quarto-ci
+          imageName: ghcr.io/cameronrutherford/quarto-ci
           # Make sure doc can render in container before pushing
           runCmd: quarto render

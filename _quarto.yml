@@ -19,7 +19,7 @@ execute:
   freeze: auto
 
 website:
-  repo-url: https://github.com/CameronRutherford/CameronRutherford
+  repo-url: https://github.com/cameronrutherford/cameronrutherford
   repo-actions: [edit]
   search:
     type: overlay
@@ -39,7 +39,7 @@ website:
         href: https://twitter.com/cam_rutherford_
         text: Quarto Twitter
       - icon: github
-        href: https://github.com/CameronRutherford
+        href: https://github.com/cameronrutherford
         text: Quarto GitHub
       - icon: linkedin
         href: https://www.linkedin.com/in/robert-c-rutherford/

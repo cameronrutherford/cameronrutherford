@@ -13,6 +13,6 @@ pre-commit install-hooks
 # Configure git config so I can at least commit things
 # Should push/pull outside of a container for sure
 git config --global user.email "cameron.rutherford@me.com"
-git config --global user.name "CameronRutherford"
+git config --global user.name "cameronrutherford"
 
 set +x
