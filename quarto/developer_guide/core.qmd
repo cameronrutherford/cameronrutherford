@@ -170,7 +170,7 @@ So, I googled and updated tlmgr in the end with `tlmgr update --self && tlmgr up
 
 #### GitHub actions and pdf
 
-Unfortunately the first pipeline I tried with pdf backend enabled also needed some TeX engine installed - [https://github.com/CameronRutherford/CameronRutherford/actions/runs/5774702232/job/15651941247](https://github.com/CameronRutherford/CameronRutherford/actions/runs/5774702232/job/15651941247)
+Unfortunately the first pipeline I tried with pdf backend enabled also needed some TeX engine installed - [see failed pipeline](https://github.com/CameronRutherford/CameronRutherford/actions/runs/5774702232/job/15651941247)
 
 TODO: for now this is disabled as an output format, but needs to be fixed and checks added to pre-commit and CI.
 
