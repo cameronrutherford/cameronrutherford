@@ -13,13 +13,11 @@ RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
 ENV PATH=$PATH:/quarto-1.4.251/bin
 
 # Install Tex Live
-WORKDIR /tmp
 RUN wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 RUN zcat < install-tl-unx.tar.gz | tar xf -
-RUN mv /tmp/install-tl-* /tmp/install-tl
-WORKDIR /tmp/install-tl
 # Want to just install the smallest version
-RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
+RUN cd install-tl-20230806 && \
+    perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
 # Another PATH modification never hurt noone
 ENV PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
 
