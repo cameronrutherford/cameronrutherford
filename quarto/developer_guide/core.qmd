@@ -165,7 +165,7 @@ tlmgr: An error has occurred. See above messages. Exiting.
 
 So, I googled and updated tlmgr in the end with `tlmgr update --self && tlmgr update --all` in the Dockerfile (See [SO Post](https://stackoverflow.com/a/59851436)), as well as a line to install other extensions being used in the project:
 
-```{.Dockerfile include="../../.devcontainer/Dockerfile" start-line=26 end-line=32}
+```{.Dockerfile include="../../.devcontainer/Dockerfile" start-line=26 end-line=33}
 ```
 
 #### GitHub actions and pdf
