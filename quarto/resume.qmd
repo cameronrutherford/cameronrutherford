@@ -1,5 +1,7 @@
 ---
 title: "Resume"
+filters:
+    - include-code-files
 format:
     html:
         default: true
