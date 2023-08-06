@@ -40,4 +40,7 @@ RUN echo "alias ll='ls -alF'" >> /home/vscode/.bash_aliases && \
         echo "alias gs='git status'" >> /home/vscode/.bash_aliases && \
         echo "alias ga='git add'" >> /home/vscode/.bash_aliases && \
         echo "alias gd='git diff'" >> /home/vscode/.bash_aliases && \
+        echo "alias gf='git fetch --all'" >> /home/vscode/.bash_aliases && \
+        echo "alias gp='git push'" >> /home/vscode/.bash_aliases && \
+        echo "alias grs='git reset --hard'" >> /home/vscode/.bash_aliases && \
         echo "alias qrp='quarto render && quarto preview'" >> /home/vscode/.bash_aliases
