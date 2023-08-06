@@ -51,6 +51,8 @@ This is the current file in `.github/workflows/dev-container-build.yml` that I a
 
 Inspired from the final example in this [Getting Started](https://github.com/devcontainers/ci/blob/main/docs/github-action.md#getting-started) section for usage of the Action.
 
+TODO: Look into container features and ways to properly publish container image...
+
 ## Pre-Commit Configuration
 
 Because of issues installing on Windwos and line endings getting messed up, I installed [pre-commit](https://pre-commit.com/) to fix bugs as they arised.

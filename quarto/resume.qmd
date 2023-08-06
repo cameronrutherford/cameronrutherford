@@ -7,9 +7,8 @@ format:
         default: true
         toc: true
         toc-depth: 4
-    # TODO: fix PDFs in CI pipelines
-    # pdf:
-    #    default: true
+    pdf:
+       default: true
 ---
 
 ## Resume

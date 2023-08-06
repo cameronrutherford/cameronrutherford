@@ -9,7 +9,7 @@ project:
     - "!quarto/old_resume.qmd"
   post-render:
     - cp docs/readme.markdowneth README.md
-  # TODO:  - cp docs/quarto/resume.pdf resume.pdf
+    - cp docs/quarto/resume.pdf resume.pdf
 
 format:
   html:

@@ -14,6 +14,7 @@ format:
 
 ![pre-commit](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml/badge.svg)
 ![github pages](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)
+![container build](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-build.yml/badge.svg)
 
 If you just want my resume, click here [here](https://cameronrutherford.github.io/cameronrutherford/quarto/resume.html) or see the link in the navbar (if viewing on HTML site).
 

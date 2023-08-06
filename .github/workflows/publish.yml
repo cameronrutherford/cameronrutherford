@@ -7,8 +7,8 @@ name: Quarto Publish
 
 jobs:
   build-deploy:
-    # Need this for potential python deps so why not
-    runs-on: ubuntu-latest
+    # Use container build in CI
+    runs-on: ghcr.io/cameronrutherford/quarto-ci:latest
     permissions:
       contents: write
     steps:
