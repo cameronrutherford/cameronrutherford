@@ -27,6 +27,10 @@ And this is my json config:
 ```{.json include="../../.devcontainer/devcontainer.json"}
 ```
 
+Since everything is built in this fasion, I suppor using a GitHub codespace to develop as well!
+
+TODO: Make sure codespace doesn't re-build container when using pre-built image
+
 ### postCreateCommand.sh
 
 As you can see in the json devcontainer configuration, there is a script invoked in the postCreateCommand section. Here are it's current contents:

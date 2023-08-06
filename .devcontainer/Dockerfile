@@ -34,10 +34,10 @@ RUN tlmgr update --self && tlmgr update --all && \
 
 # Configure aliases. This used to be done in the postCreateCommand
 # Having it here ensures that aliases are pre-loaded into the container
-RUN echo "alias ll='ls -alF'" >> /home/vscode/.bash_aliases
-RUN echo "alias gg='git log --graph --oneline --color --all'" >> /home/vscode/.bash_aliases
-RUN echo "alias gc='git commit'" >> /home/vscode/.bash_aliases
-RUN echo "alias gs='git status'" >> /home/vscode/.bash_aliases
-RUN echo "alias ga='git add'" >> /home/vscode/.bash_aliases
-RUN echo "alias gd='git diff'" >> /home/vscode/.bash_aliases
-RUN echo "alias qrp='quarto render && quarto preview'" >> /home/vscode/.bash_aliases
+RUN echo "alias ll='ls -alF'" >> /home/vscode/.bash_aliases && \
+        echo "alias gg='git log --graph --oneline --color --all'" >> /home/vscode/.bash_aliases && \
+        echo "alias gc='git commit'" >> /home/vscode/.bash_aliases && \
+        echo "alias gs='git status'" >> /home/vscode/.bash_aliases && \
+        echo "alias ga='git add'" >> /home/vscode/.bash_aliases && \
+        echo "alias gd='git diff'" >> /home/vscode/.bash_aliases && \
+        echo "alias qrp='quarto render && quarto preview'" >> /home/vscode/.bash_aliases
