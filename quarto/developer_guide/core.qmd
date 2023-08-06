@@ -27,9 +27,18 @@ And this is my json config:
 ```{.json include="../../.devcontainer/devcontainer.json"}
 ```
 
-Since everything is built in this fasion, I suppor using a GitHub codespace to develop as well!
+Since everything is built in this fasion, I support using a GitHub codespace to develop as well!
 
-TODO: Make sure codespace doesn't re-build container when using pre-built image
+As the dev-container is re-built automatically in CI, you shouldn't have to re-build unless you are developing a new format or adding a new tool. If you ever do this, you can start rebuilding locally by adding this to the JSON config in place of `image`:
+
+```JSON
+    // If you want to build this container and debug locally, use this
+     "build": {
+       "dockerfile": "Dockerfile"
+	},
+```
+
+Note that initially I had this as a comment, but JSON should not support comments. pre-commit checks caught this!
 
 ### postCreateCommand.sh
 
