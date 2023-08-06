@@ -38,7 +38,6 @@ Maybe I could debug the pre-commit config to go into the container, but often I 
 
 I also had aliases here for a while, but they moved into the Dockerfile for ease of use.
 
-I used to have aliases configured here, but I
 ## Pre-Commit Configuration
 
 Because of issues installing on Windwos and line endings getting messed up, I installed [pre-commit](https://pre-commit.com/) to fix bugs as they arised.
@@ -164,6 +163,12 @@ So, I googled and updated tlmgr in the end with `tlmgr update --self && tlmgr up
 
 ```{.Dockerfile include="../../.devcontainer/Dockerfile" start-line=26 end-line=32}
 ```
+
+#### GitHub actions and pdf
+
+Unfortunately the first pipeline I tried with pdf backend enabled also needed some TeX engine installed - [https://github.com/CameronRutherford/CameronRutherford/actions/runs/5774702232/job/15651941247](https://github.com/CameronRutherford/CameronRutherford/actions/runs/5774702232/job/15651941247)
+
+TODO: for now this is disabled as an output format, but needs to be fixed and checks added to pre-commit and CI.
 
 ### Extensions
 

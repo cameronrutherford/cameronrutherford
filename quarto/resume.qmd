@@ -7,13 +7,14 @@ format:
         default: true
         toc: true
         toc-depth: 4
-    pdf:
-        default: true
+    # TODO: fix PDFs in CI pipelines
+    # pdf:
+    #    default: true
 ---
 
 ## Resume
 
-TODO
+TODO: write resume
 
 ::: {.content-visible when-format="html"}
 
