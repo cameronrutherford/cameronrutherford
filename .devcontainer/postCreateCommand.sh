@@ -7,9 +7,9 @@ set -x
 # It would nice to have this be a part of the container, but it is nice to be able to disable
 # TODO: make a part of the container
 # mkdir only necessary in GitHub Actions??
-mkdir -p /workspaces/personal-repo
-cd /workspaces/personal-repo
-git config --global --add safe.directory /workspaces/personal-repo
+DEV_DIR=/workspaces/cameronrutherford
+mkdir -p $DEV_DIR && cd $DEV_DIR
+git config --global --add safe.directory $DEV_DIR
 pre-commit install-hooks
 
 # Configure git config so I can at least commit things
