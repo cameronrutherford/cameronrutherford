@@ -3,22 +3,15 @@
 set -e
 set -x
 
-# Configure pre-commit hooks and dependencies
-# TODO - make this a part of the container build process...
+# Configure pre-commit hooks\
+# It would nice to have this be a part of the container, but it is nice to be able to disable
 cd /workspaces/personal-repo
 git config --global --add safe.directory /workspaces/personal-repo
-git config --global user.email "cameron.rutherford@me.com"
-git config --global user.name "CameronRutherford"
 pre-commit install-hooks
 
-# Configure some simple git/other aliases
-echo "alias ll='ls -alF'" >> ~/.bashrc
-echo "alias gg='git log --graph --oneline --color --all'" >> ~/.bashrc
-echo "alias gc='git commit'" >> ~/.bashrc
-echo "alias gs='git status'" >> ~/.bashrc
-echo "alias ga='git add'" >> ~/.bashrc
-echo "alias gd='git diff'" >> ~/.bashrc
-
-# NOTE - it will be easier to manage git outside of the container for security purposes...
+# Configure git config so I can at least commit things
+# Should push/pull outside of a container for sure
+git config --global user.email "cameron.rutherford@me.com"
+git config --global user.name "CameronRutherford"
 
 set +x

@@ -1,17 +1,21 @@
 ---
 title: "Resume"
-filters:
-    - include-code-files
 format:
     html:
         default: true
         toc: true
         toc-depth: 4
+    pdf:
+        default: true
 ---
 
 ## Resume
 
 TODO
+
+::: {.content-visible when-format="html"}
+
+# This section only appears in HTML!
 
 ## Old GitHub resume
 
@@ -20,4 +24,15 @@ Here is my old GitHub resume if you want to see what it used to look like - look
 ::: {.callout-caution collapse="true"}
 ## Click to expand and view my old resume!
 {{< include old_resume.qmd >}}
+:::
+
+## Git Integration
+
+Similar to the main README that is generted my `index.qmd`, I keep a pdf uploaded to git automatically. This is copied into the right place through the `post-render` stage of quarto, you just have to remember to commit the changes to git:
+
+```{.YAML include="../_quarto.yml" start-line=10 end-line=12}
+```
+
+TODO: Write CI pipeline / pre-commit check that ensures that the main README and resume pdf are updated.
+
 :::

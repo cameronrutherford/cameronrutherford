@@ -34,11 +34,18 @@ As you can see in the json devcontainer configuration, there is a script invoked
 ```{.shell include="../../.devcontainer/postCreateCommand.sh"}
 ```
 
+Maybe I could debug the pre-commit config to go into the container, but often I need to be writing more documentation, and so I don't mind waiting for that by writing some things down about the changes I may have just successfully built with.
+
+I also had aliases here for a while, but they moved into the Dockerfile for ease of use.
+
+I used to have aliases configured here, but I
 ## Pre-Commit Configuration
 
 Because of issues installing on Windwos and line endings getting messed up, I installed [pre-commit](https://pre-commit.com/) to fix bugs as they arised.
 
 This is installed in the Dockerfile for you, but you can choose to install this on it's own if you wish to do so without a container. It is especially nice to avoid any platform specific bugs (see [Windows Developer Guide](windows.qmd)).
+
+Note that because of the [postCreateCommand.sh](###postCreateCommand.sh) configuration, pre-commit takes a little to install, and might not be available immediately upon opening a terminal. Similarly, you might need to `. ~/.bashrc` in order to get aliases (which is helpful in not enabling them by default).
 
 ### .pre-commit-config.yml
 
@@ -98,6 +105,65 @@ the file over:
 ```
 
 As you can see, some other configuration is also specified, such as the [HTML theme](https://quarto.org/docs/output-formats/html-themes.html), [navbar config](https://quarto.org/docs/websites/website-navigation.html), and the output dir.
+
+#### Supporting pdf
+
+To support pdfs, you need a TeX installation. Here is a sample error that you get when you do not have this:
+
+```
+No TeX installation was detected.
+
+Please run 'quarto install tinytex' to install TinyTex.
+If you prefer, you may install TexLive or another TeX distribution.
+```
+
+Adding `quarto install tinytex` to the Dockerfile does not fix this (TODO: report this as a bug?), and it is very perplexing why. Instead, I followed the instructions from [Tex Live](https://www.tug.org/texlive/quickinstall.html) and just modified their sample script slightly:
+
+```{.Dockerfile include="../../.devcontainer/Dockerfile" start-line=15 end-line=24}
+```
+
+I could have installed with the [texlive Spack package](https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/texlive/package.py), but why introduce more complication.
+
+#### tlmgr
+
+After installing Tex Live, I then tried rendering for the first time, and got the following error:
+
+```
+Rendering PDF
+running xelatex - 1
+  This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+
+updating tlmgr
+
+updating existing packages
+finding package for tcolorbox.sty
+> 1 package to install
+> installing tcolorbox (1 of 1)
+ERROR: tlmgr returned a non zero status code
+You don't have permission to change the installation in any way,
+specifically, the directory /usr/local/texlive/2023/tlpkg/ is not writable.
+Please run this program as administrator, or contact your local admin.
+tlmgr: An error has occurred. See above messages. Exiting.
+
+
+Stack trace:
+You don't have permission to change the installation in any way,
+specifically, the directory /usr/local/texlive/2023/tlpkg/ is not writable.
+Please run this program as administrator, or contact your local admin.
+tlmgr: An error has occurred. See above messages. Exiting.
+
+    at asErrorEx (file:///quarto-1.4.251/bin/quarto.js:13087:16)
+    at logError (file:///quarto-1.4.251/bin/quarto.js:25798:17)
+    at file:///quarto-1.4.251/bin/quarto.js:110160:13
+    at eventLoopTick (ext:core/01_core.js:181:11)
+```
+
+So, I googled and updated tlmgr in the end with `tlmgr update --self && tlmgr update --all` in the Dockerfile (See [SO Post](https://stackoverflow.com/a/59851436)), as well as a line to install other extensions being used in the project:
+
+```{.Dockerfile include="../../.devcontainer/Dockerfile" start-line=26 end-line=32}
+```
 
 ### Extensions
 

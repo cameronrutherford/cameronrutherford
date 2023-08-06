@@ -8,7 +8,7 @@
 				"quarto.quarto",
 				"sumneko.lua",
 				"ms-azuretools.vscode-docker",
-				"GitHub.vscode-github-actions"
+				"github.vscode-github-actions"
 			]
 		}
 	},

@@ -119,7 +119,7 @@ No Multiplex plugin unfortunately...
 
 ## PNNL Work
 
-![Tech Fest 2023](images/aswu.jpeg){fig-align="center"}
+![Tech Fest 2023](images/TestFest.png){fig-align="center"}
 
 ### ExaGO Internship
 
