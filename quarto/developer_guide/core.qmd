@@ -170,6 +170,8 @@ Unfortunately the first pipeline I tried with pdf backend enabled also needed so
 
 TODO: for now this is disabled as an output format, but needs to be fixed and checks added to pre-commit and CI.
 
+Probably want to pre-build dev-container spec, use that as the base image for the dev-container and quarto and pre-commit pipelines (, and then finally get pre-commit installed into the container)?
+
 ### Extensions
 
 These all are installed manually from the command line, and are not included in
