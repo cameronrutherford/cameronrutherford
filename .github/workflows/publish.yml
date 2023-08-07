@@ -7,7 +7,7 @@ name: Quarto Publish
 
 jobs:
   publish:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     container:
       image: ghcr.io/cameronrutherford/quarto-ci:latest
       credentials:
