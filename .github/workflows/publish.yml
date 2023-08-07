@@ -8,6 +8,8 @@ name: Quarto Publish
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: ghcr.io/cameronrutherford/quarto-ci:latest
       credentials:
