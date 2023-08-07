@@ -6,21 +6,14 @@ on:
 name: Quarto Publish
 
 jobs:
-  build-deploy:
-    # Use container build in CI
-    runs-on: ghcr.io/cameronrutherford/quarto-ci:latest
-    permissions:
-      contents: write
+  publish:
+    runs-on: ubuntu-18.04
+    container:
+      image: ghcr.io/cameronrutherford/quarto-ci:latest
+      credentials:
+        username: cameronrutherford
+        password: ${{ secrets.GHCR_TOKEN }}
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: publish
+        shell: bash
+        run: quarto publish gh-pages
