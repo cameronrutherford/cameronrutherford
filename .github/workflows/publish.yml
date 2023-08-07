@@ -10,17 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    container:
-      image: ghcr.io/cameronrutherford/quarto-ci:latest
-      credentials:
-        username: cameronrutherford
-        password: ${{ secrets.GHCR_TOKEN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
