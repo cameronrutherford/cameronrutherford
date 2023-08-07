@@ -35,6 +35,7 @@ RUN tlmgr update --self && tlmgr update --all && \
 RUN echo "alias ll='ls -alF'" >> /home/vscode/.bash_aliases && \
         echo "alias gg='git log --graph --oneline --color --all'" >> /home/vscode/.bash_aliases && \
         echo "alias gc='git commit'" >> /home/vscode/.bash_aliases && \
+        echo "alias gck='git checkout'" >> /home/vscode/.bash_aliases && \
         echo "alias gs='git status'" >> /home/vscode/.bash_aliases && \
         echo "alias ga='git add'" >> /home/vscode/.bash_aliases && \
         echo "alias gd='git diff'" >> /home/vscode/.bash_aliases && \
