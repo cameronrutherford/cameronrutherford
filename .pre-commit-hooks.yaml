@@ -1,4 +1,0 @@
-- id: custom-docker-quarto-test
-  name: hostname in container (and a test naem)
-  language: docker_image
-  entry: ghcr.io/cameronrutherford/quarto-ci:latest hostname
