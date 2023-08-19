@@ -1,3 +1,7 @@
+# If you want to use the ghcr version of this container pre-built:
+# "image": "ghcr.io/cameronrutherford/quarto-ci:latest",
+# instead of the entire "build" entry in the devcontainer.json
+
 # Lets use the latest Python (3.11 was latest at the time)
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
