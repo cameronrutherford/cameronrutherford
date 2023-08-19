@@ -1,4 +1,4 @@
-name: 'Test Quarto Render'
+name: 'Build Container'
 on:
   pull_request:
     paths:

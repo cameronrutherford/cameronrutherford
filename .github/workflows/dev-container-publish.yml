@@ -22,12 +22,9 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and Publish Dev Container Image
+      - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/cameronrutherford/quarto-ci
-          cacheFrom: ghcr.io/cameronrutherford/quarto-ci
           # Make sure doc can render in container before pushing
-          push: always
-          # Don't run anything here since we assume it works
-          # runCmd: quarto render
+          runCmd: quarto render
