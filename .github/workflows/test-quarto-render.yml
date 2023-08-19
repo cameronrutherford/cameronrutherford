@@ -1,9 +1,9 @@
-name: 'Test Quarto Render'
+name: 'GHCR Prebuit Dev-Container'
 on:
   pull_request:
 
 jobs:
-  container-test-job:
+  quarto-render:
     runs-on: ubuntu-latest
     container:
         image: ghcr.io/cameronrutherford/quarto-ci
