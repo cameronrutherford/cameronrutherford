@@ -27,8 +27,7 @@ website:
     search: true
     left:
       - text: "Resume"
-        menu:
-          - quarto/resume.qmd
+        file: quarto/resume.qmd
       - text: "Developer Guide"
         menu:
           - quarto/developer_guide/core.qmd
