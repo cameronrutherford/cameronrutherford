@@ -1,6 +1,9 @@
 name: 'GHCR Prebuit Dev-Container'
 on:
   pull_request:
+    paths:
+      # Don't run when container is changed and we need to rebuild env
+      - '!.devcontainer/**'
 
 jobs:
   quarto-render:

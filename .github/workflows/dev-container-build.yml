@@ -2,6 +2,7 @@ name: 'Test Quarto Render w/ Container Build'
 on:
   pull_request:
     paths:
+      # Only runs when container config changes
       - .devcontainer/**
 
 jobs:
@@ -16,6 +17,5 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/cameronrutherford/quarto-ci
-          cacheFrom: ghcr.io/cameronrutherford/quarto-ci
           push: never
           runCmd: quarto render

@@ -1,6 +1,10 @@
 # If you want to use the ghcr version of this container pre-built:
-# "image": "ghcr.io/cameronrutherford/quarto-ci:latest",
-# instead of the entire "build" entry in the devcontainer.json
+#   "image": "ghcr.io/cameronrutherford/quarto-ci:latest",
+# If you want to re-build locally:
+#   "build": {
+#		"dockerfile": "Dockerfile",
+#		"context": ".."
+#	},
 
 # Lets use the latest Python (3.11 was latest at the time)
 # https://github.com/devcontainers/images/tree/main/src/python
@@ -21,12 +25,20 @@ RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-
 ENV PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
 WORKDIR /
 
+# Install extras with apt
+RUN apt update && \
+    apt install -y fontconfig && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
 # Also install any other extensions that are used - this is trial and error as far as I can tell
 RUN tlmgr update --self --all && \
     tlmgr install tcolorbox \
                   environ \
                   tikzfill \
+                  titlesec \
+                  xstring \
                   pdfcol \
                   fontawesome5
 
@@ -36,11 +48,11 @@ RUN pip install pre-commit
 # Copy git contents over into the workdir
 # This dir relates to the devcontainer.json
 WORKDIR /home/app
-COPY . .
+COPY .pre-commit-config.yaml .
 
 # Install the deps and the hooks in the repo
 RUN git init .
-RUN pre-commit install-hooks
+RUN pre-commit install --install-hooks
 WORKDIR /
 
 # Configure aliases with a heredoc

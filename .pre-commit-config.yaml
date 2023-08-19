@@ -15,8 +15,3 @@ repos:
       args: ['--maxkb=500']
     - id: no-commit-to-branch
       args: [--branch, staging]
-
-#-   repo: https://github.com/cameronrutherford/cameronrutherford
-#    rev: pre-commit-dev
-#    hooks:
-#    -   id: custom-docker-quarto-test
