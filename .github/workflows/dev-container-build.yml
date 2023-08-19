@@ -1,4 +1,4 @@
-name: 'Test Quarto Render'
+name: 'Test Quarto Render w/ Container Build'
 on:
   pull_request:
     paths:
@@ -18,5 +18,4 @@ jobs:
           imageName: ghcr.io/cameronrutherford/quarto-ci
           cacheFrom: ghcr.io/cameronrutherford/quarto-ci
           push: never
-          # Make sure doc can render in container before we can pass build
           runCmd: quarto render
