@@ -1,6 +1,9 @@
-name: 'Build Container'
+name: 'Publish Container'
 on:
-  pull_request:
+  # Hoping this also runs when PRs are merged...
+  push:
+    branches:
+      - main
     paths:
       - .devcontainer/**
 
