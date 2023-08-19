@@ -16,7 +16,5 @@ jobs:
       - name: Build Dev Container and Quarto Render
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/cameronrutherford/quarto-ci
-          cacheFrom: ghcr.io/cameronrutherford/quarto-ci
           push: never
           runCmd: quarto render
