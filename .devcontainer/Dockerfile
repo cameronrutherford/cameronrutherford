@@ -25,12 +25,20 @@ RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-
 ENV PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
 WORKDIR /
 
+# Install extras with apt
+RUN apt update && \
+    apt install -y fontconfig && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
 # Also install any other extensions that are used - this is trial and error as far as I can tell
 RUN tlmgr update --self --all && \
     tlmgr install tcolorbox \
                   environ \
                   tikzfill \
+                  titlesec \
+                  xstring \
                   pdfcol \
                   fontawesome5
 
