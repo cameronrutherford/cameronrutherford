@@ -26,5 +26,6 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/cameronrutherford/quarto-ci
+          cacheFrom: ghcr.io/cameronrutherford/quarto-ci
           # Make sure doc can render in container before pushing
           runCmd: quarto render
