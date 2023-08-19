@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: "HPC Software Engineer"
 filters:
     - include-code-files
 format:
@@ -44,39 +44,47 @@ skills:
 
 ### Software Engineer HPC/ML/Q, Pacific Northwest National Laboratory (Virtual): 2020 - Present
 
-* test
-* test
-* test
+- test
+- test
+- test
 
-### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019-2020
+### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
 
-* test
-* test
-* test
+- test
+- test
+- test
 
-### IT Intern, Keysight Technologies (Colorado Springs, CO): Summer 2018
+### IT Intern, Keysight Technologies (Colorado Springs, CO): 2018
 
-* test
-* test
-* test
+- Deployed and Tested
+
+### Mathematics Tutor / Calculus III Grader, Whitworth University (Spokane, WA): 2017, 2019
+### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
+
+# Publications
+
+# Conferences
 
 # Education
 
-### Bachelor of Mathematics and Computer Science: May 2020
+### Whitworth University, B.S. Mathematics and Computer Science: G.P.A 3.9/4.0
 
-Whitworth University, Summa Cum Laude, Outstanding Mathematician
+- Summa Cum Laude, Outstanding Mathematics Major 2020
+- ICPC Pacific Northwest Eastern Washington Site Winner 2018
+- Howard R. Gage Memorial Scholarship 2017, 2018, 2019
 
-# Extra
+# Other Activities
 
-### Whitworth Chess Club President: 2019-2020
-
-### Whitworth Men's Basketball Team: 2016-2019
+### Sustainable Horizons Institute HPC Mentor: 2022, 2023
+### Quantum Information Science / HPC STEM Mentor: 2022 - Present
+### Whitworth Chess Club President: 2019 - 2020
+### Pine Codes Hackathon Winner: 2019
+### SpokAnimal Shelter Volunteer: 2019
+### Whitworth Men's Basketball Team: 2016 - 2019
 
 :::
 
 ::: {.content-visible when-format="html"}
-
-### This section only appears in HTML!
 
 ## Resume
 
