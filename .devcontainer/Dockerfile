@@ -44,7 +44,7 @@ COPY .pre-commit-config.yaml .
 
 # Install the deps and the hooks in the repo
 RUN git init .
-RUN pre-commit install-hooks
+RUN pre-commit install --install-hooks
 WORKDIR /
 
 # Configure aliases with a heredoc
