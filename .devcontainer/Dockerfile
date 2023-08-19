@@ -2,44 +2,54 @@
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
-# Consider using more sophisticated dep management platform as this gets worse
-# Despite what the VSCode docs say, pipx doesn't work
-RUN pip3 install pre-commit
-
 # Install quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
 RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
-# I don't really like how this works, but it works...
 ENV PATH=$PATH:/quarto-1.4.251/bin
 
-# Install Tex Live
+# Install Tex Live - this isn't 100% reproducible, but the build will always work and update...
 RUN wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 RUN zcat < install-tl-unx.tar.gz | tar xf -
-# Want to just install the smallest version
-RUN cd install-tl-20230806 && \
-    perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
-# Another PATH modification never hurt noone
+RUN mv $(find . -maxdepth 1 -type d -regex ".*install-tl.*") ./install-tlmgr
+WORKDIR /install-tlmgr
+RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
+# 2023 might break first
 ENV PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+WORKDIR /
 
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
 # Also install any other extensions that are used - this is trial and error as far as I can tell
-RUN tlmgr update --self && tlmgr update --all && \
-        tlmgr install tcolorbox && \
-        tlmgr install environ && \
-        tlmgr install tikzfill && \
-        tlmgr install pdfcol && \
-        tlmgr install fontawesome5
+RUN tlmgr update --self --all && \
+    tlmgr install tcolorbox \
+                  environ \
+                  tikzfill \
+                  pdfcol \
+                  fontawesome5
 
-# Configure aliases. This used to be done in the postCreateCommand
-# Having it here ensures that aliases are pre-loaded into the container
-RUN echo "alias ll='ls -alF'" >> /home/vscode/.bash_aliases && \
-        echo "alias gg='git log --graph --oneline --color --all'" >> /home/vscode/.bash_aliases && \
-        echo "alias gc='git commit'" >> /home/vscode/.bash_aliases && \
-        echo "alias gck='git checkout'" >> /home/vscode/.bash_aliases && \
-        echo "alias gs='git status'" >> /home/vscode/.bash_aliases && \
-        echo "alias ga='git add'" >> /home/vscode/.bash_aliases && \
-        echo "alias gd='git diff'" >> /home/vscode/.bash_aliases && \
-        echo "alias gf='git fetch --all'" >> /home/vscode/.bash_aliases && \
-        echo "alias gp='git push'" >> /home/vscode/.bash_aliases && \
-        echo "alias grs='git reset --hard'" >> /home/vscode/.bash_aliases && \
-        echo "alias qrp='quarto render && quarto preview'" >> /home/vscode/.bash_aliases
+# Install pre-commit CLI
+RUN pip install pre-commit
+
+# Copy git contents over into the workdir
+# This dir relates to the devcontainer.json
+WORKDIR /home/app
+COPY . .
+
+# Install the deps and the hooks in the repo
+RUN git init .
+RUN pre-commit install-hooks
+WORKDIR /
+
+# Configure aliases with a heredoc
+COPY <<EOF /home/vscode/.bash_aliases
+alias ll='ls -alF'
+alias gg='git log --graph --oneline --color --all'
+alias gc='git commit'
+alias gck='git checkout'
+alias gs='git status'
+alias ga='git add'
+alias gd='git diff'
+alias gf='git fetch --all'
+alias gp='git push'
+alias grs='git reset --hard'
+alias qrp='quarto render && quarto preview'
+EOF
