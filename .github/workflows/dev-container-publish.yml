@@ -1,6 +1,5 @@
 name: 'Publish Container'
 on:
-  # Hoping this also runs when PRs are merged...
   push:
     branches:
       - main
@@ -27,7 +26,4 @@ jobs:
         with:
           imageName: ghcr.io/cameronrutherford/quarto-ci
           cacheFrom: ghcr.io/cameronrutherford/quarto-ci
-          # Make sure doc can render in container before pushing
           push: always
-          # Don't run anything here since we assume it works
-          # runCmd: quarto render

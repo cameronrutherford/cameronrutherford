@@ -1,5 +1,6 @@
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
     - id: trailing-whitespace
@@ -14,3 +15,8 @@ repos:
       args: ['--maxkb=500']
     - id: no-commit-to-branch
       args: [--branch, staging]
+
+#-   repo: https://github.com/cameronrutherford/cameronrutherford
+#    rev: pre-commit-dev
+#    hooks:
+#    -   id: custom-docker-quarto-test
