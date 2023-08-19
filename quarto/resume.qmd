@@ -28,6 +28,8 @@ Here is my old GitHub resume if you want to see what it used to look like - look
 {{< include old_resume.qmd >}}
 :::
 
+I saw this in a talk about plain text, but I think the Australian flag used to be there. Since MSFT formatting screws with how this displays, I decided it was a feature, not a bug, and will not be fixing it.
+
 ## Git Integration
 
 Similar to the main README that is generted my `index.qmd`, I keep a pdf uploaded to git automatically. This is copied into the right place through the `post-render` stage of quarto, you just have to remember to commit the changes to git:

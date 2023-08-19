@@ -7,6 +7,7 @@ on:
 
 jobs:
   pre-commit:
+    # Hopefully the quarto checks do not overload pre-commit here
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
