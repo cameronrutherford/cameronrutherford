@@ -1,8 +1,5 @@
 {
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
+	"image": "ghcr.io/cameronrutherford/quarto-ci:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
