@@ -2,6 +2,7 @@ name: 'Test Quarto Render w/ Container Build'
 on:
   pull_request:
     paths:
+      # Only runs when container config changes
       - .devcontainer/**
 
 jobs:

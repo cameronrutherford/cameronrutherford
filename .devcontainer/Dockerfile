@@ -40,7 +40,7 @@ RUN pip install pre-commit
 # Copy git contents over into the workdir
 # This dir relates to the devcontainer.json
 WORKDIR /home/app
-COPY . .
+COPY .pre-commit-config.yaml .
 
 # Install the deps and the hooks in the repo
 RUN git init .
