@@ -1,5 +1,4 @@
 ---
-title: "HPC Software Engineer"
 filters:
     - include-code-files
 format:
@@ -11,8 +10,12 @@ format:
        template: template.tex
        font: DejaVu Sans
        number-sections: false
+
+title: "HPC/ML/Q Research Software Engineer"
 name: Cameron Rutherford
-summary: High Performance Computing Research Software Engineer with over 3 years of experience deploying, testing and optimizing scientific software and systems.
+
+summary: High Performance Computing (HPC) / Machine Learning (ML) / Quantum (Q) Research Software Engineer (RSE) with over 3 years of experience deploying, testing, optimizing and teaching people about scientific software and computing systems. I have worked on a wide variety of projects during my time at "the lab", and have had my code run on everywhere from the largest supercomputer in the world, to a novel quantum computer.
+
 contact:
     location: Manhattan, NY
     phone: (509) 218-1818
@@ -20,22 +23,20 @@ contact:
 portfolio:
     linkedin: \href{https://www.linkedin.com/in/robert-c-rutherford/}{Robert C Rutherford}
     github: \href{https://github.com/cameronrutherford}{cameronrutherford}
+
 skills:
-    - Languages:
-        - Python
-        - C, C++
-        - Linux, bash
-        - Qiskit, QASM, Q#
-    - Development Tools:
-        - Git, pre-commit
-        - VSCode / JupyterLab
-        - GitHub / GitLab pipelines
-        - Docker, Conda, Spack, Poetry
-        - Quarto, Sphinx, LaTeX
-    - Frameworks:
-        - Quarto / nbdev
-        - Distributed ML / Parallel Computing
-        - Pytorch, LLAMA, AWS
+    - C / C++17:
+        - CMake, Spack, CUDA / HIP
+        - RAJA + Umpire / Kokkos
+        - MPI, pybind11, toml11, spdlog
+    - Python:
+        - Pytorch, JAX, Distributed ML
+        - conda, poetry, mamba
+        - quarto, nbdev, qiskit
+    - DevOps:
+        - Docker, ghcr, S3
+        - Singularity/Apptainer, charliecloud, podman
+        - GitHub, GitLab, pre-commit
 ---
 
 ::: {.content-visible when-format="pdf"}
@@ -49,27 +50,32 @@ skills:
 - test
 
 ### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
-
-- test
-- test
-- test
-
-### IT Intern, Keysight Technologies (Colorado Springs, CO): 2018
-
-- Deployed and Tested
-
-### Mathematics Tutor / Calculus III Grader, Whitworth University (Spokane, WA): 2017, 2019
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+### Calculus III Grader / Mathematics Tutor, Whitworth University (Spokane, WA): 2017, 2019
 ### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
 
 # Publications
 
+- S. Abhyankar, S. Peles, **R. Rutherford**, A. Mancinelli, **_Evaluation of AC optimal power flow on graphical processing units._** (IEEE PESGM 2021)
+- S. Peles, M. Alam, A. J. Mancinelli, K. Perumalla, **R. C. Rutherford**, J. Ryan, C. G. Petra, **_Porting the Nonlinear Optimization Library HiOp to Accelerator-Based Hardware Architectures_** (arxiv 2021)
+
 # Conferences
+
+### Practice and Experience in Advanced Research Computing (PEARC): 2023
+### Pacific Northwest National Laboratory (PNNL) Tech Fest: 2021-2023
+### Energy Exascale Earth System Model (E3SM) Annual Meeting: 2023
+### Sustainable Tools Ecosystem Project (STEP) East Coast Town Hall: 2023
+### Exascale Computing Project (ECP) Annual Meeting: 2021-2023
+### Pacific Northwest National Laboratory (PNNL) Innovation Summit: 2022
+### Co-Design Centre for Quantum Advantage (C2QA) Annual Meeting: 2022
 
 # Education
 
+### Scientist & Engineer Rising Leader Learning Journey: 2023
+### Cyber Security & National Security Seminar Series, PNNL: 2021 - 2022
 ### Whitworth University, B.S. Mathematics and Computer Science: G.P.A 3.9/4.0
 
-- Summa Cum Laude, Outstanding Mathematics Major 2020
+- Outstanding Mathematics Major 2020
 - ICPC Pacific Northwest Eastern Washington Site Winner 2018
 - Howard R. Gage Memorial Scholarship 2017, 2018, 2019
 
