@@ -11,8 +11,8 @@ format:
        font: DejaVu Sans
        number-sections: false
 
-title: "HPC/ML/Q Research Software Engineer"
-name: Cameron Rutherford
+title: HPC/ML/Q Research Software Engineer
+name: (Robert) Cameron Rutherford
 
 summary: High Performance Computing (HPC) / Machine Learning (ML) / Quantum (Q) Research Software Engineer (RSE) with over 3 years of experience deploying, testing, optimizing and teaching people about scientific software and computing systems. I have worked on a wide variety of projects during my time at "the lab", and have had my code run on everywhere from the largest supercomputer in the world, to a novel quantum computer.
 
@@ -45,9 +45,11 @@ skills:
 
 ### Software Engineer HPC/ML/Q, Pacific Northwest National Laboratory (Virtual): 2020 - Present
 
-- test
-- test
-- test
+- Lead Software Stack for ExaSGD project through key Frontiner deployment to 8k nodes and 54k GPUs
+- MLOps internal offering lead developing containerisation and best practices community
+- On-boarding and support experience for both HPC Clusters and IBMQ systems
+- Deployed ML software stack for various projects, and assisted in building continuous integration pipelines
+- Lead Privacy Preserving ML project to explore FHE, FL, DP and SMC
 
 ### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
 ### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
