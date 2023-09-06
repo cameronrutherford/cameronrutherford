@@ -117,6 +117,8 @@ $endif$
 
 \section{Skills}
 \begin{tabular}{*{$skills/length$}{c}}
+    \newcounter{skillCounter}
+    \setcounter{skillCounter}{0}
     $for(skills)$
         $for(skills/pairs)$
             \begin{tabular}[t]{l}
@@ -125,6 +127,11 @@ $endif$
                     $it$ $sep$\\
                 $endfor$
             \end{tabular}
+            \stepcounter{skillCounter}
+            \ifnum\value{skillCounter}=3
+                \\ % Add a newline after every 3 tables
+                \setcounter{skillCounter}{0} % Reset the counter
+            \fi
         $endfor$
     $endfor$
 \end{tabular}
