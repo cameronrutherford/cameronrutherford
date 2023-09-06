@@ -1,3 +1,8 @@
+# syntax=docker/dockerfile:1.3-labs
+# Lets use the latest Python (3.11 was latest at the time)
+# https://github.com/devcontainers/images/tree/main/src/python
+
+FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 # If you want to use the ghcr version of this container pre-built:
 #   "image": "ghcr.io/cameronrutherford/quarto-ci:latest",
 # If you want to re-build locally:
@@ -5,10 +10,6 @@
 #		"dockerfile": "Dockerfile",
 #		"context": ".."
 #	},
-
-# Lets use the latest Python (3.11 was latest at the time)
-# https://github.com/devcontainers/images/tree/main/src/python
-FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
 # Install quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
@@ -56,16 +57,17 @@ RUN pre-commit install --install-hooks
 WORKDIR /
 
 # Configure aliases with a heredoc
-COPY <<EOF /home/vscode/.bash_aliases
-alias ll='ls -alF'
-alias gg='git log --graph --oneline --color --all'
-alias gc='git commit'
-alias gck='git checkout'
-alias gs='git status'
-alias ga='git add'
-alias gd='git diff'
-alias gf='git fetch --all'
-alias gp='git push'
-alias grs='git reset --hard'
-alias qrp='quarto render && quarto preview'
-EOF
+COPY <<-"end_aliases" /home/vscode/.bash_aliases
+#!/bin/bash
+alias ll="ls -alF"
+alias gg="git log --graph --oneline --color --all"
+alias gc="git commit"
+alias gck="git checkout"
+alias gs="git status"
+alias ga="git add"
+alias gd="git diff"
+alias gf="git fetch --all"
+alias gp="git push"
+alias grs="git reset --hard"
+alias qrp="quarto render && quarto preview"
+end_aliases
