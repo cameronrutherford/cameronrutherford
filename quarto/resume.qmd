@@ -14,7 +14,7 @@ format:
 title: HPC/ML/Q Research Software Engineer
 name: (Robert) Cameron Rutherford
 
-summary: High Performance Computing (HPC) / Machine Learning (ML) / Quantum (Q) Research Software Engineer (RSE) with over 3 years of experience deploying, testing, optimizing and teaching people about scientific software and computing systems. I have worked on a wide variety of projects during my time at "the lab", and have had my code run on everywhere from the largest supercomputer in the world, to a novel quantum computer.
+summary: Experienced HPC/ML/Q Research Software Engineer with 3+ years of expertise in deploying, optimizing, and teaching scientific software on diverse computing systems, including the world's largest supercomputers and quantum computers. Proven track record in end-to-end solution delivery, project leadership, and effective team coordination, while adept at managing social engineering challenges in software development processes.
 
 contact:
     location: Manhattan, NY
@@ -26,30 +26,69 @@ portfolio:
 
 skills:
     - C / C++17:
-        - CMake, Spack, CUDA / HIP
-        - RAJA + Umpire / Kokkos
-        - MPI, pybind11, toml11, spdlog
+        - CUDA, HIP, MPI, OpenMP
+        - CMake, Spack, pybind11
+        - google [test/benchmark]
+        - Performance Optimization
     - Python:
-        - Pytorch, JAX, Distributed ML
-        - conda, poetry, mamba
-        - quarto, nbdev, qiskit
+        - torch, Tensorflow, pyg
+        - JAX, mpi4py, lightning
+        - conda/mamba, poetry
+        - qiskit, pytest, black
     - DevOps:
-        - Docker, ghcr, S3
-        - Singularity/Apptainer, charliecloud, podman
-        - GitHub, GitLab, pre-commit
+        - GitHub/GitLab CI/CD, git flow
+        - k8s, ansible, SLURM/LSF
+        - Containerization, MLOps
+        - Quality Assurance, Agile
+    - IDEs:
+        - JupyterLab, VSCode, vim
+        - tmux, google collab
+        - dev-containers, jetbrains
+        - IDE extensions, GUI tools
+    - Documentation:
+        - Tutorial Driven Dev.
+        - .qmd, obsidian, LaTeX
+        - RevealJS, docx, binder
+        - Git[Hub/Lab] pages
+    - Other:
+        - Fully Homomorphic Encryption
+        - Secure Multi-Party Computation
+        - FL, DP, SSS, Cryptography
+        - Rust, Go, Fortran
 ---
 
 ::: {.content-visible when-format="pdf"}
 
 # Experience
 
-### Software Engineer HPC/ML/Q, Pacific Northwest National Laboratory (Virtual): 2020 - Present
+### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
 
-- Lead Software Stack for ExaSGD project through key Frontiner deployment to 8k nodes and 54k GPUs
+- Lead Software Stack for ExaSGD project to Frontiner deployment (AMD - current #1)
+- Facilitated deployment of ExaGO application to the cloud with ChatGPT integration
+- Lead software development of CUDA targetted Sparse GPU solver tailored for use case with HiOp
 - MLOps internal offering lead developing containerisation and best practices community
-- On-boarding and support experience for both HPC Clusters and IBMQ systems
-- Deployed ML software stack for various projects, and assisted in building continuous integration pipelines
-- Lead Privacy Preserving ML project to explore FHE, FL, DP and SMC
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+
+### Software Engineer I HPC/ML/Q, PNNL (Virtual): 2021 - 2022
+
+- Lead Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+- Transitioned and successfully lead ExaSGD software stack through development of AMD/HIP support
+- Delivered internal tutorials on distributed machine learning with JAX and other internal MLOps offerings
+- Lead tutorials on using Qiskit, and trained other staff in Quantum through internal boot camp
+
+### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
+
+- Worked on open-source MLFlow offering to save lab $200k per project on WandB subscription
+- Deployed ExaSGD software to Summit supercomputer (NVIDIA - former world #1)
+- Learned Quantum Computing basics to enable C2QA project research on IMBQ platform
+- Worked in HPC support centre to deploy, debug and test various ML software stacks
+
+### Tech Student 4 Optimization and Control Group, PNNL (Virtual): 2020
+
+- Worked on RAJA linear algebra kernel development within HiOp for interface with ExaGO
+- Learned CMake with Spack and implemented testing and packaging for ExaSGD software
+- Profiled codebase on different GPU architectures and analyzed performance data
+- Taught other developers about RAJA and CMake and delivered key kernels for project success
 
 ### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
 ### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
