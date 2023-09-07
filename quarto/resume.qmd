@@ -63,7 +63,7 @@ skills:
 
 ### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
 
-- Led Software Stack for ExaSGD project to Frontiner deployment (AMD - current #1)
+- Led Software Stack for ExaSGD project to Frontiner deployment (AMD based - current world #1)
 - Facilitated deployment of ExaGO application to the cloud with ChatGPT integration
 - Led software development of CUDA targetted Sparse GPU solver tailored for use case with HiOp
 - MLOps internal offering leader developing containerisation and best practices community
@@ -79,8 +79,8 @@ skills:
 ### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
 
 - Worked on open-source MLFlow offering to save lab $200k per project on WandB subscription
-- Deployed ExaSGD software to Summit supercomputer (NVIDIA - former world #1)
-- Learned Quantum Computing basics to enable C2QA project research on IMBQ platform
+- Deployed ExaSGD software to Summit supercomputer (NVIDIA based - former world #1)
+- Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
 - Worked in HPC support centre to deploy, debug and test various ML software stacks
 
 ### Tech Student 4 Optimization and Control Group, PNNL (Virtual): 2020
