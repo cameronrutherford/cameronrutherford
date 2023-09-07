@@ -63,18 +63,18 @@ skills:
 
 ### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
 
-- Lead Software Stack for ExaSGD project to Frontiner deployment (AMD - current #1)
+- Led Software Stack for ExaSGD project to Frontiner deployment (AMD - current #1)
 - Facilitated deployment of ExaGO application to the cloud with ChatGPT integration
-- Lead software development of CUDA targetted Sparse GPU solver tailored for use case with HiOp
-- MLOps internal offering lead developing containerisation and best practices community
+- Led software development of CUDA targetted Sparse GPU solver tailored for use case with HiOp
+- MLOps internal offering leader developing containerisation and best practices community
 - Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
 
 ### Software Engineer I HPC/ML/Q, PNNL (Virtual): 2021 - 2022
 
-- Lead Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
-- Transitioned and successfully lead ExaSGD software stack through development of AMD/HIP support
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+- Transitioned and successfully led ExaSGD software stack through development of AMD/HIP support
 - Delivered internal tutorials on distributed machine learning with JAX and other internal MLOps offerings
-- Lead tutorials on using Qiskit, and trained other staff in Quantum through internal boot camp
+- Led tutorials on using Qiskit, and trained other staff in Quantum through internal boot camp
 
 ### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
 
