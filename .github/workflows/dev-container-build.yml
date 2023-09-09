@@ -3,7 +3,7 @@ on:
   pull_request:
     paths:
       # Only runs when container config changes
-      - .devcontainer/**
+      - .devcontainer/dev-build/**
 
 jobs:
   build:
@@ -13,9 +13,18 @@ jobs:
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
 
-      - name: Build Dev Container and Quarto Render
-        uses: devcontainers/ci@v0.3
+      # https://github.com/devcontainers/ci/issues/212
+      # Have to do this manually becuase of issue with subfolders
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          imageName: ghcr.io/cameronrutherford/quarto-ci
-          push: never
-          runCmd: quarto render
+          node-version: 18
+
+      - name: Install devcontainer CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Build & start dev container
+        run: devcontainer up --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
+
+      - name: Quartor render
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render

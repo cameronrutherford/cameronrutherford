@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - .devcontainer/**
+      - .devcontainer/dev-build/**
 
 jobs:
   build:
@@ -21,9 +21,15 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and Publish Dev Container Image
-        uses: devcontainers/ci@v0.3
+      # https://github.com/devcontainers/ci/issues/212
+      # Have to do this manually becuase of issue with subfolders
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          imageName: ghcr.io/cameronrutherford/quarto-ci
-          cacheFrom: ghcr.io/cameronrutherford/quarto-ci
-          push: always
+          node-version: 18
+
+      - name: Install devcontainer CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Build and push devcontainer
+        run: devcontainer build --push true --image-name ghcr.io/cameronrutherford/quarto-ci --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
