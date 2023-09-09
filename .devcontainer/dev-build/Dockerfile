@@ -1,15 +1,8 @@
 # syntax=docker/dockerfile:1.3-labs
+# ^ Need this for syntax specific to heredoc aliases
 # Lets use the latest Python (3.11 was latest at the time)
 # https://github.com/devcontainers/images/tree/main/src/python
-
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
-# If you want to use the ghcr version of this container pre-built:
-#   "image": "ghcr.io/cameronrutherford/quarto-ci:latest",
-# If you want to re-build locally:
-#   "build": {
-#		"dockerfile": "Dockerfile",
-#		"context": ".."
-#	},
 
 # Install quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
