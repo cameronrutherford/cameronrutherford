@@ -21,20 +21,24 @@ quarto render && quarto preview
 This assumes that Quarto is installed, or you are running in the dev container.
 :::
 
-# Output Formats
+# Website Config
 
-As you can see in the sidebar, this is also rendered into raw [GitHub Flavored
-Markdown](https://quarto.org/docs/output-formats/gfm.html) with Quarto.
-
-This is configured in the top of this file's source code. Other output formats
-are used for other files in this repository. In order to ensure the main GitHub
-`README.md` has the correct file, we specify a `post-render` stage that copies
-the file over:
+Here the the main YAML config for the site:
 
 ```{.YAML include="../_quarto.yml"}
 ```
 
 As you can see, some other configuration is also specified, such as the [HTML theme](https://quarto.org/docs/output-formats/html-themes.html), [navbar config](https://quarto.org/docs/websites/website-navigation.html), and the output dir.
+
+# Output Formats
+
+## RevealJS
+
+Most of the presentations are in this format.
+
+## GFM
+
+The main README.md is rendered into gfm and then copied into the right location in git. Check the source file of `index.qmd` for a small easter egg/bugg.
 
 ## PDF
 
