@@ -1,0 +1,54 @@
+---
+title: "Quickstart"
+format:
+    html:
+        default: true
+        toc: true
+        toc-depth: 4
+---
+
+# Documentation Quickstart
+
+Once quarto (and LaTeX) is installed, simply run `quarto render && quarto preview` to rebuild and preview the site locally.
+
+## Quarto Only
+
+You can install [Quarto](https://quarto.org/docs/download/) yourself to just work with the documentation.
+
+## Quarto + Resume
+
+Install [TeX Live](https://tug.org/texlive/) or a TeX distribtion of choice to work with the LaTeX resume output.
+
+# Devcontainer Quickstart
+
+1. Install [Docker](https://www.docker.com/)
+1. Install VSCode and the [Dev Container Extension](https://code.visualstudio.com/docs/devcontainers/containers)
+1. Clone this repository
+1. Open the root folder in the docs-prebuilt container to work with documentation, or the dev-build container to rebuild yourself and develop
+
+# Windows Quickstart
+
+While installing on MacOS seems trivial through installing Docker, working on Windows requires a WSL installation in order to work.
+
+## Install Steps
+
+You have to jump through a few hoops to install Docker:
+
+1. https://learn.microsoft.com/en-gb/windows/wsl/install
+    - Install WSL and a linux Distribution to run containers in
+1. https://www.docker.com/
+    - Install Docker, and create an account for personal use
+1. https://code.visualstudio.com/blogs/2020/07/01/containers-wsl
+    - Follow remaining steps in this Guide
+
+## Bugs
+
+### Dev-Container / VSCode
+
+1. I personally had some quite mysterious bugs that were happening as a result of my storage being almost full. Cleaning that out helped, as well as the occasional restart. Symptoms of this included:
+    - Docker failing to delete an old container. This is worthwhile doing as old containers can take up space
+    - VSCode failing to build a dev-container. There were a variety of errors here - unable to start shell, unable to build container, unable to run on read-only file system...
+
+### File Endings
+
+1. I opened/edited some files with the file line ending in "windows mode", and so that appeared in git. I resolved this by installing and using pre-commit, which enforces specific line endings.

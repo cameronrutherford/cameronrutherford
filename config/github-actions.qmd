@@ -1,0 +1,57 @@
+---
+title: "GitHub Actions"
+filters:
+    - include-code-files
+format:
+    html:
+        default: true
+        toc: true
+        toc-depth: 4
+---
+
+# Build Container
+
+```{.YAML include="../.github/workflows/dev-container-build.yml"}
+```
+
+Inspired from the final example in this [Getting Started](https://github.com/devcontainers/ci/blob/main/docs/github-action.md#getting-started) section from GitHub docs, but later configured to use the CLI manually.
+
+Note that this runs `quarto render` to ensure the container works as intended, functioning as a unit test.
+
+# Test `quarto render`
+
+Since some tests won't need to rebuild the container, this is ran to verify the quarto is still valid. If the container is being rebuilt, this test is already ran within the container build action.
+
+# Publish Container
+
+```{.YAML include="../.github/workflows/dev-container-publish.yml"}
+```
+
+Since this only runs once a PR is merged, it doesn't render as the build is assumed to have passed by this point.
+
+
+# pre-commit
+
+I run pre-commit checks in CI using a GitHub action from [https://github.com/pre-commit/action](https://github.com/pre-commit/action):
+
+```{.YAML include="../.github/workflows/pre-commit.yml"}
+```
+
+# GitHub Pages Configuration
+
+There are many ways to deploy Quarto pages. You can read more about choices in
+[rendering Quarto in CI](https://quarto.org/docs/publishing/ci.html#rendering-for-ci)
+here.
+
+## Initial Config
+
+I ran this initially per [the docs](https://quarto.org/docs/publishing/github-pages.html#publish-action):
+
+```bash
+quarto publish gh-pages
+```
+
+I then added a GitHub action to auto publish based on what is in the repository based on other people's publish actions:
+
+```{.YAML include="../.github/workflows/publish.yml"}
+```

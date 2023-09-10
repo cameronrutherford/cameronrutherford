@@ -5,9 +5,9 @@
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
 # Install quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.251/quarto-1.4.251-linux-amd64.tar.gz
-RUN tar -xvzf quarto-1.4.251-linux-amd64.tar.gz
-ENV PATH=$PATH:/quarto-1.4.251/bin
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.358/quarto-1.4.358-linux-amd64.tar.gz
+RUN tar -xvzf quarto-1.4.358-linux-amd64.tar.gz
+ENV PATH=$PATH:/quarto-1.4.358/bin
 
 # Install Tex Live - this isn't 100% reproducible, but the build will always work and update...
 RUN wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz

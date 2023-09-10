@@ -6,10 +6,9 @@ project:
     - "*.qmd"
     - "*.ipynb"
     # No need to render files in more than one place - this file is just included in another
-    - "!quarto/old_resume.qmd"
+    - "!resume/old_resume.qmd"
   post-render:
     - cp docs/readme.markdowneth README.md
-    - cp docs/quarto/resume.pdf resume.pdf
 
 format:
   html:
@@ -27,15 +26,17 @@ website:
     search: true
     left:
       - text: "Resume"
-        file: quarto/resume.qmd
-      - text: "Developer Guide"
+        file: resume/resume.qmd
+      - text: "Site Configuration"
         menu:
-          - quarto/developer_guide/core.qmd
-          - quarto/developer_guide/windows.qmd
-          - quarto/developer_guide/quarto.qmd
+          - config/devcontainer.qmd
+          - config/github-actions.qmd
+          - config/pre-commit.qmd
+          - config/quickstart.qmd
+          - config/quarto.qmd
       - text: "Presentations"
         menu:
-          - quarto/presentations/stem-engagement/presentation.qmd
+          - presentations/stem-engagement/presentation.qmd
     tools:
       - icon: twitter
         href: https://twitter.com/cam_rutherford_

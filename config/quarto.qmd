@@ -1,0 +1,168 @@
+---
+title: "Quarto"
+filters:
+    - include-code-files
+format:
+    html:
+        default: true
+        toc: true
+        toc-depth: 4
+---
+
+# Workflow
+
+Build and render the project using:
+
+```bash
+quarto render && quarto preview
+```
+
+::: {.callout-tip}
+This assumes that Quarto is installed, or you are running in the dev container.
+:::
+
+# Output Formats
+
+As you can see in the sidebar, this is also rendered into raw [GitHub Flavored
+Markdown](https://quarto.org/docs/output-formats/gfm.html) with Quarto.
+
+This is configured in the top of this file's source code. Other output formats
+are used for other files in this repository. In order to ensure the main GitHub
+`README.md` has the correct file, we specify a `post-render` stage that copies
+the file over:
+
+```{.YAML include="../_quarto.yml"}
+```
+
+As you can see, some other configuration is also specified, such as the [HTML theme](https://quarto.org/docs/output-formats/html-themes.html), [navbar config](https://quarto.org/docs/websites/website-navigation.html), and the output dir.
+
+## PDF
+
+### Font Styles
+
+To view available font names that LaTeX can pick up on, run:
+
+```bash
+fc-list  | cut -d\  -f2-99 | cut -d: -f1 | sort -u
+```
+
+From [https://stackoverflow.com/questions/5109550/how-to-get-a-list-of-all-available-ttf-fonts-with-xetex](https://stackoverflow.com/questions/5109550/how-to-get-a-list-of-all-available-ttf-fonts-with-xetex).
+
+### Installing a Font
+
+This proved too difficult and so TODO for now.
+
+### Supporting LaTeX
+
+To support pdfs, you need a TeX installation. Here is a sample error that you get when you do not have this:
+
+```
+No TeX installation was detected.
+
+Please run 'quarto install tinytex' to install TinyTex.
+If you prefer, you may install TexLive or another TeX distribution.
+```
+
+You could have installed with the [TeXlive Spack package](https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/texlive/package.py), but why introduce more complication - instead the Dockerfile installs per TeXLive install instructions.
+
+### tlmgr
+
+After installing Tex Live, I then tried rendering for the first time, and got the following error:
+
+```
+Rendering PDF
+running xelatex - 1
+  This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+   restricted \write18 enabled.
+  entering extended mode
+
+updating tlmgr
+
+updating existing packages
+finding package for tcolorbox.sty
+> 1 package to install
+> installing tcolorbox (1 of 1)
+ERROR: tlmgr returned a non zero status code
+You don't have permission to change the installation in any way,
+specifically, the directory /usr/local/texlive/2023/tlpkg/ is not writable.
+Please run this program as administrator, or contact your local admin.
+tlmgr: An error has occurred. See above messages. Exiting.
+
+
+Stack trace:
+You don't have permission to change the installation in any way,
+specifically, the directory /usr/local/texlive/2023/tlpkg/ is not writable.
+Please run this program as administrator, or contact your local admin.
+tlmgr: An error has occurred. See above messages. Exiting.
+
+    at asErrorEx (file:///quarto-1.4.251/bin/quarto.js:13087:16)
+    at logError (file:///quarto-1.4.251/bin/quarto.js:25798:17)
+    at file:///quarto-1.4.251/bin/quarto.js:110160:13
+    at eventLoopTick (ext:core/01_core.js:181:11)
+```
+
+So, I googled and updated tlmgr in the end with `tlmgr update --self && tlmgr update --all` in the Dockerfile (See [SO Post](https://stackoverflow.com/a/59851436)), and then had to iteratively add any remaining dependencies.
+
+# Extensions
+
+These all are installed manually from the command line, and are not included in the Dockerfile. This is because the whole extesion ecosystem works through the `_extensions` directory. See [Quarto Extensions](https://quarto.org/docs/extensions/).
+
+To install the first extension, I ran:
+
+```bash
+quarto add --no-prompt quarto-ext/include-code-files
+```
+
+## Extension List
+
+- [`include-code-files`](https://github.com/quarto-ext/include-code-files)
+- [`qrcode`](https://github.com/jmbuhr/quarto-qrcode)
+- [`quarto-confetti`](https://github.com/ArthurData/quarto-confetti)
+
+Note that these are the only project-wide extension installed. Other custom extensions can be installed for individual documents as needed, such as for my [stem engagement presentation](../presentations/stem-engagement/presentation.qmd) where I added a blackboard theme.
+
+# Quarto Misc
+
+::: {.callout-note}
+I included the old github markdown resume in `old_resume.qmd` in the HTML of my main resume using the following quarto snippet:
+
+``` markdown
+{{{< include <file_to_include>.qmd >}}}
+```
+
+Make sure to change to the correct file when copying for your own use.
+:::
+
+::: {.callout-tip collapse="true"}
+Check out the source code for this if you haven't already in the side bar.
+
+In order to render quarto source code without rendering it in a document, you
+have to add another `{ }` to your source code, and use a markdown source comment.
+
+I rendered the note above with this source code:
+
+```` markdown
+``` markdown
+{{{ include <file_to_include>.qmd }}}
+```
+````
+
+Also, you need to vary the number of backticks when starting the markdown block
+compared to the source code you are commenting. I used four `\`` in rednering the
+above source code comment, whereas I only used 3 in the above note
+
+:::
+
+::: {.callout-warning collapse="true"}
+If I keep exaplaining this in markdown, it will be recursive.
+Check out the source code on the right sidebar for this (and other) pages if you
+ have not already. This is also partly the reason you can't self-reference a file
+ and do recursion in quarto.
+:::
+
+::: {.callout-note collapse="true"}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+
+You can also make collabsable sections!
+:::

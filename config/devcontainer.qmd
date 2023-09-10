@@ -1,0 +1,54 @@
+---
+title: "devcontainer"
+filters:
+    - include-code-files
+format:
+    html:
+        default: true
+        toc: true
+        toc-depth: 4
+---
+
+# Configuration
+
+There are two supported devcontainer configurations for the root project ([ref spec](https://docs.github.com/en/enterprise-cloud@latest/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#devcontainerjson)):
+- `.devcontainer/dev-build` - manually rebuild the container on your machines
+- `.devcontainer/docs-prebuilt` - pull CI build image and attach
+
+You can either open the root folder and select one of these two configurations when prompted by VSCode, or open a `.devcontainer` config from a tutorial/blog post if you want to use the custom environment there.
+
+## Codespaces
+
+Since codespaces are naive, they just use the root spec in `.devcontainer`. Because of this, I have copied the prebuilt config into that directory. This shows up as Main, and should be a safe option for developers.
+
+# Dockerfile
+
+For the core docs, I used Python as the base image, and then installed Quarto, TeX, and other dependencies in the Dockerfile:
+
+```{.Dockerfile include="../.devcontainer/dev-build/Dockerfile"}
+```
+
+Note that TeX is installed here, as well as convenient aliases and other tools like pre-commit.
+
+# JSON config
+
+#### Local Build Config
+
+```{.json include="../.devcontainer/dev-build/devcontainer.json"}
+```
+
+#### CI Image Config
+
+```{.json include="../.devcontainer/docs-prebuilt/devcontainer.json"}
+```
+
+You can't quite inherit configurations in devcontainers so this is a little repetitive, but it could be worse.
+
+# postCreateCommand.sh
+
+I use a `postCreateCommand` to run any final configurations inside of the container once it's running:
+
+```{.shell include="../.devcontainer/postCreateCommand.sh"}
+```
+
+The git user is customized to me here for convenience, but you can change this for yourself. As noted in [Quickstart](quickstart.qmd), you will want to do git operations outside of the container still.

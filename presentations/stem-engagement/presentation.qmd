@@ -1,5 +1,5 @@
 ---
-title: "STEM - My Story"
+title: "STEM Background"
 subtitle: "From America to Australia and back again"
 date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
 date: today

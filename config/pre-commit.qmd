@@ -1,0 +1,41 @@
+---
+title: "pre-commit"
+filters:
+    - include-code-files
+format:
+    html:
+        default: true
+        toc: true
+        toc-depth: 4
+---
+
+# Inspiration
+
+Because of issues installing on Windwos and line endings getting messed up, I installed [pre-commit](https://pre-commit.com/) to fix bugs as they arised.
+
+Future features have been added if a need has been presented.
+
+This is installed in the Dockerfile for you, but you can choose to install this on it's own if you wish to do so without a container. It is especially nice to avoid any platform specific bugs (see [Quickstart](quickstart.qmd)), although your IDE can normally do enough to get you by. GitHub actions will also fix errors for you when possible.
+
+# .pre-commit-config.yml
+
+Inspired by https://gdevops.gitlab.io/tuto_git/tools/pre-commit/repos_hooks/repo_pre_commit_hooks/mixed-line-ending/mixed-line-ending.html:
+
+```{.YAML include="../.pre-commit-config.yaml"}
+```
+
+# Usage
+
+Install the hooks:
+
+```bash
+pre-commit install --install-hooks
+```
+
+Then to run manually without needing a `git commit`:
+
+```bash
+pre-commit run --all-files
+```
+
+Otherwise pre-commit checks happen upon each invokation of `git commit`.
