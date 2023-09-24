@@ -1,18 +1,5 @@
 # README
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)
-[![pre-commit
-autofix](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml/badge.svg?event=pull_request)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml)
-[![Publish Quarto GitHub
-Pages](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)
-[![Publish
-Container](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml)
-[![Quarto Render / Container
-Rebuild](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg?event=pull_request)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml)
-
-| Links                                                                                      |
-|--------------------------------------------------------------------------------------------|
-| [HTML README](https://cameronrutherford.github.io/cameronrutherford/index.html)            |
-| [Resume (HTML)](https://cameronrutherford.github.io/cameronrutherford/resume/resume.html)  |
-| [Resume (PDF)](https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf)    |
-| [Quickstart](https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html) |
+| Quick Links | Tech Stack | Pipelines |
+| ---- | ---- | ---- |
+| <p> [HTML README](https://cameronrutherford.github.io/cameronrutherford/index.html) <p> [Resume (HTML)](https://cameronrutherford.github.io/cameronrutherford/resume/resume.html) <p> [Resume (PDF)](https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf) <p> [Quickstart](https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html) | <p> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <p> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <p> [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) | <p> [![pre-commit autofix](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml/badge.svg?event=pull_request)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml) <p> [![Publish Quarto GitHub Pages](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml) <p> [![Publish Container](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml) <p> [![Quarto Render / Container Rebuild](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg?event=pull_request)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml)
