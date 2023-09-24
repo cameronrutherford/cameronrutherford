@@ -1,0 +1,92 @@
+name: 'Quarto Render / Container Rebuild'
+on: [pull_request]
+
+jobs:
+  # JOB to run change detection
+  # This is all to exclude running this when devtcontainer config changes
+  changes:
+    runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    # Set job outputs to values from filter step
+    outputs:
+      devcontainer: ${{ steps.filter.outputs.devcontainer }}
+    steps:
+    # For pull requests it's not necessary to checkout the code
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          devcontainer:
+            - '.devcontainer/dev-build/**'
+
+  # Only run this if no devcontainer changes detected...
+  no-build-quarto-render:
+    needs: changes
+    if: ${{ needs.changes.outputs.devcontainer == 'false' }}
+    runs-on: ubuntu-latest
+    container:
+        image: ghcr.io/cameronrutherford/quarto-ci
+        credentials:
+            username: ${{ github.repository_owner }}
+            password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+
+      - name: Checkout (GitHub)
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Quarto Render
+        run: quarto render
+
+      - name: Fix Permissions
+        run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: "['README.md']"
+          fetch: false
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+          message: Update resume/README after quarto render
+
+  container-build-and-render:
+    needs: changes
+    # Run if we need to rebuild the container
+    if: ${{ needs.changes.outputs.devcontainer == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout (GitHub)
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      # https://github.com/devcontainers/ci/issues/212
+      # Have to do this manually becuase of issue with subfolders
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install devcontainer CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Build & start dev container
+        run: devcontainer up --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
+
+      - name: Quartor render
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render
+
+      - name: Fix Permissions
+        run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: "['README.md']"
+          fetch: false
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+          message: Update resume/README after quarto render
