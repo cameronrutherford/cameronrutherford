@@ -9,6 +9,7 @@ project:
     - "!resume/old_resume.qmd"
   post-render:
     - cp docs/readme.markdowneth README.md
+    - cp docs/resume/resume.pdf resume.pdf
 
 format:
   html:

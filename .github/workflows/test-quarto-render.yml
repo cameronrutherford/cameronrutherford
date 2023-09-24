@@ -20,3 +20,11 @@ jobs:
 
       - name: Quarto Render
         run: quarto render
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: "['resume.pdf', 'README.md']"
+          fetch: false
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+          message: Update resume/README after quarto render
