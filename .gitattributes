@@ -1,2 +1,7 @@
-_extensions/* linguist-detectable=false
-*.qmd linguist-language=Markdown
+# We want to ignore the quarto extensions that we import that aren't part of the original work
+# Could use linguist-vendored, but this works...
+_extensions/** linguist-detectable=false
+presentations/**/_extensions/** linguist-detectable=false
+# Want to reflect quarto code as part of the codebase
+*.qmd linguist-detectable
+*.qmd linguist-language=md
