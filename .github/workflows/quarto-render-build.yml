@@ -35,6 +35,8 @@ jobs:
 
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Quarto Render
         run: quarto render
@@ -44,7 +46,7 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: "['resume.pdf', 'README.md']"
+          add: "['resume.pdf --force', 'README.md']"
           fetch: false
           committer_name: GitHub Actions
           committer_email: actions@github.com
@@ -59,6 +61,8 @@ jobs:
 
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
       # https://github.com/devcontainers/ci/issues/212
       # Have to do this manually becuase of issue with subfolders
@@ -81,7 +85,7 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: "['resume.pdf', 'README.md']"
+          add: "['resume.pdf --force', 'README.md']"
           fetch: false
           committer_name: GitHub Actions
           committer_email: actions@github.com

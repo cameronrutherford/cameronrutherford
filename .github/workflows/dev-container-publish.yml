@@ -1,4 +1,4 @@
-name: 'quarto-ci ghcr'
+name: quarto-ci ghcr
 on:
   push:
     branches:
