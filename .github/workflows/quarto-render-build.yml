@@ -1,4 +1,4 @@
-name: 'Quarto Render GitHub Action'
+name: 'Quarto Render / Container Rebuild'
 on: [pull_request]
 
 jobs:
@@ -39,6 +39,9 @@ jobs:
       - name: Quarto Render
         run: quarto render
 
+      - name: Fix Permissions
+        run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
+
       - uses: EndBug/add-and-commit@v9
         with:
           add: "['resume.pdf', 'README.md']"
@@ -72,6 +75,9 @@ jobs:
 
       - name: Quartor render
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render
+
+      - name: Fix Permissions
+        run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
 
       - uses: EndBug/add-and-commit@v9
         with:
