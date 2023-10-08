@@ -15,6 +15,7 @@ format:
 <table>
   <thead>
     <tr>
+      <th>QR Code</th>
       <th>Quick Links</th>
       <th>Tech Stack</th>
       <th>Pipelines</th>
@@ -22,6 +23,9 @@ format:
   </thead>
   <tbody>
     <tr>
+      <td>
+         <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="160" height="160"/> </a>
+      </td>
       <td>
         <p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html">HTML README</a>
         <p> <a href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">Resume (HTML)</a>
@@ -50,7 +54,3 @@ format:
 ```
 
 This is a HTML table that is rendered as HTML in the browser, and in GitHub flavored markdown the main README!
-
-::: {.content-visible when-format="html"}
-{{< qrcode https://cameronrutherford.github.io/cameronrutherford/index.html HTML-readme width=200 height=200 >}}
-:::
