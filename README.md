@@ -1,15 +1,15 @@
 # README
 
+<a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="320"/> </a>
+&#10;
 <table data-quarto-postprocess="true">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th">QR Code</th>
 <th data-quarto-table-cell-role="th">Quick Links</th>
 <th data-quarto-table-cell-role="th">Tech Stack</th>
 <th data-quarto-table-cell-role="th">Pipelines</th>
@@ -17,19 +17,18 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><a
-href="https://cameronrutherford.github.io/cameronrutherford/index.html"
-target="_blank" rel="noreferrer"><img src="./config/qr-code.svg"
-width="160" height="160" /></a></td>
 <td><p><a
+href="https://github.com/cameronrutherford/cameronrutherford">GitHub
+README</a></p>
+<p><a
 href="https://cameronrutherford.github.io/cameronrutherford/index.html">HTML
 README</a></p>
 <p><a
-href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">Resume
-(HTML)</a></p>
+href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">HTML
+Resume</a></p>
 <p><a
-href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf">Resume
-(PDF)</a></p>
+href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf">PDF
+Resume</a></p>
 <p><a
 href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a></p></td>
 <td><div>

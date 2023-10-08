@@ -12,10 +12,11 @@ format:
 ---
 
 ```{=html}
+<a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="320"/> </a>
+
 <table>
   <thead>
     <tr>
-      <th>QR Code</th>
       <th>Quick Links</th>
       <th>Tech Stack</th>
       <th>Pipelines</th>
@@ -24,12 +25,10 @@ format:
   <tbody>
     <tr>
       <td>
-         <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="160" height="160"/> </a>
-      </td>
-      <td>
+        <p> <a href="https://github.com/cameronrutherford/cameronrutherford">GitHub README</a>
         <p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html">HTML README</a>
-        <p> <a href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">Resume (HTML)</a>
-        <p> <a href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf">Resume (PDF)</a>
+        <p> <a href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">HTML Resume</a>
+        <p> <a href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf">PDF Resume</a>
         <p> <a href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a>
       </td>
       <td>
