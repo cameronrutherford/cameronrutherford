@@ -23,6 +23,7 @@ contact:
 portfolio:
     linkedin: \href{https://www.linkedin.com/in/robert-c-rutherford/}{Robert C Rutherford}
     github: \href{https://github.com/cameronrutherford}{cameronrutherford}
+
 ---
 
 ::: {.content-visible when-format="pdf"}
@@ -90,10 +91,12 @@ portfolio:
                 <p> google [test/benchmark]
                 <p> Performance Optimization
             </td>
+            <td>
                 <p> torch, Tensorflow, pyg
                 <p> JAX, mpi4py, lightning
                 <p> conda/mamba, poetry
                 <p> qiskit, pytest, black
+            </td>
             <td>
                 <p> GitHub/GitLab CI/CD, git flow
                 <p> k8s, ansible, SLURM/LSF
