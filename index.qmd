@@ -13,7 +13,6 @@ format:
 
 ```{=html}
 <table>
-  <caption>This is a HTML table that is rendered as HTML in the browser, and in GitHub flavored markdown the main README!</caption>
   <thead>
     <tr>
       <th>Quick Links</th>
@@ -44,6 +43,8 @@ format:
   </tbody>
 </table>
 ```
+
+This is a HTML table that is rendered as HTML in the browser, and in GitHub flavored markdown the main README!
 
 ::: {.content-visible when-format="html"}
 {{< qrcode https://cameronrutherford.github.io/cameronrutherford/index.html HTML-readme width=200 height=200 >}}
