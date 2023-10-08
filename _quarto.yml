@@ -8,7 +8,7 @@ project:
     # No need to render files in more than one place - this file is just included in another
     - "!resume/old_resume.qmd"
   post-render:
-    - cp docs/readme.markdowneth README.md
+    - cp docs/README.md README.md
 
 format:
   html:

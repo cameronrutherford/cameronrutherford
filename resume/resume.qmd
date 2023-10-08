@@ -24,37 +24,6 @@ portfolio:
     linkedin: \href{https://www.linkedin.com/in/robert-c-rutherford/}{Robert C Rutherford}
     github: \href{https://github.com/cameronrutherford}{cameronrutherford}
 
-skills:
-    - C / C++17:
-        - CUDA, HIP, MPI, OpenMP
-        - CMake, Spack, pybind11
-        - google [test/benchmark]
-        - Performance Optimization
-    - Python:
-        - torch, Tensorflow, pyg
-        - JAX, mpi4py, lightning
-        - conda/mamba, poetry
-        - qiskit, pytest, black
-    - DevOps:
-        - GitHub/GitLab CI/CD, git flow
-        - k8s, ansible, SLURM/LSF
-        - Containerization, MLOps
-        - Quality Assurance, Agile
-    - IDEs:
-        - JupyterLab, VSCode, vim
-        - tmux, google collab
-        - dev-containers, jetbrains
-        - IDE extensions, GUI tools
-    - Documentation:
-        - Tutorial Driven Dev.
-        - .qmd, obsidian, LaTeX
-        - RevealJS, docx, binder
-        - Git[Hub/Lab] pages
-    - Other:
-        - Fully Homomorphic Encryption
-        - Secure Multi-Party Computation
-        - FL, DP, SSS, Cryptography
-        - Rust, Go, Fortran
 ---
 
 ::: {.content-visible when-format="pdf"}
@@ -99,6 +68,63 @@ skills:
 
 - S. Abhyankar, S. Peles, **R. Rutherford**, A. Mancinelli, **_Evaluation of AC optimal power flow on graphical processing units._** (IEEE PESGM 2021)
 - S. Peles, M. Alam, A. J. Mancinelli, K. Perumalla, **R. C. Rutherford**, J. Ryan, C. G. Petra, **_Porting the Nonlinear Optimization Library HiOp to Accelerator-Based Hardware Architectures_** (arxiv 2021)
+
+# Skills
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th>C / C++17</th>
+            <th>Python</th>
+            <th>DevOps</th>
+            <th>Machine Learning</th>
+            <th>Other</th>
+            <th>OtherII</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> CUDA, HIP, MPI, OpenMP
+                <p> CMake, Spack, pybind11
+                <p> google [test/benchmark]
+                <p> Performance Optimization
+            </td>
+            <td>
+                <p> torch, Tensorflow, pyg
+                <p> JAX, mpi4py, lightning
+                <p> conda/mamba, poetry
+                <p> qiskit, pytest, black
+            </td>
+            <td>
+                <p> GitHub/GitLab CI/CD, git flow
+                <p> k8s, ansible, SLURM/LSF
+                <p> Containerization, MLOps
+                <p> Quality Assurance, Agile
+            </td>
+            <td>
+                <p> JupyterLab, VSCode, vim
+                <p> tmux, google collab
+                <p> dev-containers, jetbrains
+                <p> IDE extensions, GUI tools
+            </td>
+            <td>
+                <p> Tutorial Driven Dev.
+                <p> .qmd, obsidian, LaTeX
+                <p> RevealJS, docx, binder
+                <p> Git[Hub/Lab] pages
+            </td>
+            <td>
+                <p> Fully Homomorphic Encryption
+                <p> Secure Multi-Party Computation
+                <p> FL, DP, SSS, Cryptography
+                <p> Rust, Go, Fortran
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
 
 # Conferences
 

@@ -31,6 +31,13 @@
 % Need StrBefore and StrBehind to split subsection and subsubsection arg
 \usepackage{xstring}
 
+% Needed for HTML table shenanigans
+\usepackage{longtable}
+% https://stackoverflow.com/questions/69893867/undefined-control-sequence-when-using-tufte-latex-package
+\usepackage{array,calc}
+% https://tex.stackexchange.com/questions/510374/when-i-tried-to-generate-a-table-i-got-this-error-undefined-control-sequence
+\usepackage{booktabs}
+
 % custom subsection command that first arg on left and second arg on right
 \let\oldsubsection\subsection
 \newcommand{\customsubsection}[2]{
@@ -114,27 +121,6 @@ $summary$
 $endif$
 
 \bigskip
-
-\section{Skills}
-\begin{tabular}{*{$skills/length$}{c}}
-    \newcounter{skillCounter}
-    \setcounter{skillCounter}{0}
-    $for(skills)$
-        $for(skills/pairs)$
-            \begin{tabular}[t]{l}
-                \textbf{$skills.key$}\\
-                $for(skills.value)$
-                    $it$ $sep$\\
-                $endfor$
-            \end{tabular}
-            \stepcounter{skillCounter}
-            \ifnum\value{skillCounter}=3
-                \\ % Add a newline after every 3 tables
-                \setcounter{skillCounter}{0} % Reset the counter
-            \fi
-        $endfor$
-    $endfor$
-\end{tabular}
 
 $body$
 
