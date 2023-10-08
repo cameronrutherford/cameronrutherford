@@ -1,18 +1,38 @@
 # README
 
+<p>
+<a href="https://github.com/pre-commit/pre-commit" target="_blank" rel="noreferrer">
+<img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit" width="160"/>
+</a>
+<p>
+<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml" rel="noreferrer">
+<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml/badge.svg?event=pull_request"/>
+</a>
+<p>
+<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml">
+<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg"/>
+</a>
+<p>
+<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml">
+<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg"/>
+</a>
+<p>
+
+<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml">
+<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg?event=pull_request"/>
+</a>
+
 <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="320"/> </a>
 &#10;
 <table data-quarto-postprocess="true">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">Quick Links</th>
 <th data-quarto-table-cell-role="th">Tech Stack</th>
-<th data-quarto-table-cell-role="th">Pipelines</th>
 </tr>
 </thead>
 <tbody>
@@ -60,36 +80,16 @@ rel="noreferrer"><img
 src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
 width="160" /></a></p>
 </div></td>
-<td><div>
-<p><a href="https://github.com/pre-commit/pre-commit" target="_blank"
-rel="noreferrer"><img
-src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit"
-width="160" /></a></p>
-</div>
-<div>
-<p><a
-href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml"
-rel="noreferrer"><img
-src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml/badge.svg?event=pull_request" /></a></p>
-</div>
-<div>
-<p><a
-href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml"><img
-src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg" /></a></p>
-</div>
-<div>
-<p><a
-href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml"><img
-src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg" /></a></p>
-</div>
-<div>
-<p><a
-href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml"><img
-src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg?event=pull_request" /></a></p>
-</div></td>
 </tr>
 </tbody>
 </table>
 
 This is a HTML table that is rendered as HTML in the browser, and in
 GitHub flavored markdown the main README!
+
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="resume.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
+  </a>
+</p>
+&#10;<iframe src="./resume/resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
