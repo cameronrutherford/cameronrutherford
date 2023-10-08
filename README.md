@@ -1,8 +1,6 @@
 # README
 
 <table data-quarto-postprocess="true">
-<caption>This is a HTML table that is rendered as HTML in the browser,
-and in GitHub flavored markdown the main README!</caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -29,22 +27,39 @@ href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf">R
 <p><a
 href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a></p></td>
 <td><div>
-<p><a href="https://www.gnu.org/software/bash/" target="_blank"
-rel="noreferrer"><img
-src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
-width="40" height="40" /></a></p>
-<p>bash</p>
+<p><a href="https://quarto.org/" target="_blank" rel="noreferrer"><img
+src="https://quarto.org/quarto.png" width="160" height="40" /></a></p>
 </div>
 <div>
-<p><a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img
-src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+<p><a href="https://www.freepnglogos.com/images/javascript-39398.html"
+target="_blank" rel="noreferrer"><img
+src="https://www.freepnglogos.com/uploads/javascript-png/fix-html-css-javascript-for-website-logo-6.png"
+width="160" height="80" /></a></p>
+</div>
+<p><a href="https://www.json.org/json-en.html" target="_blank"
+rel="noreferrer"><img
+src="https://www.vectorlogo.zone/logos/json/json-icon.svg" width="40"
+height="40" /></a> <a href="https://www.docker.com/" target="_blank"
+rel="noreferrer"><img
+src="https://www.vectorlogo.zone/logos/docker/docker-tile.svg"
+width="40" height="40" /></a> <a href="https://www.lua.org/"
+target="_blank" rel="noreferrer"><img
+src="https://www.vectorlogo.zone/logos/lua/lua-official.svg" width="40"
+height="40" /></a> <a href="https://github.com/" target="_blank"
+rel="noreferrer"><img
+src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
 width="40" height="40" /></a></p>
-<p>git</p>
+<div>
+<p><a href="https://www.latex-project.org/" target="_blank"
+rel="noreferrer"><img
+src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
+width="160" /></a></p>
 </div></td>
 <td><div>
 <p><a href="https://github.com/pre-commit/pre-commit" target="_blank"
 rel="noreferrer"><img
-src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit" /></a></p>
+src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit"
+width="160" /></a></p>
 </div>
 <div>
 <p><a
