@@ -36,9 +36,10 @@ format:
         Config:
         <ul>
           <li><a href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a></li>
+          <li><a href="https://cameronrutherford.github.io/cameronrutherford/config/devcontainer.html">Docker / Devcontainer</a></li>
           <li> <a href="https://cameronrutherford.github.io/cameronrutherford/config/pre-commit.html">pre-commit</a></li>
-          <li> <a href="https://cameronrutherford.github.io/cameronrutherford/config/github-actions.html">github actions config</a></li>
-          <li> <a href="https://cameronrutherford.github.io/cameronrutherford/config/quarto.html">quarto config</a></li>
+          <li> <a href="https://cameronrutherford.github.io/cameronrutherford/config/github-actions.html">github actions</a></li>
+          <li> <a href="https://cameronrutherford.github.io/cameronrutherford/config/quarto.html">quarto</a></li>
         </ul>
       </td>
       <td>
@@ -56,3 +57,5 @@ format:
 ```
 
 This is an HTML table written in quarto, rendered into GitHub flavored markdown and HTML, hosted in GitHub pages, run using a Docker image that I build and host on the GitHub container registry.
+
+For more information about the GitHub container registry container `quarto-ci`, see the [dev-container docs](./config/devcontainer.qmd)

@@ -32,23 +32,32 @@ portfolio:
 
 ### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
 
-- Led Software Stack for ExaSGD project to Frontiner deployment (AMD based - current world #1)
-- Facilitated deployment of ExaGO application to the cloud with ChatGPT integration
-- Led software development of CUDA targetted Sparse GPU solver tailored for use case with HiOp
-- MLOps internal offering leader developing containerisation and best practices community
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (AMD - current world #1)
+- Led software development of C++ / CUDA targetted Sparse GPU solver tailored for use case with HiOp
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
 - Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
+- Assisted projects deploying DeepSpeed / distributed LLM and GNN pipelines
+
 
 ### Software Engineer I HPC/ML/Q, PNNL (Virtual): 2021 - 2022
 
+- Received PNNL's highest performance award (OPA) for a second year in a row
+- Transitioned to leadrership of ExaSGD software stack and developed of C++ AMD/HIP backend
+- Deployed CI across multiple national labs, learned HIP/AMD stack and profiling tools
 - Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
-- Transitioned and successfully led ExaSGD software stack through development of AMD/HIP support
 - Delivered internal tutorials on distributed machine learning with JAX and other internal MLOps offerings
+- Deployed CI/CD for Physics Informed ML, RL and Graph Analytics Algorithms on HPC
 - Led tutorials on using Qiskit, and trained other staff in Quantum through internal boot camp
 
 ### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
 
+- Received PNNL's highest performance award (OPA)
+- Deployed ExaSGD C++/MPI software to Summit supercomputer (NVIDIA based - former world #1)
+- Implemented and benchmarked C++ MPI tree gather/broadcast across compilers and backends (OpenMPI, IntelMPI, MVAPICH), iteratively optimized and packaged product
 - Worked on open-source MLFlow offering to save lab $200k per project on WandB subscription
-- Deployed ExaSGD software to Summit supercomputer (NVIDIA based - former world #1)
 - Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
 - Worked in HPC support centre to deploy, debug and test various ML software stacks
 
@@ -56,7 +65,7 @@ portfolio:
 
 - Worked on RAJA linear algebra kernel development within HiOp for interface with ExaGO
 - Learned CMake with Spack and implemented testing and packaging for ExaSGD software
-- Profiled codebase on different GPU architectures and analyzed performance data
+- Profiled codebase on different NVIDIA GPU architectures and analyzed performance data
 - Taught other developers about RAJA and CMake and delivered key kernels for project success
 
 ### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
@@ -75,51 +84,41 @@ portfolio:
 <table>
     <thead>
         <tr>
-            <th>C / C++17</th>
-            <th>Python</th>
-            <th>DevOps</th>
-            <th>Machine Learning</th>
-            <th>Other</th>
-            <th>OtherII</th>
+            <th font-weight="bold">C / C++17</th>
+            <th font-weight="bold">Python</th>
+            <th font-weight="bold">DevOps</th>
+            <th font-weight="bold">Machine Learning</th>
+            <th font-weight="bold">Other</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p> CUDA, HIP, MPI, OpenMP
-                <p> CMake, Spack, pybind11
-                <p> google [test/benchmark]
-                <p> Performance Optimization
+                <p> CUDA, HIP,
+                <p> CPU/GPU Profiling,
+                <p> MPI, OpenMP,
+                <p> CMake, Spack
             </td>
             <td>
-                <p> torch, Tensorflow, pyg
-                <p> JAX, mpi4py, lightning
+                <p> torch, JAX, pyg,
+                <p> mpi4py, pybind11,
                 <p> conda/mamba, poetry
-                <p> qiskit, pytest, black
             </td>
             <td>
-                <p> GitHub/GitLab CI/CD, git flow
-                <p> k8s, ansible, SLURM/LSF
-                <p> Containerization, MLOps
-                <p> Quality Assurance, Agile
+                <p> GitHub/GitLab, vim/tmux,
+                <p> SLURM/LSF, HPC,
+                <p> quarto, VSCode
             </td>
             <td>
-                <p> JupyterLab, VSCode, vim
-                <p> tmux, google collab
-                <p> dev-containers, jetbrains
-                <p> IDE extensions, GUI tools
+                <p> LLMs, RL, NTK,
+                <p> FL, DP, SMC,
+                <p> GNNs, Domain Aware ML
             </td>
             <td>
-                <p> Tutorial Driven Dev.
-                <p> .qmd, obsidian, LaTeX
-                <p> RevealJS, docx, binder
-                <p> Git[Hub/Lab] pages
-            </td>
-            <td>
-                <p> Fully Homomorphic Encryption
-                <p> Secure Multi-Party Computation
-                <p> FL, DP, SSS, Cryptography
-                <p> Rust, Go, Fortran
+                <p> Go, Rust, Fortran,
+                <p> Graph DBs, SQL,
+                <p> Qiskit, AWS, S3
+                <p> dev-containers
             </td>
         </tr>
     </tbody>
@@ -184,11 +183,6 @@ I saw this in a talk about plain text - the Australian flag is bugged on Windows
 
 ## Git Integration
 
-Similar to the main README that is generted my `index.qmd`, I keep a pdf uploaded to git automatically. This is copied into the right place through the `post-render` stage of quarto, you just have to remember to commit the changes to git:
-
-```{.YAML include="../_quarto.yml" start-line=10 end-line=12}
-```
-
-TODO: Write CI pipeline / pre-commit check that ensures that the main README and resume pdf are updated.
+This pdf is rendered during `quarto render`, and then hosted in GitHub pages. Since the pdf seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
 
 :::

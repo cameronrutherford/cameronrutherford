@@ -11,10 +11,10 @@ format:
 
 # Build Container
 
-```{.YAML include="../.github/workflows/dev-container-build.yml"}
+```{.YAML include="../.github/workflows/dev-container-publish.yml"}
 ```
 
-Inspired from the final example in this [Getting Started](https://github.com/devcontainers/ci/blob/main/docs/github-action.md#getting-started) section from GitHub docs, but later configured to use the CLI manually.
+Inspired from the final example in this [Getting Started](https://github.com/devcontainers/ci/blob/main/docs/github-action.md#getting-started) section from GitHub docs, but later configured to use the dev-container CLI manually.
 
 Note that this runs `quarto render` to ensure the container works as intended, functioning as a unit test.
 
@@ -27,7 +27,7 @@ Since some tests won't need to rebuild the container, this is ran to verify the 
 ```{.YAML include="../.github/workflows/dev-container-publish.yml"}
 ```
 
-Since this only runs once a PR is merged, it doesn't render as the build is assumed to have passed by this point.
+Since this only runs once a PR is merged, it doesn't run `quarto render` as the build is assumed to have passed by this point.
 
 
 # pre-commit
