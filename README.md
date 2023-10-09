@@ -61,16 +61,21 @@ actions</a></li>
 <li><a
 href="https://cameronrutherford.github.io/cameronrutherford/config/quarto.html">quarto</a></li>
 </ul></td>
-<td><div>
+<td><div class="left">
+<div>
 <p><a href="https://quarto.org/" target="_blank" rel="noreferrer"><img
 src="https://quarto.org/quarto.png" width="160" /></a></p>
 </div>
+</div>
+<div class="left">
 <div>
 <p><a href="https://www.freepnglogos.com/images/javascript-39398.html"
 target="_blank" rel="noreferrer"><img
 src="https://www.freepnglogos.com/uploads/javascript-png/fix-html-css-javascript-for-website-logo-6.png"
 width="160" /></a></p>
 </div>
+</div>
+<div class="left">
 <p><a href="https://www.json.org/json-en.html" target="_blank"
 rel="noreferrer"><img
 src="https://www.vectorlogo.zone/logos/json/json-icon.svg"
@@ -84,11 +89,14 @@ height="40" /></a> <a href="https://github.com/" target="_blank"
 rel="noreferrer"><img
 src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
 width="40" /></a></p>
+</div>
+<div class="left">
 <div>
 <p><a href="https://www.latex-project.org/" target="_blank"
 rel="noreferrer"><img
 src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
 width="160" /></a></p>
+</div>
 </div></td>
 </tr>
 </tbody>
