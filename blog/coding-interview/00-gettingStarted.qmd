@@ -29,4 +29,9 @@ This ended up being installed through the Dockerfile in `.devcontainer/blog-codi
 - [ ] Get single Jupyter notebook rendering in Quarto
 - [ ] Render content into blog section of website
 - [ ] Solve some hard leetCode problems in separate notebooks
+- [ ] Figure out relevant pre-commit hooks
+- [ ] Pre-build container in CI (?)
+- [ ] Allow usage of pre-built image
+- [ ] Benchmarking / profiling of solution with comparison of solutions...
+- [ ] Comapre compilers?
 - [ ] Generate feed with content in order of posting
