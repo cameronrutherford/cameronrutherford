@@ -18,9 +18,15 @@ This ended up being installed through the Dockerfile in `.devcontainer/blog-codi
 ```{.Dockerfile include="../.devcontainer/blog-codingInterview/Dockerfile"}
 ```
 
+# Specifying C++ standard
+
+Still TBD how to change which compiler is used, but this at least gives me a starting place for experimenting with C++ standards, as well as modifying the compiler used. https://xeus-cling.readthedocs.io/en/latest/build_options.html
+
 # Running a notebook / example
 
+Just pick the relevant C++ kernel in VSCode.
 
+Will write JupyterLab documentation if it seems necessary to do things outside of VSCode.
 
 # TODO
 
@@ -34,4 +40,5 @@ This ended up being installed through the Dockerfile in `.devcontainer/blog-codi
 - [ ] Allow usage of pre-built image
 - [ ] Benchmarking / profiling of solution with comparison of solutions...
 - [ ] Comapre compilers?
+- [ ] Compare C++ standard versions?
 - [ ] Generate feed with content in order of posting
