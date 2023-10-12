@@ -1,0 +1,20 @@
+{
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "../../.."
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"quarto.quarto",
+				"sumneko.lua",
+				"ms-azuretools.vscode-docker",
+				"github.vscode-github-actions",
+				"tomoki1207.pdf",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+	"workspaceFolder": "/home/app/",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/app/,type=bind,consistency=cached"
+}

@@ -1,0 +1,32 @@
+---
+title: "Setting up C++ Jupyter kernels"
+filters:
+    - include-code-files
+format:
+    html:
+        default: true
+        toc: true
+        toc-depth: 4
+---
+
+# Requirements
+
+Since [xeus-cling](https://github.com/jupyter-xeus/xeus-cling) requires a conda based installation (I could have used Spack to install [xeus](https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/xeus/package.py), but decided that would be more effort), we will use [Micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html) and inherit from our `quarto-ci` ghcr base image.
+
+This ended up being installed through the Dockerfile in `.devcontainer/blog-codingInterview/Dockerfile` and is available as a dev-container option:
+
+```{.Dockerfile include="../.devcontainer/blog-codingInterview/Dockerfile"}
+```
+
+# Running a notebook / example
+
+
+
+# TODO
+
+- [ ] Render this page in documentation
+- [ ] Get Jupyter notebook running at all for C++ examples
+- [ ] Get single Jupyter notebook rendering in Quarto
+- [ ] Render content into blog section of website
+- [ ] Solve some hard leetCode problems in separate notebooks
+- [ ] Generate feed with content in order of posting
