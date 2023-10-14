@@ -11,7 +11,8 @@
 				"ms-azuretools.vscode-docker",
 				"github.vscode-github-actions",
 				"tomoki1207.pdf",
-				"ms-toolsai.jupyter"
+				"ms-toolsai.jupyter",
+				"ms-vscode.cpptools-extension-pack"
 			]
 		}
 	},
