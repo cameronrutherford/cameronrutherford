@@ -1,3 +1,6 @@
+# syntax=docker/dockerfile:1.3-labs
+# ^ Need this for syntax specific to heredoc aliases
+
 # Comes with base requirements to build Quarto docs, as well as Python 3.11, gcc 12.2.0
 FROM ghcr.io/cameronrutherford/quarto-ci:latest
 
@@ -15,3 +18,17 @@ RUN . /home/vscode/conda/etc/profile.d/conda.sh && \
 RUN echo ". /home/vscode/conda/etc/profile.d/conda.sh" >> /home/vscode/.bashrc
 RUN echo ". /home/vscode/conda/etc/profile.d/mamba.sh" >> /home/vscode/.bashrc
 RUN echo "mamba activate" >> /home/vscode/.bashrc
+
+# Configure compiler flags for the C++17 compiler
+COPY <<-"cpp17_configuration" /home/vscode/conda/share/jupyter/kernels/xcpp17/kernel.json
+{
+  "display_name": "C++17",
+  "argv": [
+      "/home/vscode/conda/bin/xcpp",
+      "-f",
+      "{connection_file}",
+      "--std=c++17"
+  ],
+  "language": "C++17"
+}
+cpp17_configuration
