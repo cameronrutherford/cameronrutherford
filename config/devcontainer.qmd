@@ -3,10 +3,7 @@ title: "devcontainer"
 filters:
     - include-code-files
 format:
-    html:
-        default: true
-        toc: true
-        toc-depth: 4
+    html: default
 ---
 
 # Configuration

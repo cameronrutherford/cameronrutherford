@@ -1,0 +1,99 @@
+---
+title: "LeetCode w/ C++ Jupyter kernels"
+filters:
+    - include-code-files
+format:
+    html: default
+---
+
+# Preface
+
+This document is a more general overview of writing C++ computational notebooks in the context of studying for coding interviews.
+
+Specific notebooks and cells/output might be referenced throughout this document, and each notebook will be for a separate leetcode problem.
+
+For example, here is the output of `gcc --version` in the `01-testConfiguration.ipynb` notebook:
+
+{{< embed 01-testConfiguration.ipynb#gcc-version >}}
+
+Note that citing notebooks in quarto puts it in the side bar, but I also have all my notebooks available in the menu above.
+
+To cite like this, you need to use notebook tags for individual cells. Note as well you can download notebooks by clicking on the link under "Other formats".
+
+# Notebooks
+
+A quick list of notebooks:
+
+- [Testing Configuration](#01-testConfiguration.ipynb)
+- [LeetCode #1095: Find in Mountain Array](#02-leetCode1095.ipynb)
+
+# Requirements
+
+Since [xeus-cling](https://github.com/jupyter-xeus/xeus-cling) requires a conda based installation (I could have used Spack to install [xeus](https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/xeus/package.py), but decided that would be more effort), we will use [Micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html) and inherit from our `quarto-ci` ghcr base image.
+
+This ended up being installed through the Dockerfile in `.devcontainer/blog-codingInterview/Dockerfile` and is available as a dev-container option:
+
+```{.Dockerfile include="../../.devcontainer/blog-codingInterview/Dockerfile"}
+```
+
+# Notes
+
+## C++
+
+Will take some notes here about important C++ things to keep in mind, and also have this serve as my own cheat-sheet:
+
+- Doxygen Comments (and Binary Search) https://github.com/cme212/course/blob/master/notes/lecture-03/specifications.md
+
+### C++17
+
+### C++14
+
+### C++11
+
+## Algorithms
+
+Similar cheat-sheet for algorithm concept:
+
+- Binary Search (and Doxygen) https://github.com/cme212/course/blob/master/notes/lecture-03/specifications.md
+
+## Jupyter Specific
+
+### Specifying C++ standard
+
+Still TBD how to change which compiler is used and make this custom/renderable, but this at least gives me a starting place for experimenting with C++ standards.
+
+### Running a notebook / example
+
+Just pick the relevant Jupyter C++ kernel in VSCode per the C++ standard you are targetting. Before rendering in quarto, be sure to swtich back to the Python kernel, and save your notebook.
+
+# Bugs
+
+## xeus-cling doesn't play well with quarto
+
+- When using the C++ based Jupyter kernels, quarto complains when attempting to parse/render the notebook about an invalid spec. Workaround is to switch to a Python kernel before rendering, and making sure to freeze output:
+
+```
+(base) vscode ➜ /home/app (coding-interview-blog) $ qrp
+[1/9] blog/coding-interview/00-gettingStarted.qmd
+ERROR: SyntaxError: Invalid regular expression: /(^|[^`])`{c++17}[      ]([^`]+)`/g: Nothing to repeat
+
+Stack trace:
+    at new RegExp (<anonymous>)
+    at executeInlineCodeHandler (file:///quarto-1.4.358/bin/quarto.js:27945:25)
+    at resolveUserExpressions (file:///quarto-1.4.358/bin/quarto.js:31528:31)
+    at mdFromContentCell (file:///quarto-1.4.358/bin/quarto.js:32057:9)
+    at jupyterToMarkdown (file:///quarto-1.4.358/bin/quarto.js:31934:32)
+    at getCachedNotebookInfo (file:///quarto-1.4.358/bin/quarto.js:69316:31)
+    at notebookMarkdown (file:///quarto-1.4.358/bin/quarto.js:69193:32)
+    at replaceNotebookPlaceholders (file:///quarto-1.4.358/bin/quarto.js:69155:38)
+    at renderPandoc (file:///quarto-1.4.358/bin/quarto.js:69511:34)
+    at Object.onRender (file:///quarto-1.4.358/bin/quarto.js:75678:42)
+```
+
+## assert doesn't do anything
+
+You are unable to assert in the C++ kernels in Jupyter notebooks.
+
+## The compilation process was extremely buggy
+
+It's one thing to try and do this for python and get it to work, but experimental C++ capabilites are not the forte of this environment at the moment. Was definitely an interesting experiment, and will probably used in some capacity in the future, but for now I think it will be considered a successful experiment.

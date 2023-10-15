@@ -13,9 +13,19 @@ project:
 format:
   html:
     theme: vapor
+    default: true
+    toc: true
+    toc-depth: 4
+  ipynb:
+    standalone: true
 
 execute:
-  freeze: auto
+  eval: false
+  warning: true
+  error: true
+  echo: true
+  cache: true
+  freeze: true
 
 website:
   repo-url: https://github.com/cameronrutherford/cameronrutherford
@@ -34,6 +44,12 @@ website:
           - config/pre-commit.qmd
           - config/quickstart.qmd
           - config/quarto.qmd
+      - text: "C++ Coding Interview"
+        menu:
+          - blog/cpp-coding-interview/00-gettingStarted.qmd
+          - blog/cpp-coding-interview/01-testConfiguration.ipynb
+          - blog/cpp-coding-interview/02-leetCode1095.ipynb
+          - blog/cpp-coding-interview/03-leetCode2742.ipynb
       - text: "Presentations"
         menu:
           - presentations/stem-engagement/presentation.qmd
