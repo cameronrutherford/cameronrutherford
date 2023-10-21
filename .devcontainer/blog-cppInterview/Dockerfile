@@ -4,6 +4,13 @@
 # Comes with base requirements to build Quarto docs, as well as Python 3.11, gcc 12.2.0
 FROM ghcr.io/cameronrutherford/quarto-ci:latest
 
+# Install pre-commit hooks
+WORKDIR /home/app
+COPY .pre-commit-config.yaml .
+RUN git init .
+RUN pre-commit install --install-hooks
+WORKDIR /
+
 # Install Mamba
 RUN echo ". /home/vscode/conda/etc/profile.d/conda.sh" >> /home/vscode/.bashrc
 RUN echo ". /home/vscode/conda/etc/profile.d/mamba.sh" >> /home/vscode/.bashrc

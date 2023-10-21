@@ -39,12 +39,9 @@ RUN tlmgr update --self --all && \
 # Install pre-commit CLI
 RUN pip install pre-commit
 
-# Copy git contents over into the workdir
-# This dir relates to the devcontainer.json
+# Install pre-commit hooks
 WORKDIR /home/app
 COPY .pre-commit-config.yaml .
-
-# Install the deps and the hooks in the repo
 RUN git init .
 RUN pre-commit install --install-hooks
 WORKDIR /
