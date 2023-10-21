@@ -49,26 +49,6 @@ RUN git init .
 RUN pre-commit install --install-hooks
 WORKDIR /
 
-RUN echo ". /home/vscode/conda/etc/profile.d/conda.sh" >> /home/vscode/.bashrc
-RUN echo ". /home/vscode/conda/etc/profile.d/mamba.sh" >> /home/vscode/.bashrc
-RUN echo "mamba activate" >> /home/vscode/.bashrc
-
-# Having this makes future build times shorter
-# Will need to ensure compatibility between examples as necessary
-# Install Mamba
-RUN wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" && \
-    bash ./Miniforge3.sh -b -p "/home/vscode/conda"
-
-# Install Mamba dependencies (just jupyterlab)
-# TODO: Add environment.yml (literally only one dep)
-RUN . /home/vscode/conda/etc/profile.d/conda.sh && \
-    . /home/vscode/conda/etc/profile.d/mamba.sh && \
-    mamba activate && \
-    mamba install -y -c conda-forge jupyterlab
-
-# Note, we don't want to install anything with pip in the base image, or we limit users to a function-less env
-# With mamba, they can at least build on top, and then use pipe themselves
-
 # Configure aliases with a heredoc
 COPY <<-"end_aliases" /home/vscode/.bash_aliases
 #!/bin/bash

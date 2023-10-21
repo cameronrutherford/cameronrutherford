@@ -1,0 +1,37 @@
+---
+title: "LeetCode w/ Python Jupyter kernels"
+filters:
+    - include-code-files
+format:
+    html: default
+---
+
+# Preface
+
+C++ was rather painful, but technically worked with this configuration. Hopefully python will make this much less painful:
+
+{{< embed 01-testConfiguration.ipynb#watermark >}}
+
+# Notebooks
+
+A quick list of notebooks:
+
+- [Testing Configuration](#01-testConfiguration.ipynb)
+
+# Requirements
+
+This ended up being installed through the Dockerfile in `.devcontainer/blog-codingInterview/Dockerfile` and is available as a dev-container option:
+
+```{.Dockerfile include="../../.devcontainer/blog-pythonInterview/Dockerfile"}
+```
+
+# Notes
+
+## Python
+
+## Algorithms
+
+## Jupyter Specific
+
+# Bugs
+

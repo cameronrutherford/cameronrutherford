@@ -33,7 +33,7 @@ Since [xeus-cling](https://github.com/jupyter-xeus/xeus-cling) requires a conda 
 
 This ended up being installed through the Dockerfile in `.devcontainer/blog-codingInterview/Dockerfile` and is available as a dev-container option:
 
-```{.Dockerfile include="../../.devcontainer/blog-codingInterview/Dockerfile"}
+```{.Dockerfile include="../../.devcontainer/blog-cppInterview/Dockerfile"}
 ```
 
 # Notes
