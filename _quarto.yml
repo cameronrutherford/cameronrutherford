@@ -50,6 +50,10 @@ website:
           - blog/cpp-coding-interview/01-testConfiguration.ipynb
           - blog/cpp-coding-interview/02-leetCode1095.ipynb
           - blog/cpp-coding-interview/03-leetCode2742.ipynb
+      - text: "Python Coding Interview"
+        menu:
+          - blog/python-coding-interview/00-gettingStarted.qmd
+          - blog/python-coding-interview/01-testConfiguration.ipynb
       - text: "Presentations"
         menu:
           - presentations/stem-engagement/presentation.qmd

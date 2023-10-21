@@ -12,6 +12,6 @@
 		}
 	},
 	"workspaceFolder": "/home/app/",
-	"postCreateCommand": ".devcontainer/docs-prebuilt/postCreateCommand.sh",
+	"postCreateCommand": ".devcontainer/dev-build/postCreateCommand.sh",
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/app/,type=bind,consistency=cached"
 }

@@ -10,7 +10,7 @@ format:
 
 There are two supported devcontainer configurations for the root project ([ref spec](https://docs.github.com/en/enterprise-cloud@latest/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#devcontainerjson)):
 - `.devcontainer/dev-build` - manually rebuild the container on your machines
-- `.devcontainer/docs-prebuilt` - pull CI build image and attach
+- `deafult` - pull CI build image and attach
 
 You can either open the root folder and select one of these two configurations when prompted by VSCode, or open a `.devcontainer` config from a tutorial/blog post if you want to use the custom environment there.
 
@@ -36,7 +36,7 @@ Note that TeX is installed here, as well as convenient aliases and other tools l
 
 #### CI Image Config
 
-```{.json include="../.devcontainer/docs-prebuilt/devcontainer.json"}
+```{.json include="../.devcontainer/devcontainer.json"}
 ```
 
 You can't quite inherit configurations in devcontainers so this is a little repetitive, but it could be worse.
@@ -45,7 +45,11 @@ You can't quite inherit configurations in devcontainers so this is a little repe
 
 I use a `postCreateCommand` to run any final configurations inside of the container once it's running:
 
-```{.shell include="../.devcontainer/postCreateCommand.sh"}
+```{.shell include="../.devcontainer/dev-build/postCreateCommand.sh"}
 ```
+
+Since pre-commit was buggy being installed in the `quarto-ci` base image, we have moved that into the `postCreateCommand.sh` script, so that every image still gets to share the fix, but none have anything installed by default, making the image smaller! We could also consider removing `pre-commit` from the base image entirely.
+
+There seems to be a caching issue somewhere, so that file lives in `.devcontainer/dev-build`. It's totally possible it can be moved, but I am leving it for now.
 
 The git user is customized to me here for convenience, but you can change this for yourself. As noted in [Quickstart](quickstart.qmd), you will want to do git operations outside of the container still.

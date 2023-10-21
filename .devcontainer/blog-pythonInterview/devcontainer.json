@@ -1,5 +1,8 @@
 {
-	"image": "ghcr.io/cameronrutherford/quarto-ci:latest",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "../.."
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -7,11 +10,13 @@
 				"sumneko.lua",
 				"ms-azuretools.vscode-docker",
 				"github.vscode-github-actions",
-				"tomoki1207.pdf"
+				"tomoki1207.pdf",
+				"ms-toolsai.jupyter",
+				"tamasfe.even-better-toml"
 			]
 		}
 	},
 	"workspaceFolder": "/home/app/",
-	"postCreateCommand": ".devcontainer/docs-prebuilt/postCreateCommand.sh",
+	"postCreateCommand": ".devcontainer/dev-build/postCreateCommand.sh",
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/app/,type=bind,consistency=cached"
 }
