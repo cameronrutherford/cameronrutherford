@@ -14,7 +14,7 @@ RUN wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/lat
 RUN rm Miniforge3.sh
 
 # Need to just install xeus-cling to get notebooks to work
-# NOTE: using mamba here downgrades Python to 3.10 within mamba
+# NOTE: using mamba here downgrades Python to 3.10 within due to jupyterlab
 RUN . /home/vscode/conda/etc/profile.d/conda.sh && \
     . /home/vscode/conda/etc/profile.d/mamba.sh && \
     mamba activate && \
