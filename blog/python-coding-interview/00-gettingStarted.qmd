@@ -16,7 +16,8 @@ C++ was rather painful, but technically worked with this configuration. Hopefull
 
 A quick list of notebooks:
 
-- [Testing Configuration](#01-testConfiguration.ipynb)
+- [Testing Configuration](#01-testConfiguration.ipynb)=
+- [LeetCode #1425: Constrained Subsequence Sum](#02-leetCode1425.ipynb)
 
 # Requirements
 

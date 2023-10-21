@@ -54,6 +54,7 @@ website:
         menu:
           - blog/python-coding-interview/00-gettingStarted.qmd
           - blog/python-coding-interview/01-testConfiguration.ipynb
+          - blog/cpp-coding-interview/02-leetCode1425.ipynb
       - text: "Presentations"
         menu:
           - presentations/stem-engagement/presentation.qmd
