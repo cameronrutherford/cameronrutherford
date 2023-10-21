@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - .devcontainer/dev-build/**
+      - .devcontainer/devcontainer.json
 
 jobs:
   build:

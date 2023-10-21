@@ -4,14 +4,18 @@
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
+ENV QUARTO_VERSION=1.4.358
+
 # Install quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.358/quarto-1.4.358-linux-amd64.tar.gz
-RUN tar -xvzf quarto-1.4.358-linux-amd64.tar.gz
-ENV PATH=$PATH:/quarto-1.4.358/bin
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
+RUN tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
+RUN rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
+ENV PATH=$PATH:/quarto-${QUARTO_VERSION}/bin
 
 # Install Tex Live - this isn't 100% reproducible, but the build will always work and update...
 RUN wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 RUN zcat < install-tl-unx.tar.gz | tar xf -
+RUN rm install-tl-unx.tar.gz
 RUN mv $(find . -maxdepth 1 -type d -regex ".*install-tl.*") ./install-tlmgr
 WORKDIR /install-tlmgr
 RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
@@ -26,7 +30,8 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/*
 
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
-# Also install any other extensions that are used - this is trial and error as far as I can tell
+# Also install any other extensions that are used
+#   - This was trial and error as far as I can tell
 RUN tlmgr update --self --all && \
     tlmgr install tcolorbox \
                   environ \
@@ -38,13 +43,6 @@ RUN tlmgr update --self --all && \
 
 # Install pre-commit CLI
 RUN pip install pre-commit
-
-# Install pre-commit hooks
-WORKDIR /home/app
-COPY .pre-commit-config.yaml .
-RUN git init .
-RUN pre-commit install --install-hooks
-WORKDIR /
 
 # Configure aliases with a heredoc
 COPY <<-"end_aliases" /home/vscode/.bash_aliases

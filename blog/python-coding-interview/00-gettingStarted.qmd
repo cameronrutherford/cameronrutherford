@@ -29,8 +29,19 @@ This ended up being installed through the Dockerfile in `.devcontainer/blog-codi
 
 ## Python
 
+### Poetry
+
+For a while, mamba was being used in the `quarto-ci` base image. That was downgrading Python to 3.10, and I didn't want that. Instead we are using [Poetry](https://python-poetry.org/) to manage pure python deps. The configuration for our image is:
+
+```{.TOML include="../../.devcontainer/blog-pythonInterview/pyproject.toml"}
+```
+
 ## Algorithms
 
 ## Jupyter Specific
+
+### ipykernel
+
+You can have a python environment run jupyter in VSCode, but really what you want from a venv is an ipykernel environment installed. We had to do that in our Dockerfile, and we also make it a "Jupyter Kernel" detectable by VSCode.
 
 # Bugs
