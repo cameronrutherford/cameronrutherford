@@ -1,0 +1,12 @@
+title: python
+author: cameronrutherford
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    pdf:
+      template: ../resume/template.tex
+      font: DejaVu Sans
+      number-sections: false
+      output-file: resume_python
+      output-ext: pdf

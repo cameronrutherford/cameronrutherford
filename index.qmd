@@ -67,3 +67,12 @@ format:
 This is an HTML table written in quarto, rendered into GitHub flavored markdown and HTML, hosted in GitHub pages, run using a Docker image that I build and host on the GitHub container registry.
 
 For more information about the GitHub container registry container `quarto-ci`, see the [dev-container docs](./config/devcontainer.qmd)
+
+## Old GitHub README
+
+Here is my old GitHub resume if you want to see what it used to look like - look how far I have come!
+
+::: {.callout-caution collapse="true"}
+## Click to expand and view my old resume!
+{{< include old_resume.qmd >}}
+:::

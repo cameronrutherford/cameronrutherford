@@ -6,10 +6,9 @@ format:
         default: true
         toc: true
         toc-depth: 4
-    pdf:
-       template: template.tex
-       font: DejaVu Sans
-       number-sections: false
+    cpp-pdf: default
+    python-pdf: default
+    devops-pdf: default
 
 title: HPC/ML/Q Research Software Engineer
 name: (Robert) Cameron Rutherford
@@ -26,7 +25,7 @@ portfolio:
 
 ---
 
-::: {.content-visible when-format="pdf"}
+::: {.content-hidden when-format="html"}
 
 # Experience
 
@@ -159,7 +158,6 @@ portfolio:
 ::: {.content-visible when-format="html"}
 
 ## Resume
-
 ```{=html}
 <p class="text-center">
   <a class="btn btn-primary btn-lg cv-download" href="resume.pdf" target="_blank">
@@ -170,19 +168,8 @@ portfolio:
 <iframe src="resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
 ```
 
-## Old GitHub resume
-
-Here is my old GitHub resume if you want to see what it used to look like - look how far I have come!
-
-::: {.callout-caution collapse="true"}
-## Click to expand and view my old resume!
-{{< include old_resume.qmd >}}
-:::
-
-I saw this in a talk about plain text - the Australian flag is bugged on Windows. Since MSFT only added 3 flags to it's base character set, I decided it was a feature, not a bug, and will not be fixing it.
-
 ## Git Integration
 
-This pdf is rendered during `quarto render`, and then hosted in GitHub pages. Since the pdf seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
+These pdfs are rendered during `quarto render`, and then hosted in GitHub pages. Since the pdfs seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
 
 :::
