@@ -38,6 +38,15 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
+      - name: Quartor render (cpp)
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile cpp
+
+      - name: Quartor render (python)
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile python
+
+      - name: Quartor render (devops)
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile devops
+
       - name: Quarto Render
         run: quarto render
 
@@ -77,10 +86,7 @@ jobs:
       - name: Build & start dev container
         run: devcontainer up --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
 
-      - name: Quartor render
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render
-
-      - name: Quartor render  (cpp)
+      - name: Quartor render (cpp)
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile cpp
 
       - name: Quartor render (python)
@@ -88,6 +94,9 @@ jobs:
 
       - name: Quartor render (devops)
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile devops
+
+      - name: Quartor render
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render
 
       - name: Fix Permissions
         run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford

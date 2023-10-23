@@ -68,6 +68,8 @@ This is an HTML table written in quarto, rendered into GitHub flavored markdown 
 
 For more information about the GitHub container registry container `quarto-ci`, see the [dev-container docs](./config/devcontainer.qmd)
 
+::: {.content-visible when-format="html"}
+
 ## Old GitHub README
 
 Here is my old GitHub resume if you want to see what it used to look like - look how far I have come!
@@ -75,4 +77,6 @@ Here is my old GitHub resume if you want to see what it used to look like - look
 ::: {.callout-caution collapse="true"}
 ## Click to expand and view my old resume!
 {{< include resume/old_resume.qmd >}}
+:::
+
 :::

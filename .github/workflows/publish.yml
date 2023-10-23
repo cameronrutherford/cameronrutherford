@@ -20,10 +20,10 @@ jobs:
           tinytex: true
       - name: Quarto Render (with resume profiles)
         run: |
-          quarto render --no-browser
           quarto render --no-browser --profile cpp
           quarto render --no-browser --profile python
           quarto render --no-browser --profile devops
+          quarto render --no-browser
 
       - name: Quarto Publish
         uses: quarto-dev/quarto-actions/publish@v2
