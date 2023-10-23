@@ -1,4 +1,4 @@
-name: Publish Quarto GitHub Pages
+name: GitHub Pages
 
 on:
   workflow_dispatch:
