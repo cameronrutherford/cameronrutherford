@@ -80,6 +80,15 @@ jobs:
       - name: Quartor render
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render
 
+      - name: Quartor render  (cpp)
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile cpp
+
+      - name: Quartor render (python)
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile python
+
+      - name: Quartor render (devops)
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile devops
+
       - name: Fix Permissions
         run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
 

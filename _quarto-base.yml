@@ -1,0 +1,17 @@
+project:
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    # No need to render files in more than one place - these files are just included in another
+    - "!resume/old_resume.qmd"
+    - "!resume/conferences.qmd"
+    - "!resume/education.qmd"
+    - "!resume/experience.qmd"
+    - "!resume/other.qmd"
+    - "!resume/publications.qmd"
+    - "!resume/skills.qmd"
+    - "!resume/cpp_resume.qmd"
+    - "!resume/python_resume.qmd"
+    - "!resume/devops_resume.qmd"
+  post-render:
+    - cp docs/README.md README.md

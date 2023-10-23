@@ -18,7 +18,15 @@ jobs:
         with:
           # This means we have to keep what CI does minimal...
           tinytex: true
-      - name: Render and Publish
+      - name: Quarto Render (with resume profiles)
+        run: |
+          quarto render --no-browser
+          quarto render --no-browser --profile cpp
+          quarto render --no-browser --profile python
+          quarto render --no-browser --profile devops
+
+      - name: Quarto Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
+          render: false
           target: gh-pages

@@ -22,7 +22,7 @@ A quick list of notebooks:
 
 - [Testing Configuration](#01-testConfiguration.ipynb)
 - [LeetCode #1425: Constrained Subsequence Sum](#02-leetCode1425.ipynb)
-- [LeetCode #1425: Constrained Subsequence Sum](#03-leetCode1793.ipynb)
+- [LeetCode #1793: Maximum Score of a Good Subarray](#03-leetCode1793.ipynb)
 
 # Requirements
 

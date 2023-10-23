@@ -2,13 +2,10 @@ project:
   type: website
   title: "Cameron's git-site"
   output-dir: docs
-  render:
-    - "*.qmd"
-    - "*.ipynb"
-    # No need to render files in more than one place - this file is just included in another
-    - "!resume/old_resume.qmd"
-  post-render:
-    - cp docs/README.md README.md
+
+profile:
+  group:
+    - [base, cpp, python, devops]
 
 format:
   html:

@@ -26,6 +26,7 @@ A quick list of notebooks:
 
 - [Testing Configuration](#01-testConfiguration.ipynb)
 - [LeetCode #1095: Find in Mountain Array](#02-leetCode1095.ipynb)
+- [LeetCode #2742: Painting the Walls](#03-leetCode2742.ipynb)
 
 # Requirements
 
