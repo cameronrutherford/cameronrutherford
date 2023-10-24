@@ -2,19 +2,19 @@
 
 ::: {.content-visible when-profile="cpp"}
 
-# Hello C++
+
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-# Hello Python
+
 
 :::
 
 ::: {.content-visible when-profile="devops"}
 
-# Hello devops
+
 
 :::
 

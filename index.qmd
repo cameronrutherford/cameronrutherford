@@ -12,13 +12,14 @@ format:
 ---
 
 ```{=html}
-<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="320"/> </a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 
 <table>
   <thead>
     <tr>
       <th>Quick Links</th>
       <th>Tech Stack</th>
+      <th>About</th>
     </tr>
   </thead>
   <tbody>
@@ -49,24 +50,20 @@ format:
         <a href="https://github.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/github/github-icon.svg" width="40"/> </a>
         <p> <a style="float: left;" href="https://www.latex-project.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg" width="160"/> </a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&show_icons=true&theme=nightowl"/> </a>
-        <p> <a href="https://leetcode.com/cameronrutherford/" target="_blank" rel="noreferrer"><img src="https://leetcard.jacoblin.cool/cameronrutherford?theme=nord&font=Darker%20Grotesque&ext=heatmap"/></a>
-      </td>
-      <td>
-        <p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&show_icons=true&theme=nightowl&layout=donut"/> </a>
-        <p> <a href="https://git.io/streak-stats" target="_blank" rel="noreferrer"><img src="https://streak-stats.demolab.com?user=cameronrutherford&theme=nightowl&border_radius=2&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=300"/> </a>
+        <p> This is an HTML table written in quarto, rendered into GitHub flavored markdown in my `README.md`, redered into HTML with CSS, hosted in GitHub pages, run using a Docker image that I build and host on the GitHub container registry (ghcr) called `quarto-ci`.
+
+        For more information about the ghcr container `quarto-ci`, how I configured my website, and more about me, go check out the documentation!
       </td>
     </tr>
   </tbody>
 </table>
+
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&show_icons=true&theme=nightowl"/> </a>
+<a href="https://git.io/streak-stats" target="_blank" rel="noreferrer"><img src="https://streak-stats.demolab.com?user=cameronrutherford&theme=nightowl&border_radius=2&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=300"/> </a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&show_icons=true&theme=nightowl&layout=donut-vertical" width="25%"/> </a>
+<a href="https://leetcode.com/cameronrutherford/" target="_blank" rel="noreferrer"><img src="https://leetcard.jacoblin.cool/cameronrutherford?theme=wtf&font=Darker%20Grotesque&ext=heatmap" width="49%"/></a>
 ```
-
-This is an HTML table written in quarto, rendered into GitHub flavored markdown and HTML, hosted in GitHub pages, run using a Docker image that I build and host on the GitHub container registry.
-
-For more information about the GitHub container registry container `quarto-ci`, see the [dev-container docs](./config/devcontainer.qmd)
 
 ::: {.content-visible when-format="html"}
 

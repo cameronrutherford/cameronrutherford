@@ -1,5 +1,20 @@
+::: {.content-visible when-profile="cpp"}
 
-::: {.content-hidden when-format="html"}
+
+
+:::
+
+::: {.content-visible when-profile="python"}
+
+
+
+:::
+
+::: {.content-visible when-profile="devops"}
+
+
+
+:::
 
 # Education
 
@@ -10,5 +25,3 @@
 - Outstanding Mathematics Major 2020
 - ICPC Pacific Northwest Eastern Washington Site Winner 2018
 - Howard R. Gage Memorial Scholarship 2017, 2018, 2019
-
-:::

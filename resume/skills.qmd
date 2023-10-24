@@ -1,5 +1,20 @@
+::: {.content-visible when-profile="cpp"}
 
-::: {.content-hidden when-format="html"}
+
+
+:::
+
+::: {.content-visible when-profile="python"}
+
+
+
+:::
+
+::: {.content-visible when-profile="devops"}
+
+
+
+:::
 
 # Skills
 
@@ -47,4 +62,3 @@
     </tbody>
 </table>
 ```
-:::

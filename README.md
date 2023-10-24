@@ -5,17 +5,19 @@ Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows
 [![quarto-ci ghcr
 publish](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml)
 
-<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="320"/> </a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 &#10;
 <table data-quarto-postprocess="true">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">Quick Links</th>
 <th data-quarto-table-cell-role="th">Tech Stack</th>
+<th data-quarto-table-cell-role="th">About</th>
 </tr>
 </thead>
 <tbody>
@@ -80,37 +82,17 @@ target="_blank" rel="noreferrer"><img
 src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
 width="160" /></a></p>
 </div></td>
-</tr>
-<tr class="even">
-<td><div>
-<p><a
-href="https://cameronrutherford.github.io/cameronrutherford/index.html"
-target="_blank" rel="noreferrer"><img
-src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&amp;show_icons=true&amp;theme=nightowl" /></a></p>
-</div>
-<div>
-<p><a href="https://leetcode.com/cameronrutherford/" target="_blank"
-rel="noreferrer"><img
-src="https://leetcard.jacoblin.cool/cameronrutherford?theme=nord&amp;font=Darker%20Grotesque&amp;ext=heatmap" /></a></p>
-</div></td>
-<td><div>
-<p><a
-href="https://cameronrutherford.github.io/cameronrutherford/index.html"
-target="_blank" rel="noreferrer"><img
-src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&amp;show_icons=true&amp;theme=nightowl&amp;layout=donut" /></a></p>
-</div>
-<div>
-<p><a href="https://git.io/streak-stats" target="_blank"
-rel="noreferrer"><img
-src="https://streak-stats.demolab.com?user=cameronrutherford&amp;theme=nightowl&amp;border_radius=2&amp;date_format=j%20M%5B%20Y%5D&amp;mode=weekly&amp;card_width=300" /></a></p>
-</div></td>
+<td><p>This is an HTML table written in quarto, rendered into GitHub
+flavored markdown in my `README.md`, redered into HTML with CSS, hosted
+in GitHub pages, run using a Docker image that I build and host on the
+GitHub container registry (ghcr) called `quarto-ci`. For more
+information about the ghcr container `quarto-ci`, how I configured my
+website, and more about me, go check out the documentation!</p></td>
 </tr>
 </tbody>
 </table>
 
-This is an HTML table written in quarto, rendered into GitHub flavored
-markdown and HTML, hosted in GitHub pages, run using a Docker image that
-I build and host on the GitHub container registry.
-
-For more information about the GitHub container registry container
-`quarto-ci`, see the [dev-container docs](./config/devcontainer.qmd)
+&#10;<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&show_icons=true&theme=nightowl"/> </a>
+<a href="https://git.io/streak-stats" target="_blank" rel="noreferrer"><img src="https://streak-stats.demolab.com?user=cameronrutherford&theme=nightowl&border_radius=2&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=300"/> </a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&show_icons=true&theme=nightowl&layout=donut-vertical" width="25%"/> </a>
+<a href="https://leetcode.com/cameronrutherford/" target="_blank" rel="noreferrer"><img src="https://leetcard.jacoblin.cool/cameronrutherford?theme=wtf&font=Darker%20Grotesque&ext=heatmap" width="49%"/></a>
