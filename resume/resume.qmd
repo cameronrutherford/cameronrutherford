@@ -10,13 +10,41 @@ format:
 
 ## Resume
 ```{=html}
-<p class="text-center">
-  <a class="btn btn-primary btn-lg cv-download" href="resume.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
-  </a>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="cpp_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current C++ resume </a>
+        </p>
+      </th>
+      <th> <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="python_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current Python resume </a>
+        </p>
+      </th>
+      <th>
+        <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="devops_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current DevOps resume  </a>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <iframe src="cpp_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+      <td>
+        <iframe src="python_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+      <td>
+        <iframe src="devops_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+    </tr>
+  </tbody>
+<table>
 
-<iframe src="resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+
 ```
 
 ## Git Integration

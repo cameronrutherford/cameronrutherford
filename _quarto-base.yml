@@ -2,6 +2,7 @@ project:
   render:
     - "*.qmd"
     - "*.ipynb"
+    - "!*.out.*"
     # No need to render files in more than one place - these files are just included in another
     - "!resume/old_resume.qmd"
     - "!resume/conferences.qmd"

@@ -1,60 +1,121 @@
 # Experience
 
+### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
+
 ::: {.content-visible when-profile="cpp"}
 
-
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (current world #1 HPC System)
+- Aided development of C++ / CUDA / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (current world #1 HPC System)
+- Aided development of C++ / CUDA / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
 
 :::
 
 ::: {.content-visible when-profile="devops"}
 
-
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (current world #1 HPC System)
+- Aided development of C++ / CUD / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
 
 :::
 
-### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
-
-- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (AMD - current world #1)
-- Led software development of C++ / CUDA targetted Sparse GPU solver tailored for use case with HiOp
-- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
-- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
-- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
-- MLOps internal offering leader developing containerisation and MLOps best practices community
-- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
-- Assisted projects deploying DeepSpeed / distributed LLM and GNN pipelines
-
-
 ### Software Engineer I HPC/ML/Q, PNNL (Virtual): 2021 - 2022
 
+::: {.content-visible when-profile="cpp"}
+
 - Received PNNL's highest performance award (OPA) for a second year in a row
-- Transitioned to leadrership of ExaSGD software stack and developed of C++ AMD/HIP backend
-- Deployed CI across multiple national labs, learned HIP/AMD stack and profiling tools
+- Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
+- Deployed ExaSGD CI/CD across [x86_64/amd64/ppcle] x [AMD/NVIDIA], learned HIP/AMD
 - Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
-- Delivered internal tutorials on distributed machine learning with JAX and other internal MLOps offerings
-- Deployed CI/CD for Physics Informed ML, RL and Graph Analytics Algorithms on HPC
-- Led tutorials on using Qiskit, and trained other staff in Quantum through internal boot camp
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Led tutorials and boot camps for PNNL staff on using JAX, Qiskit, and other parallel ML/computing concepts
+
+:::
+
+::: {.content-visible when-profile="python"}
+
+- Received PNNL's highest performance award (OPA) for a second year in a row
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+- Led tutorials and boot camps for PNNL staff on using JAX, Qiskit, and other parallel ML/computing concepts
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
+- Deployed ExaSGD CI/CD across [x86_64/amd64/ppcle] x [AMD/NVIDIA], learned HIP/AMD
+
+:::
+
+::: {.content-visible when-profile="devops"}
+
+- Received PNNL's highest performance award (OPA) for a second year in a row
+- Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
+- Deployed ExaSGD CI/CD across [x86_64/amd64/ppcle] x [AMD/NVIDIA], learned HIP/AMD
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Led tutorials and boot camps for PNNL staff on using JAX, Qiskit, and other parallel ML/computing concepts
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+
+:::
 
 ### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
 
+::: {.content-visible when-profile="cpp"}
+
 - Received PNNL's highest performance award (OPA)
-- Deployed ExaSGD C++/MPI software to Summit supercomputer (NVIDIA based - former world #1)
-- Implemented and benchmarked C++ MPI tree gather/broadcast across compilers and backends (OpenMPI, IntelMPI, MVAPICH), iteratively optimized and packaged product
-- Worked on open-source MLFlow offering to save lab $200k per project on WandB subscription
+- Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Custom)
+- Successfully scaled ExaSGD C++ / MPI software to Summit (former world #1 HPC System)
+- Benchmarked C / MPI communication collectives across compilers and backends, optimized and packaged product
+- Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
 - Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
-- Worked in HPC support centre to deploy, debug and test various ML software stacks
+
+:::
+
+::: {.content-visible when-profile="python"}
+
+- Received PNNL's highest performance award (OPA)
+- Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Custom)
+- Deployed CI/CD for ML Python package neuromancer, testing deployment on PNNL HPC
+- Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
+- Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
+- Successfully scaled ExaSGD C++ / MPI software to Summit (former world #1 HPC System)
+
+:::
+
+::: {.content-visible when-profile="devops"}
+
+- Received PNNL's highest performance award (OPA)
+- Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Quantum)
+- Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
+- Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
+- Successfully scaled ExaSGD C++ / MPI software to Summit (former world #1 HPC System)
+- Benchmarked C / MPI communication collectives across compilers and backends, optimized and packaged product
+
+:::
+
 
 ### Tech Student 4 Optimization and Control Group, PNNL (Virtual): 2020
 
-- Worked on RAJA linear algebra kernel development within HiOp for interface with ExaGO
-- Learned CMake with Spack and implemented testing and packaging for ExaSGD software
-- Profiled codebase on different NVIDIA GPU architectures and analyzed performance data
-- Taught other developers about RAJA and CMake and delivered key kernels for project success
+- Deployed C++ / RAJA MDS linear algebra kernels in HiOp as well as designing unit tests
+- Interfaced HiOp linear solver into ExaGO for first ever (SC-)ACOPF solved on GPU
+- Learned CMake, Spack, GitHub/GitLab pipelines and QA/testing of C++ codebases
+- Developed skills in performance profiling of CUDA, MPI, OpenMP and hybrid applications
+- Taught other project developers about RAJA, GPUs and best practices learned
 
 ### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
 ### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
