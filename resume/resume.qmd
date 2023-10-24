@@ -15,16 +15,16 @@ format:
     <tr>
       <th>
         <p class="text-center">
-          <a class="btn btn-primary btn-lg cv-download" href="cpp_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current C++ resume </a>
+          <a class="btn btn-primary btn-lg cv-download" href="cpp_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download C++ CV </a>
         </p>
       </th>
       <th> <p class="text-center">
-          <a class="btn btn-primary btn-lg cv-download" href="python_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current Python resume </a>
+          <a class="btn btn-primary btn-lg cv-download" href="python_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download Python CV </a>
         </p>
       </th>
       <th>
         <p class="text-center">
-          <a class="btn btn-primary btn-lg cv-download" href="devops_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current DevOps resume  </a>
+          <a class="btn btn-primary btn-lg cv-download" href="devops_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download DevOps CV </a>
         </p>
       </th>
     </tr>
