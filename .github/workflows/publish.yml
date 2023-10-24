@@ -26,9 +26,9 @@ jobs:
           quarto render resume/cpp_resume.qmd --profile cpp
           mv ./docs/resume/cpp_resume.pdf ./quarto-cache/resume
           quarto render resume/python_resume.qmd --profile python
-          mv ./docs/resume/devops_resume.pdf ./quarto-cache/resume
-          quarto render resume/devops_resume.qmd --profile devops
           mv ./docs/resume/python_resume.pdf ./quarto-cache/resume
+          quarto render resume/devops_resume.qmd --profile devops
+          mv ./docs/resume/devops_resume.pdf ./quarto-cache/resume
           rm -rf ./docs && mv ./quarto-cache ./docs && rm -rf ./quarto-cache
 
       - name: Quarto Publish
