@@ -9,15 +9,13 @@ publish](https://github.com/cameronrutherford/cameronrutherford/actions/workflow
 &#10;
 <table data-quarto-postprocess="true">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">Quick Links</th>
 <th data-quarto-table-cell-role="th">Tech Stack</th>
-<th data-quarto-table-cell-role="th">About</th>
 </tr>
 </thead>
 <tbody>
@@ -82,12 +80,14 @@ target="_blank" rel="noreferrer"><img
 src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
 width="160" /></a></p>
 </div></td>
-<td><p>This is an HTML table written in quarto, rendered into GitHub
-flavored markdown in my `README.md`, redered into HTML with CSS, hosted
-in GitHub pages, run using a Docker image that I build and host on the
-GitHub container registry (ghcr) called `quarto-ci`. For more
-information about the ghcr container `quarto-ci`, how I configured my
-website, and more about me, go check out the documentation!</p></td>
+</tr>
+<tr class="even">
+<td colspan="2"><p>This is an HTML table written in quarto, rendered
+into GitHub flavored markdown in my `README.md`, redered into HTML with
+CSS, hosted in GitHub pages, run using a Docker image that I build and
+host on the GitHub container registry (ghcr) called `quarto-ci`. For
+more information about the ghcr container `quarto-ci`, how I configured
+my website, and more about me, go check out the documentation!</p></td>
 </tr>
 </tbody>
 </table>
