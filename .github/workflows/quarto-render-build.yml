@@ -39,13 +39,13 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Quartor render (cpp)
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile cpp
+        run: quarto render --profile cpp
 
       - name: Quartor render (python)
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile python
+        run: quarto render --profile python
 
       - name: Quartor render (devops)
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile devops
+        run: quarto render --profile devops
 
       - name: Quarto Render
         run: quarto render

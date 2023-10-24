@@ -86,27 +86,23 @@ width="160" /></a></p>
 <p><a
 href="https://cameronrutherford.github.io/cameronrutherford/index.html"
 target="_blank" rel="noreferrer"><img
-src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&amp;show_icons=true&amp;theme=nightowl"
-width="2200" /></a></p>
+src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&amp;show_icons=true&amp;theme=nightowl" /></a></p>
 </div>
 <div>
 <p><a href="https://leetcode.com/cameronrutherford/" target="_blank"
 rel="noreferrer"><img
-src="https://leetcard.jacoblin.cool/cameronrutherford?theme=nord&amp;font=Darker%20Grotesque&amp;ext=heatmap"
-width="2200" /></a></p>
+src="https://leetcard.jacoblin.cool/cameronrutherford?theme=nord&amp;font=Darker%20Grotesque&amp;ext=heatmap" /></a></p>
 </div></td>
 <td><div>
 <p><a
 href="https://cameronrutherford.github.io/cameronrutherford/index.html"
 target="_blank" rel="noreferrer"><img
-src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&amp;show_icons=true&amp;theme=nightowl&amp;layout=donut"
-width="300" /></a></p>
+src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&amp;show_icons=true&amp;theme=nightowl&amp;layout=donut" /></a></p>
 </div>
 <div>
 <p><a href="https://git.io/streak-stats" target="_blank"
 rel="noreferrer"><img
-src="https://streak-stats.demolab.com?user=cameronrutherford&amp;theme=nightowl&amp;border_radius=2&amp;date_format=j%20M%5B%20Y%5D&amp;mode=weekly&amp;card_width=300"
-width="300" /></a></p>
+src="https://streak-stats.demolab.com?user=cameronrutherford&amp;theme=nightowl&amp;border_radius=2&amp;date_format=j%20M%5B%20Y%5D&amp;mode=weekly&amp;card_width=300" /></a></p>
 </div></td>
 </tr>
 </tbody>
