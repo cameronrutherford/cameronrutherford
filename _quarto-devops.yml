@@ -1,0 +1,3 @@
+project:
+  render:
+    - "resume/devops_resume.qmd"

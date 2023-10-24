@@ -1,0 +1,10 @@
+---
+format: python-pdf
+---
+
+{{< include experience.qmd >}}
+{{< include publications.qmd >}}
+{{< include skills.qmd >}}
+{{< include conferences.qmd >}}
+{{< include education.qmd >}}
+{{< include other.qmd >}}

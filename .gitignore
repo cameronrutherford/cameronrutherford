@@ -3,9 +3,9 @@
 docs
 /.luarc.json
 site_libs
-resume/*.aux
-resume/*.html
-resume/*.log
-resume/*.out
-resume/*.tex
-resume.pdf
+*.aux
+*.html
+*.log
+*.out*
+*.tex
+*.pdf

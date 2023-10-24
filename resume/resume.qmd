@@ -1,188 +1,54 @@
 ---
-filters:
-    - include-code-files
 format:
     html:
         default: true
         toc: true
         toc-depth: 4
-    pdf:
-       template: template.tex
-       font: DejaVu Sans
-       number-sections: false
-
-title: HPC/ML/Q Research Software Engineer
-name: (Robert) Cameron Rutherford
-
-summary: Experienced HPC/ML/Q Research Software Engineer with 3+ years of expertise in deploying, optimizing, and teaching scientific software on diverse computing systems, including the world's largest supercomputers and quantum computers. Proven track record in end-to-end solution delivery, project leadership, and effective team coordination, while adept at managing social engineering challenges in software development processes.
-
-contact:
-    location: Manhattan, NY
-    phone: (509) 218-1818
-    email: cameron.rutherford@me.com
-portfolio:
-    linkedin: \href{https://www.linkedin.com/in/robert-c-rutherford/}{Robert C Rutherford}
-    github: \href{https://github.com/cameronrutherford}{cameronrutherford}
-
 ---
-
-::: {.content-visible when-format="pdf"}
-
-# Experience
-
-### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - Present
-
-- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (AMD - current world #1)
-- Led software development of C++ / CUDA targetted Sparse GPU solver tailored for use case with HiOp
-- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
-- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
-- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
-- MLOps internal offering leader developing containerisation and MLOps best practices community
-- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
-- Assisted projects deploying DeepSpeed / distributed LLM and GNN pipelines
-
-
-### Software Engineer I HPC/ML/Q, PNNL (Virtual): 2021 - 2022
-
-- Received PNNL's highest performance award (OPA) for a second year in a row
-- Transitioned to leadrership of ExaSGD software stack and developed of C++ AMD/HIP backend
-- Deployed CI across multiple national labs, learned HIP/AMD stack and profiling tools
-- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
-- Delivered internal tutorials on distributed machine learning with JAX and other internal MLOps offerings
-- Deployed CI/CD for Physics Informed ML, RL and Graph Analytics Algorithms on HPC
-- Led tutorials on using Qiskit, and trained other staff in Quantum through internal boot camp
-
-### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
-
-- Received PNNL's highest performance award (OPA)
-- Deployed ExaSGD C++/MPI software to Summit supercomputer (NVIDIA based - former world #1)
-- Implemented and benchmarked C++ MPI tree gather/broadcast across compilers and backends (OpenMPI, IntelMPI, MVAPICH), iteratively optimized and packaged product
-- Worked on open-source MLFlow offering to save lab $200k per project on WandB subscription
-- Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
-- Worked in HPC support centre to deploy, debug and test various ML software stacks
-
-### Tech Student 4 Optimization and Control Group, PNNL (Virtual): 2020
-
-- Worked on RAJA linear algebra kernel development within HiOp for interface with ExaGO
-- Learned CMake with Spack and implemented testing and packaging for ExaSGD software
-- Profiled codebase on different NVIDIA GPU architectures and analyzed performance data
-- Taught other developers about RAJA and CMake and delivered key kernels for project success
-
-### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
-### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
-### Calculus III Grader / Mathematics Tutor, Whitworth University (Spokane, WA): 2017, 2019
-### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
-
-# Publications
-
-- S. Abhyankar, S. Peles, **R. Rutherford**, A. Mancinelli, **_Evaluation of AC optimal power flow on graphical processing units._** (IEEE PESGM 2021)
-- S. Peles, M. Alam, A. J. Mancinelli, K. Perumalla, **R. C. Rutherford**, J. Ryan, C. G. Petra, **_Porting the Nonlinear Optimization Library HiOp to Accelerator-Based Hardware Architectures_** (arxiv 2021)
-
-# Skills
-
-```{=html}
-<table>
-    <thead>
-        <tr>
-            <th font-weight="bold">C / C++17</th>
-            <th font-weight="bold">Python</th>
-            <th font-weight="bold">DevOps</th>
-            <th font-weight="bold">Machine Learning</th>
-            <th font-weight="bold">Other</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <p> CUDA, HIP,
-                <p> CPU/GPU Profiling,
-                <p> MPI, OpenMP,
-                <p> CMake, Spack
-            </td>
-            <td>
-                <p> torch, JAX, pyg,
-                <p> mpi4py, pybind11,
-                <p> conda/mamba, poetry
-            </td>
-            <td>
-                <p> GitHub/GitLab, vim/tmux,
-                <p> SLURM/LSF, HPC,
-                <p> quarto, VSCode
-            </td>
-            <td>
-                <p> LLMs, RL, NTK,
-                <p> FL, DP, SMC,
-                <p> GNNs, Domain Aware ML
-            </td>
-            <td>
-                <p> Go, Rust, Fortran,
-                <p> Graph DBs, SQL,
-                <p> Qiskit, AWS, S3
-                <p> dev-containers
-            </td>
-        </tr>
-    </tbody>
-</table>
-```
-
-# Conferences
-
-### Practice and Experience in Advanced Research Computing (PEARC): 2023
-### Pacific Northwest National Laboratory (PNNL) Tech Fest: 2021-2023
-### Energy Exascale Earth System Model (E3SM) Annual Meeting: 2023
-### Sustainable Tools Ecosystem Project (STEP) East Coast Town Hall: 2023
-### Exascale Computing Project (ECP) Annual Meeting: 2021-2023
-### Pacific Northwest National Laboratory (PNNL) Innovation Summit: 2022
-### Co-Design Centre for Quantum Advantage (C2QA) Annual Meeting: 2022
-
-# Education
-
-### Scientist & Engineer Rising Leader Learning Journey: 2023
-### Cyber Security & National Security Seminar Series, PNNL: 2021 - 2022
-### Whitworth University, B.S. Mathematics and Computer Science: G.P.A 3.9/4.0
-
-- Outstanding Mathematics Major 2020
-- ICPC Pacific Northwest Eastern Washington Site Winner 2018
-- Howard R. Gage Memorial Scholarship 2017, 2018, 2019
-
-# Other Activities
-
-### Sustainable Horizons Institute HPC Mentor: 2022, 2023
-### Quantum Information Science / HPC STEM Mentor: 2022 - Present
-### Whitworth Chess Club President: 2019 - 2020
-### Pine Codes Hackathon Winner: 2019
-### SpokAnimal Shelter Volunteer: 2019
-### Whitworth Men's Basketball Team: 2016 - 2019
-
-:::
 
 ::: {.content-visible when-format="html"}
 
 ## Resume
-
 ```{=html}
-<p class="text-center">
-  <a class="btn btn-primary btn-lg cv-download" href="resume.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
-  </a>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="cpp_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current C++ resume </a>
+        </p>
+      </th>
+      <th> <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="python_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current Python resume </a>
+        </p>
+      </th>
+      <th>
+        <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="devops_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current DevOps resume  </a>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <iframe src="cpp_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+      <td>
+        <iframe src="python_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+      <td>
+        <iframe src="devops_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+    </tr>
+  </tbody>
+<table>
 
-<iframe src="resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+
 ```
-
-## Old GitHub resume
-
-Here is my old GitHub resume if you want to see what it used to look like - look how far I have come!
-
-::: {.callout-caution collapse="true"}
-## Click to expand and view my old resume!
-{{< include old_resume.qmd >}}
-:::
-
-I saw this in a talk about plain text - the Australian flag is bugged on Windows. Since MSFT only added 3 flags to it's base character set, I decided it was a feature, not a bug, and will not be fixing it.
 
 ## Git Integration
 
-This pdf is rendered during `quarto render`, and then hosted in GitHub pages. Since the pdf seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
+These pdfs are rendered during `quarto render`, and then hosted in GitHub pages. Since the pdfs seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
 
 :::

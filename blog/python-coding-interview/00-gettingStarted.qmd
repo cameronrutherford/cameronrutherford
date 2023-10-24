@@ -12,11 +12,17 @@ C++ was rather painful, but technically worked with this configuration. Hopefull
 
 {{< embed 01-testConfiguration.ipynb#watermark >}}
 
+I attempted two hard problems, and realized that it really has been a while for Python. Working backwards through daily easies until they become clockwork, before progressing with Medium and then hards. Will probably only document hards, and since I will only do 10-20 of them, will try and make them worth reading in the end.
+
+TODO : Also make C++ ones readable again, and re-do the problem with sophisticated solutions?
+
 # Notebooks
 
 A quick list of notebooks:
 
 - [Testing Configuration](#01-testConfiguration.ipynb)
+- [LeetCode #1425: Constrained Subsequence Sum](#02-leetCode1425.ipynb)
+- [LeetCode #1793: Maximum Score of a Good Subarray](#03-leetCode1793.ipynb)
 
 # Requirements
 
@@ -45,3 +51,7 @@ For a while, mamba was being used in the `quarto-ci` base image. That was downgr
 You can have a python environment run jupyter in VSCode, but really what you want from a venv is an ipykernel environment installed. We had to do that in our Dockerfile, and we also make it a "Jupyter Kernel" detectable by VSCode.
 
 # Bugs
+
+## VSCode
+
+By default, kernel cells with really long lines do not look good, so we will have to embed that setting into the dev-container later

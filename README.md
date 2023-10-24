@@ -1,22 +1,11 @@
 # README
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)
+[![GitHub Pages
+Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)
+[![quarto-ci ghcr
+publish](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml)
 
-<a href="https://github.com/pre-commit/pre-commit" target="_blank" rel="noreferrer">
-<img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit"/>
-</a>
-<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml" rel="noreferrer">
-<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/pre-commit.yml/badge.svg?event=pull_request"/>
-</a>
-<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml">
-<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg"/>
-</a>
-<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml">
-<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg"/>
-</a>
-<a href="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml">
-<img src="https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg?event=pull_request"/>
-</a>
-
-<a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="320"/> </a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 &#10;
 <table data-quarto-postprocess="true">
 <colgroup>
@@ -92,12 +81,18 @@ src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird
 width="160" /></a></p>
 </div></td>
 </tr>
+<tr class="even">
+<td colspan="2"><p>This is an HTML table written in quarto, rendered
+into GitHub flavored markdown in my `README.md`, redered into HTML with
+CSS, hosted in GitHub pages, run using a Docker image that I build and
+host on the GitHub container registry (ghcr) called `quarto-ci`. For
+more information about the ghcr container `quarto-ci`, how I configured
+my website, and more about me, go check out the documentation!</p></td>
+</tr>
 </tbody>
 </table>
 
-This is an HTML table written in quarto, rendered into GitHub flavored
-markdown and HTML, hosted in GitHub pages, run using a Docker image that
-I build and host on the GitHub container registry.
-
-For more information about the GitHub container registry container
-`quarto-ci`, see the [dev-container docs](./config/devcontainer.qmd)
+&#10;<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&show_icons=true&theme=nightowl"/> </a>
+<a href="https://git.io/streak-stats" target="_blank" rel="noreferrer"><img src="https://streak-stats.demolab.com?user=cameronrutherford&theme=nightowl&border_radius=2&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=300"/> </a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&show_icons=true&theme=nightowl&layout=donut-vertical" width="25%"/> </a>
+<a href="https://leetcode.com/cameronrutherford/" target="_blank" rel="noreferrer"><img src="https://leetcard.jacoblin.cool/cameronrutherford?theme=wtf&font=Darker%20Grotesque&ext=heatmap" width="49%"/></a>

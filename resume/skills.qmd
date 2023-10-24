@@ -1,0 +1,148 @@
+# Skills
+
+::: {.content-visible when-profile="cpp"}
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th font-weight="bold">C / C++17</th>
+            <th font-weight="bold">DevOps</th>
+            <th font-weight="bold">Python</th>
+            <th font-weight="bold">Machine Learning</th>
+            <th font-weight="bold">Other</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> CUDA, HIP,
+                <p> CPU/GPU Profiling,
+                <p> MPI, OpenMP,
+                <p> CMake, Spack
+            </td>
+            <td>
+                <p> GitHub/GitLab, vim/tmux,
+                <p> SLURM/LSF, HPC,
+                <p> quarto, VSCode
+            </td>
+            <td>
+                <p> torch, JAX, pyg,
+                <p> mpi4py, pybind11,
+                <p> conda/mamba, poetry
+            </td>
+            <td>
+                <p> LLMs, RL, NTK,
+                <p> FL, DP, SMC,
+                <p> GNNs, Domain Aware ML
+            </td>
+            <td>
+                <p> Go, Rust, Fortran,
+                <p> Graph DBs, SQL,
+                <p> Qiskit, AWS, S3
+                <p> dev-containers
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+:::
+
+::: {.content-visible when-profile="python"}
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th font-weight="bold">Python</th>
+            <th font-weight="bold">Machine Learning</th>
+            <th font-weight="bold">DevOps</th>
+            <th font-weight="bold">C / C++17</th>
+            <th font-weight="bold">Other</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> torch, JAX, pyg,
+                <p> mpi4py, pybind11,
+                <p> conda/mamba, poetry
+            </td>
+            <td>
+                <p> LLMs, RL, NTK,
+                <p> FL, DP, SMC,
+                <p> GNNs, Domain Aware ML
+            </td>
+            <td>
+                <p> GitHub/GitLab, vim/tmux,
+                <p> SLURM/LSF, HPC,
+                <p> quarto, VSCode
+            </td>
+            <td>
+                <p> CUDA, HIP,
+                <p> CPU/GPU Profiling,
+                <p> MPI, OpenMP,
+                <p> CMake, Spack
+            </td>
+            <td>
+                <p> Go, Rust, Fortran,
+                <p> Graph DBs, SQL,
+                <p> Qiskit, AWS, S3
+                <p> dev-containers
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+:::
+
+::: {.content-visible when-profile="devops"}
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th font-weight="bold">DevOps</th>
+            <th font-weight="bold">C / C++17</th>
+            <th font-weight="bold">Python</th>
+            <th font-weight="bold">Machine Learning</th>
+            <th font-weight="bold">Other</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> GitHub/GitLab, vim/tmux,
+                <p> SLURM/LSF, HPC,
+                <p> quarto, VSCode
+            </td>
+            <td>
+                <p> CUDA, HIP,
+                <p> CPU/GPU Profiling,
+                <p> MPI, OpenMP,
+                <p> CMake, Spack
+            </td>
+            <td>
+                <p> torch, JAX, pyg,
+                <p> mpi4py, pybind11,
+                <p> conda/mamba, poetry
+            </td>
+            <td>
+                <p> LLMs, RL, NTK,
+                <p> FL, DP, SMC,
+                <p> GNNs, Domain Aware ML
+            </td>
+            <td>
+                <p> Go, Rust, Fortran,
+                <p> Graph DBs, SQL,
+                <p> Qiskit, AWS, S3
+                <p> dev-containers
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+:::

@@ -1,4 +1,4 @@
-name: Publish Quarto GitHub Pages
+name: GitHub Pages
 
 on:
   workflow_dispatch:
@@ -18,7 +18,21 @@ jobs:
         with:
           # This means we have to keep what CI does minimal...
           tinytex: true
-      - name: Render and Publish
+      - name: Quarto Render (with resume profiles)
+        run: |
+          quarto render --no-browser
+          mkdir ./quarto-cache
+          rm -rf ./quarto-cache && mv ./docs ./quarto-cache
+          quarto render --no-browser resume/cpp_resume.qmd --profile cpp
+          mv ./docs/resume/cpp_resume.pdf ./quarto-cache/resume
+          quarto render --no-browser resume/python_resume.qmd --profile python
+          mv ./docs/resume/devops_resume.pdf ./quarto-cache/resume
+          quarto render --no-browser resume/devops_resume.qmd --profile devops
+          mv ./docs/resume/python_resume.pdf ./quarto-cache/resume
+          rm -rf ./docs && mv ./quarto-cache ./docs && rm -rf ./quarto-cache
+
+      - name: Quarto Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
+          render: false
           target: gh-pages
