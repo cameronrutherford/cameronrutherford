@@ -17,6 +17,7 @@ format:
     menu: true
     chalkboard: true
     slide-level: 3
+    auto-play-media: false
 revealjs-plugins:
   - confetti
   # Added in _extensions/cameronrutherford/manim-reveal
@@ -45,8 +46,6 @@ Yes, while I could just add the media into the site data, there are a few things
 
 1. I am trying to embed the animation into the revealJS presentation seamlessly, so I need the .json files along with the mp4. This might only be possible in reveal, in which case I will do conditional content to deal with making HTML look nice.
 2. If you add all output in media, you will end up caching a whole bunch of information, and it can get very messy.
-
-## Just the background?
 
 :::{.fv-background fv-video="videos/DemoScene.mp4" fv-playback-info="videos/DemoScene.json"}
 
