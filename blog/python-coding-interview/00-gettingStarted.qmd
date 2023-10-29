@@ -37,10 +37,7 @@ This ended up being installed through the Dockerfile in `.devcontainer/blog-codi
 
 ### Poetry
 
-For a while, mamba was being used in the `quarto-ci` base image. That was downgrading Python to 3.10, and I didn't want that. Instead we are using [Poetry](https://python-poetry.org/) to manage pure python deps. The configuration for our image is:
-
-```{.TOML include="../../.devcontainer/blog-pythonInterview/pyproject.toml"}
-```
+For a while, mamba was being used in the `quarto-ci` base image. That was downgrading Python to 3.10, and I didn't want that. Instead we are using [Poetry](https://python-poetry.org/) to manage pure python deps. The configuration for our image is stored as a heredoc within the Dockerfile to ensure that modifications to the pyproject.toml "file" actually triggers a rebuild when appropriate, since there is no way to chain a COPY/ADD command with a RUN in Docker.
 
 ## Algorithms
 

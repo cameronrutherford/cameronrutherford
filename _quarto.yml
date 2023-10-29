@@ -3,6 +3,9 @@ project:
   title: "Cameron's git-site"
   output-dir: docs
 
+resources:
+  - "presentations/math-magic/videos/*"
+
 profile:
   group:
     - [base, cpp, python, devops]
@@ -54,6 +57,7 @@ website:
       - text: "Presentations"
         menu:
           - presentations/stem-engagement/presentation.qmd
+          - presentations/math-magic/presentation.qmd
     tools:
       - icon: twitter
         href: https://twitter.com/cam_rutherford_

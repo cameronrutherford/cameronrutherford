@@ -2,6 +2,7 @@
 
 # TODO - replace this with poethepoet / poetry, along with porting other aliases
 
+rm -rfd docs
 quarto render
 mkdir ./quarto-cache
 rm -rf ./quarto-cache && mv ./docs ./quarto-cache
