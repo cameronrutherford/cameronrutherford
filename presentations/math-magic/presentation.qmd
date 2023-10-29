@@ -1,0 +1,62 @@
+---
+title: "Magical animations with RevealJS, Quarto and Manim"
+subtitle: "Putting it all together"
+date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
+date: today
+fig-cap-location: top
+author:
+  - Cameron Rutherford
+format:
+  html:
+    toc: true
+  revealjs:
+    output-ext: reveal.html
+    smaller: true
+    toc: true
+    toc-depth: 2
+    menu: true
+    chalkboard: true
+    slide-level: 3
+    auto-play-media: false
+revealjs-plugins:
+  - confetti
+  # Added in _extensions/cameronrutherford/manim-reveal
+  - manim-reveal
+---
+
+## Intro
+
+We are going to do our best to have a manim animation as the content for this slide... Let's see how it goes! Maybe we have to pull in the animation from a notebook to the side as an element within this document...
+
+## Bad example
+
+One option that keeps this all quite simple, is to just embed the output of a notebook into this presentation, albeit this has quite a few gotchas, and probably isn't recommended...
+
+::: {.callout-warning}
+This video will not play if you try and render it
+:::
+
+```markdown
+{{< embed manim-test.ipynb#basic-animation >}}
+```
+
+Note that unless you are careful, in both the rendered notebook preview, along with the embedded output here will not work.
+
+Yes, while I could just add the media into the site data, there are a few things to consider:
+
+1. I am trying to embed the animation into the revealJS presentation seamlessly, so I need the .json files along with the mp4. This might only be possible in reveal, in which case I will do conditional content to deal with making HTML look nice.
+2. If you add all output in media, you will end up caching a whole bunch of information, and it can get very messy.
+
+:::{.fv-background fv-video="videos/DemoScene.mp4" fv-playback-info="videos/DemoScene.json"}
+
+##
+
+:::
+
+## Better example
+
+We can try some silly things with HTML embedding of the video, or getting an iFrame that links to a YouTube video etc:
+
+
+
+## Best Integration
