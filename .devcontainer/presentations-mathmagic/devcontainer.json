@@ -1,0 +1,22 @@
+{
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "../.."
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"quarto.quarto",
+				"sumneko.lua",
+				"ms-azuretools.vscode-docker",
+				"github.vscode-github-actions",
+				"tomoki1207.pdf",
+				"ms-toolsai.jupyter",
+				"tamasfe.even-better-toml"
+			]
+		}
+	},
+	"workspaceFolder": "/home/app/",
+	"postCreateCommand": ".devcontainer/dev-build/postCreateCommand.sh",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/app/,type=bind,consistency=cached"
+}

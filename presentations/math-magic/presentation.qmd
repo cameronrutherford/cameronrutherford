@@ -1,0 +1,28 @@
+---
+title: "Magical animations with RevealJS, Quarto and Manim"
+subtitle: "Putting it all together"
+date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
+date: today
+fig-cap-location: top
+author:
+  - Cameron Rutherford
+format:
+  html:
+    toc: true
+  revealjs:
+    output-ext: reveal.html
+    smaller: true
+    toc: true
+    toc-depth: 2
+    menu: true
+    chalkboard: true
+    slide-level: 3
+revealjs-plugins:
+  - confetti
+  # Added in _extensions/cameronrutherford/manim-reveal
+  - manim-reveal
+---
+
+## Intro
+
+We are going to do our best to have a manim animation as the content for this slide... Let's see how it goes! Maybe we have to pull in the animation from a notebook to the side as an element within this document...
