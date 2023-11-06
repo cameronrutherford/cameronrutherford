@@ -12,7 +12,8 @@
 				"github.vscode-github-actions",
 				"tomoki1207.pdf",
 				"ms-toolsai.jupyter",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"GitHub.copilot"
 			]
 		}
 	},

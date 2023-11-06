@@ -9,6 +9,7 @@ author:
 format:
   html:
     toc: true
+    toc-depth: 3
   revealjs:
     output-ext: reveal.html
     smaller: true
@@ -47,16 +48,28 @@ Yes, while I could just add the media into the site data, there are a few things
 1. I am trying to embed the animation into the revealJS presentation seamlessly, so I need the .json files along with the mp4. This might only be possible in reveal, in which case I will do conditional content to deal with making HTML look nice.
 2. If you add all output in media, you will end up caching a whole bunch of information, and it can get very messy.
 
+## Here is what just directly embedding the video on a slide/html looks like
+
+{{< video ./videos/DemoScene.mp4 >}}
+
+Notice that you can't really step through the animation as well as you can on the next slide (see revealJS format for this!)
+
+::::{.content-hidden unless-format="revealjs"}
+
 :::{.fv-background fv-video="videos/DemoScene.mp4" fv-playback-info="videos/DemoScene.json"}
 
 ##
 
 :::
 
-## Better example
+::::
 
-We can try some silly things with HTML embedding of the video, or getting an iFrame that links to a YouTube video etc:
+## End
 
+While not a thoroughly impressive demo, this opens up the possibility to use all of Manim's awesome animations seamlessly within a slide!
 
+TODO:
 
-## Best Integration
+- Embed as a section of a slide
+- Publish extension as standalone thing
+- Create cooler examples

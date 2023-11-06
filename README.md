@@ -1,9 +1,4 @@
-# README
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)
-[![GitHub Pages
-Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)
-[![quarto-ci ghcr
-publish](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml)
+# README[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)[![GitHub-Pages-Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)[![quarto-ci-ghcr-publish](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml)
 
 <p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 &#10;
@@ -92,7 +87,6 @@ my website, and more about me, go check out the documentation!</p></td>
 </tbody>
 </table>
 
-&#10;<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&show_icons=true&theme=nightowl"/> </a>
-<a href="https://git.io/streak-stats" target="_blank" rel="noreferrer"><img src="https://streak-stats.demolab.com?user=cameronrutherford&theme=nightowl&border_radius=2&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=300"/> </a>
-<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api/top-langs?username=cameronrutherford&show_icons=true&theme=nightowl&layout=donut-vertical" width="25%"/> </a>
-<a href="https://leetcode.com/cameronrutherford/" target="_blank" rel="noreferrer"><img src="https://leetcard.jacoblin.cool/cameronrutherford?theme=wtf&font=Darker%20Grotesque&ext=heatmap" width="49%"/></a>
+&#10;<p> <a href="https://leetcode.com/cameronrutherford/" target="_blank" rel="noreferrer"><img src="https://leetcard.jacoblin.cool/cameronrutherford?theme=wtf&font=Darker%20Grotesque&ext=heatmap"/></a>
+<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="https://github-readme-stats.vercel.app/api?username=cameronrutherford&show_icons=true&theme=nightowl"/> </a>
+<p> <a href="https://git.io/streak-stats" target="_blank" rel="noreferrer"><img src="https://streak-stats.demolab.com?user=cameronrutherford&theme=nightowl&border_radius=2&date_format=j%20M%5B%20Y%5D&mode=weekly"/> </a>
