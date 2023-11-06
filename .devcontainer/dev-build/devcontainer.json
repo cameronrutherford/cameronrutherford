@@ -10,7 +10,8 @@
 				"sumneko.lua",
 				"ms-azuretools.vscode-docker",
 				"github.vscode-github-actions",
-				"tomoki1207.pdf"
+				"tomoki1207.pdf",
+				"GitHub.copilot"
 			]
 		}
 	},
