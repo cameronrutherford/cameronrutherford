@@ -40,6 +40,8 @@ You have to jump through a few hoops to install Docker:
 
 ## Bugs
 
+[https://askubuntu.com/questions/1380253/where-is-wsl-located-on-my-computer](https://askubuntu.com/questions/1380253/where-is-wsl-located-on-my-computer) while not explicitly a bug, you should make sure to move over your git repo into the WSL home directory for best performance! I was shocked how much faster things were...
+
 ### Dev-Container / VSCode
 
 1. I personally had some quite mysterious bugs that were happening as a result of my storage being almost full. Cleaning that out helped, as well as the occasional restart. Symptoms of this included:
