@@ -1,0 +1,45 @@
+{
+	"name": "CUDA Coding Interview",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "../..",
+		"args": {
+			"VARIANT": "ubuntu22.04",
+			"CUDA_VERSION": "12.2.2",
+			"POETRY_VERSION": "1.7.0"
+		}
+	},
+
+	"runArgs": [
+		"--gpus",
+		"all"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"username": "automatic",
+			"uid": "automatic",
+			"gid": "automatic",
+			"installZsh": false,
+			"installOhMyZsh": false,
+			"upgradePackages": false,
+			"nonFreePackages": false
+		}
+	},
+    "customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"github.vscode-github-actions",
+				"ms-toolsai.jupyter",
+				"ms-vscode.cpptools-extension-pack",
+				"GitHub.copilot",
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "NVIDIA.nsight-vscode-edition"
+			]
+		}
+	},
+    "workspaceFolder": "/home/app/",
+	"postCreateCommand": ".devcontainer/dev-build/postCreateCommand.sh",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/app/,type=bind,consistency=cached"
+}

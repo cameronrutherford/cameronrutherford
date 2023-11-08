@@ -37,6 +37,8 @@ One option that keeps this all quite simple, is to just embed the output of a no
 This video will not play if you try and render it
 :::
 
+{{< embed manim-test.ipynb#basic-animation >}}
+
 ```markdown
 {{< embed manim-test.ipynb#basic-animation >}}
 ```
