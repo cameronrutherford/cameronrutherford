@@ -3,7 +3,11 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "../..",
-		"args": { "VARIANT": "ubuntu22.04", "CUDA_VERSION": "12.2.2" }
+		"args": {
+			"VARIANT": "ubuntu22.04",
+			"CUDA_VERSION": "12.2.2",
+			"POETRY_VERSION": "1.7.0"
+		}
 	},
 
 	"runArgs": [
@@ -15,9 +19,9 @@
 			"username": "automatic",
 			"uid": "automatic",
 			"gid": "automatic",
-			"installZsh": true,
-			"installOhMyZsh": true,
-			"upgradePackages": true,
+			"installZsh": false,
+			"installOhMyZsh": false,
+			"upgradePackages": false,
 			"nonFreePackages": false
 		}
 	},
@@ -35,7 +39,6 @@
 			]
 		}
 	},
-	"remoteUser": "vscode",
     "workspaceFolder": "/home/app/",
 	"postCreateCommand": ".devcontainer/dev-build/postCreateCommand.sh",
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/app/,type=bind,consistency=cached"

@@ -54,6 +54,9 @@ website:
           - blog/python-coding-interview/01-testConfiguration.ipynb
           - blog/python-coding-interview/02-leetCode1425.ipynb
           - blog/python-coding-interview/03-leetCode1793.ipynb
+      - text: "CUDA Coding Interview"
+        menu:
+          - blog/CUDA-coding-interview/01-testConfiguration.ipynb
       - text: "Presentations"
         menu:
           - presentations/stem-engagement/presentation.qmd
