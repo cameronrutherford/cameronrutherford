@@ -16,3 +16,4 @@ project:
     - "!resume/devops_resume.qmd"
   post-render:
     - cp docs/README.md README.md
+    - cp presentations/math-magic/presentation.reveal-speaker.html docs/presentations/math-magic/presentation.reveal-speaker.html
