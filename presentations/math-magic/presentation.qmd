@@ -11,6 +11,8 @@ format:
     toc: true
     toc-depth: 3
   revealjs:
+    multiplex:
+      url: 'https://reveal-multiplex.glitch.me/'
     output-ext: reveal.html
     smaller: true
     toc: true
@@ -27,7 +29,14 @@ revealjs-plugins:
 
 ## Intro
 
-We are going to do our best to have a manim animation as the content for this slide... Let's see how it goes! Maybe we have to pull in the animation from a notebook to the side as an element within this document...
+We are going to do our best to have a manim animation as the content for this slide... Let's see how it goes! Maybe we have to pull in
+the animation from a notebook to the side as an element within this document...
+
+## Manim
+
+Manim is a python library that is used for these slide animations, and I have wrapped https://github.com/RickDW/manim-revealjs with Quarto as a reveal extension. The source code for the first example is quite simple:
+
+
 
 ## Bad example
 
@@ -37,7 +46,7 @@ One option that keeps this all quite simple, is to just embed the output of a no
 This video will not play if you try and render it
 :::
 
-{{< embed manim-test.ipynb#basic-animation >}}
+{{< embed manim-test.ipynb#basic-animation echo=true >}}
 
 ```markdown
 {{< embed manim-test.ipynb#basic-animation >}}
@@ -65,6 +74,12 @@ Notice that you can't really step through the animation as well as you can on th
 :::
 
 ::::
+
+# Okay, but what about Multiplex?
+
+Does that work with revealJS?
+
+TODO: - Add poll to verify / test and guage satisfaction
 
 ## End
 
