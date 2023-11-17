@@ -1,4 +1,4 @@
 # Publications
 
 - S. Abhyankar, S. Peles, **R. Rutherford**, A. Mancinelli, **_Evaluation of AC optimal power flow on graphical processing units._** (IEEE PESGM 2021)
-- S. Peles, M. Alam, A. J. Mancinelli, K. Perumalla, **R. C. Rutherford**, J. Ryan, C. G. Petra, **_Porting the Nonlinear Optimization Library HiOp to Accelerator-Based Hardware Architectures_** (arxiv 2021)
+- S. Peles, M. Alam, A. J. Mancinelli, K. Perumalla, **R. C. Rutherford**, J. Ryan, C. G. Petra, **_Porting the Nonlinear Optimization Library HiOp to Accelerator-Based Hardware Architectures_** (2021)

@@ -8,7 +8,7 @@ resources:
 
 profile:
   group:
-    - [base, cpp, python, devops]
+    - [base, cpp, python, devops, onepager]
 
 format:
   html:
@@ -33,7 +33,7 @@ website:
   navbar:
     search: true
     left:
-      - text: "Resume"
+      - text: "CV"
         file: resume/resume.qmd
       - text: "Site Configuration"
         menu:

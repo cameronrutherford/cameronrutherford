@@ -98,6 +98,7 @@
 
 :::
 
+
 ::: {.content-visible when-profile="devops"}
 
 ```{=html}
@@ -139,6 +140,53 @@
                 <p> Graph DBs, SQL,
                 <p> Qiskit, AWS, S3
                 <p> dev-containers
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+:::
+
+::: {.content-visible when-profile="onepager"}
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th font-weight="bold">DevOps</th>
+            <th font-weight="bold">C / C++17</th>
+            <th font-weight="bold">Python</th>
+            <th font-weight="bold">Machine Learning</th>
+            <th font-weight="bold">Other</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> HPC, SLURM, k8s
+                <p> Git[Hub/Lab] CI/CD
+                <p> Containers, AWS
+            </td>
+            <td>
+                <p> CUDA/HIP C++/MPI
+                <p> CPU/GPU Profiling
+                <p> CMake, Spack
+            </td>
+            <td>
+                <p> torch, tflow, JAX
+                <p> mpi4py, pybind11
+                <p> dist. workflows
+            </td>
+            <td>
+                <p> LLMs, RL, NTK
+                <p> FL/FHE, DP, SMC
+                <p> GNNs, PINNs
+            </td>
+            <td>
+                <p> Go, Rust, Fortran
+                <p> Graph DBs, SQL
+                <p> Qiskit, Azure
             </td>
         </tr>
     </tbody>
