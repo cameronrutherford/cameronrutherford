@@ -1,9 +1,25 @@
 # Education
 
+::: {.content-visible unless-profile="onepager"}
+
 ### Scientist & Engineer Rising Leader Learning Journey: 2023
 ### Cyber Security & National Security Seminar Series, PNNL: 2021 - 2022
-### Whitworth University, B.S. Mathematics and Computer Science: G.P.A 3.9/4.0
 
-- Outstanding Mathematics Major 2020
-- ICPC Pacific Northwest Eastern Washington Site Winner 2018
-- Howard R. Gage Memorial Scholarship 2017, 2018, 2019
+:::
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th colspan="3"> <b> Whitworth University,B.S. Computer Science and B.S. Mathematics: G.P.A 3.93/4.0 </b> </th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> Outstanding Mathematics Major '20 </td>
+        <td> ICPC PNW Site Winner '18 </td>
+        <td> Howard R. Gage Scholarship '17, '18, '19 </td>
+      </tr>
+    </tbody>
+</table>
+```

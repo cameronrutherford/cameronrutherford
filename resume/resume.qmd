@@ -6,20 +6,42 @@ format:
         toc-depth: 4
 ---
 
-::: {.content-visible when-format="html"}
-
 ## Resume
+
 ```{=html}
 <table>
   <thead>
     <tr>
       <th>
         <p class="text-center">
-          <a class="btn btn-primary btn-lg cv-download" href="cpp_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download C++ CV </a>
+          <a class="btn btn-primary btn-lg cv-download" href="onepager_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download One-page CV </a>
         </p>
       </th>
-      <th> <p class="text-center">
+      <th>
+        <p class="text-center">
           <a class="btn btn-primary btn-lg cv-download" href="python_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download Python CV </a>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <iframe src="onepager_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+      <td>
+        <iframe src="python_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
+      </td>
+    </tr>
+  </tbody>
+<table>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p class="text-center">
+          <a class="btn btn-primary btn-lg cv-download" href="cpp_resume.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download C++ CV </a>
         </p>
       </th>
       <th>
@@ -35,20 +57,14 @@ format:
         <iframe src="cpp_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
       </td>
       <td>
-        <iframe src="python_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
-      </td>
-      <td>
         <iframe src="devops_resume.pdf" height=500px style="border: 0.5px" position="absolute" top=0 left=0 width=100% height=100%></iframe>
       </td>
     </tr>
   </tbody>
 <table>
 
-
 ```
 
 ## Git Integration
 
 These pdfs are rendered during `quarto render`, and then hosted in GitHub pages. Since the pdfs seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
-
-:::
