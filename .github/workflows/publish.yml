@@ -12,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     # Required permissions
     permissions:
-      pull-requests: read
+      contents: read
     # Set job outputs to values from filter step
     outputs:
       devcontainer: ${{ steps.filter.outputs.devcontainer }}
     steps:
-    # For pull requests it's not necessary to checkout the code
+    - name: Checkout source code
+      uses: actions/checkout@v2
     - uses: dorny/paths-filter@v2
       id: filter
       with:
@@ -31,6 +32,9 @@ jobs:
     # Run if we need to rebuild the container
     if: ${{ needs.changes.outputs.devcontainer == 'true' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
 
       - name: Checkout (GitHub)
@@ -86,7 +90,7 @@ jobs:
           target: gh-pages
 
   publish-docs-no-build:
-    needs: publish-devcontainer
+    needs: changes
     # Run if we need to rebuild the container
     if: ${{ needs.changes.outputs.devcontainer == 'false' }}
     runs-on: ghcr.io/cameronrutherford/quarto-ci
