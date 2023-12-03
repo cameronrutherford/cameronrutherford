@@ -65,7 +65,12 @@ jobs:
     needs: publish-devcontainer
     # Run if we need to rebuild the container
     if: ${{ needs.changes.outputs.devcontainer == 'true' }}
-    runs-on: ghcr.io/cameronrutherford/quarto-ci
+    runs-on: ubuntu-latest
+    container:
+        image: ghcr.io/cameronrutherford/quarto-ci
+        credentials:
+            username: ${{ github.repository_owner }}
+            password: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
     steps:
@@ -94,7 +99,12 @@ jobs:
     needs: changes
     # Run if we need to rebuild the container
     if: ${{ needs.changes.outputs.devcontainer == 'false' }}
-    runs-on: ghcr.io/cameronrutherford/quarto-ci
+    runs-on: ubuntu-latest
+    container:
+        image: ghcr.io/cameronrutherford/quarto-ci
+        credentials:
+            username: ${{ github.repository_owner }}
+            password: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
     steps:
