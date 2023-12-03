@@ -18,7 +18,7 @@ jobs:
       devcontainer: ${{ steps.filter.outputs.devcontainer }}
     steps:
     - name: Checkout source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - uses: dorny/paths-filter@v2
       id: filter
       with:
@@ -39,10 +39,10 @@ jobs:
     steps:
 
       - name: Checkout (GitHub)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -51,7 +51,7 @@ jobs:
       # https://github.com/devcontainers/ci/issues/212
       # Have to do this manually becuase of issue with subfolders
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -70,7 +70,7 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Quarto Render (with resume profiles)
         run: |
           quarto render
@@ -99,12 +99,8 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          # This means we have to keep what CI does minimal...
-          tinytex: true
+        uses: actions/checkout@v4
+
       - name: Quarto Render (with resume profiles)
         run: |
           quarto render
