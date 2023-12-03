@@ -7,4 +7,5 @@ git config --global user.name "cameronrutherford"
 
 # Install pre-commit hooks
 cd /home/app
-pre-commit install --install-hooks
+# If poetry is installed, run with that. Otherwise just try running
+poetry run pre-commit install --install-hooks || pre-commit install --install-hooks

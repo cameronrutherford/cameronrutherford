@@ -18,19 +18,16 @@
 <td>CV / README:
 <ul>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.pdf">PDF
-Resume</a></li>
+href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">Resume
+/ CV PDF Download</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">HTML
-Resume</a></li>
-<li><a
-href="https://cameronrutherford.github.io/cameronrutherford/index.html">HTML
-README</a></li>
+href="https://cameronrutherford.github.io/cameronrutherford/index.html">GitHub
+Pages Homepage</a></li>
 <li><a
 href="https://github.com/cameronrutherford/cameronrutherford">GitHub
-README</a></li>
+repository</a></li>
 </ul>
-Config:
+Documentation:
 <ul>
 <li><a
 href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a></li>

@@ -8,7 +8,7 @@ resources:
 
 profile:
   group:
-    - [base, cpp, python, devops]
+    - [base, cpp, python, devops, onepager]
 
 format:
   html:
@@ -33,7 +33,7 @@ website:
   navbar:
     search: true
     left:
-      - text: "Resume"
+      - text: "CV"
         file: resume/resume.qmd
       - text: "Site Configuration"
         menu:
@@ -54,6 +54,9 @@ website:
           - blog/python-coding-interview/01-testConfiguration.ipynb
           - blog/python-coding-interview/02-leetCode1425.ipynb
           - blog/python-coding-interview/03-leetCode1793.ipynb
+      - text: "CUDA Coding Interview"
+        menu:
+          - blog/CUDA-coding-interview/01-testConfiguration.ipynb
       - text: "Presentations"
         menu:
           - presentations/stem-engagement/presentation.qmd
