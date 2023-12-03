@@ -4,7 +4,7 @@
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
-ENV QUARTO_VERSION=1.4.358
+ENV QUARTO_VERSION=1.4.515
 
 # Install quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
