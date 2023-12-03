@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs:
   # JOB to run change detection
-  # This is all to exclude running this when devtcontainer config changes
+  # This is all to include / exclude running this when devtcontainer config changes
   changes:
     runs-on: ubuntu-latest
     # Required permissions

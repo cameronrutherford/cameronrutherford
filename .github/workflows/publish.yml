@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Container / Documentation Publish
 
 on:
   workflow_dispatch:
@@ -6,8 +6,90 @@ on:
     branches: main
 
 jobs:
-  publish:
+  # JOB to run change detection
+  # This is all to include / exclude running jobs when devtcontainer config changes
+  changes:
     runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    # Set job outputs to values from filter step
+    outputs:
+      devcontainer: ${{ steps.filter.outputs.devcontainer }}
+    steps:
+    # For pull requests it's not necessary to checkout the code
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          devcontainer:
+            - '.devcontainer/dev-build/**'
+
+
+  publish-devcontainer:
+    needs: changes
+    # Run if we need to rebuild the container
+    if: ${{ needs.changes.outputs.devcontainer == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout (GitHub)
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # https://github.com/devcontainers/ci/issues/212
+      # Have to do this manually becuase of issue with subfolders
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install devcontainer CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Build and push devcontainer
+        run: devcontainer build --push true --image-name ghcr.io/cameronrutherford/quarto-ci --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
+
+  publish-docs:
+    needs: publish-devcontainer
+    # Run if we need to rebuild the container
+    if: ${{ needs.changes.outputs.devcontainer == 'true' }}
+    runs-on: ghcr.io/cameronrutherford/quarto-ci
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Quarto Render (with resume profiles)
+        run: |
+          quarto render
+          mkdir ./quarto-cache
+          rm -rf ./quarto-cache && mv ./docs ./quarto-cache
+          quarto render resume/cpp_resume.qmd --profile cpp
+          mv ./docs/resume/cpp_resume.pdf ./quarto-cache/resume
+          quarto render resume/python_resume.qmd --profile python
+          mv ./docs/resume/python_resume.pdf ./quarto-cache/resume
+          quarto render resume/devops_resume.qmd --profile devops
+          mv ./docs/resume/devops_resume.pdf ./quarto-cache/resume
+          rm -rf ./docs && mv ./quarto-cache ./docs && rm -rf ./quarto-cache
+
+      - name: Quarto Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          render: false
+          target: gh-pages
+
+  publish-docs-no-build:
+    needs: publish-devcontainer
+    # Run if we need to rebuild the container
+    if: ${{ needs.changes.outputs.devcontainer == 'false' }}
+    runs-on: ghcr.io/cameronrutherford/quarto-ci
     permissions:
       contents: write
     steps:
