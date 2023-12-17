@@ -4,14 +4,6 @@
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
-ENV QUARTO_VERSION=1.4.515
-
-# Install quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
-RUN tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
-RUN rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
-ENV PATH=$PATH:/quarto-${QUARTO_VERSION}/bin
-
 # Install Tex Live - this isn't 100% reproducible, but the build will always work and update...
 RUN wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 RUN zcat < install-tl-unx.tar.gz | tar xf -
@@ -48,7 +40,7 @@ RUN pip install pre-commit
 COPY <<-"end_aliases" /home/vscode/.bash_aliases
 #!/bin/bash
 alias ll="ls -alF"
-alias gg="git log --graph --oneline --color --all"
+alias gg="git log --graph --oneline --color"
 alias gc="git commit"
 alias gck="git checkout"
 alias gs="git status"
@@ -59,3 +51,11 @@ alias gp="git push"
 alias grs="git reset --hard"
 alias qrp="quarto render && quarto preview"
 end_aliases
+
+ENV QUARTO_VERSION=1.3.450
+
+# Install quarto
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
+RUN tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
+RUN rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
+ENV PATH=$PATH:/quarto-${QUARTO_VERSION}/bin
