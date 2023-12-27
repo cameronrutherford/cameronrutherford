@@ -1,5 +1,6 @@
 .DS_Store
 /.quarto/
+/_site/
 docs
 /.luarc.json
 site_libs
