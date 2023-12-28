@@ -52,7 +52,7 @@ alias grs="git reset --hard"
 alias qrp="quarto render && quarto preview"
 end_aliases
 
-ENV QUARTO_VERSION=1.3.450
+ENV QUARTO_VERSION=1.4.533
 
 # Install quarto
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
