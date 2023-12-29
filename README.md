@@ -1,6 +1,7 @@
-# README[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)[![GitHub-Pages-Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)[![quarto-ci-ghcr-publish](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/dev-container-publish.yml)
+# README[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)[![GitHub-Pages-Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)[![Quarto-Render/Publish-Pages/Container](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml)
 
-<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
+
+<p> <a href="https://cameronrutherford.quarto.pub/camerons-git-site/" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 &#10;
 <table data-quarto-postprocess="true">
 <colgroup>
@@ -18,10 +19,10 @@
 <td>CV / README:
 <ul>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">Resume
+href="https://cameronrutherford.quarto.pub/camerons-git-site//resume/resume.html">Resume
 / CV PDF Download</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/index.html">GitHub
+href="https://cameronrutherford.quarto.pub/camerons-git-site/">GitHub
 Pages Homepage</a></li>
 <li><a
 href="https://github.com/cameronrutherford/cameronrutherford">GitHub
@@ -30,29 +31,25 @@ repository</a></li>
 Documentation:
 <ul>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a></li>
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/quickstart.html">Quickstart</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/devcontainer.html">Docker
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/devcontainer.html">Docker
 / Devcontainer</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/pre-commit.html">pre-commit</a></li>
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/pre-commit.html">pre-commit</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/github-actions.html">github
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/github-actions.html">github
 actions</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/quarto.html">quarto</a></li>
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/quarto.html">quarto</a></li>
 </ul></td>
-<td><div>
-<p><a href="https://quarto.org/" style="float: left;" target="_blank"
-rel="noreferrer"><img src="https://quarto.org/quarto.png"
-width="160" /></a></p>
-</div>
-<div>
+<td><p><a href="https://quarto.org/" style="float: left;"
+target="_blank" rel="noreferrer"><img
+src="https://quarto.org/quarto.png" width="160" /></a></p>
 <p><a href="https://www.freepnglogos.com/images/javascript-39398.html"
 style="float: left;" target="_blank" rel="noreferrer"><img
 src="https://www.freepnglogos.com/uploads/javascript-png/fix-html-css-javascript-for-website-logo-6.png"
 width="160" /></a></p>
-</div>
 <p><a href="https://www.json.org/json-en.html" target="_blank"
 rel="noreferrer"><img
 src="https://www.vectorlogo.zone/logos/json/json-icon.svg"
@@ -66,12 +63,10 @@ height="40" /></a> <a href="https://github.com/" target="_blank"
 rel="noreferrer"><img
 src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
 width="40" /></a></p>
-<div>
 <p><a href="https://www.latex-project.org/" style="float: left;"
 target="_blank" rel="noreferrer"><img
 src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
-width="160" /></a></p>
-</div></td>
+width="160" /></a></p></td>
 </tr>
 <tr class="even">
 <td colspan="2"><p>This is an HTML table written in quarto, rendered
