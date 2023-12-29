@@ -1,7 +1,7 @@
 # README[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit.png)](https://github.com/pre-commit/pre-commit)[![GitHub-Pages-Action](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/publish.yml)[![Quarto-Render/Publish-Pages/Container](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml/badge.svg)](https://github.com/cameronrutherford/cameronrutherford/actions/workflows/quarto-render-build.yml)
 
 
-<p> <a href="https://cameronrutherford.github.io/cameronrutherford/index.html" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
+<p> <a href="https://cameronrutherford.quarto.pub/camerons-git-site/" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 &#10;
 <table data-quarto-postprocess="true">
 <colgroup>
@@ -19,10 +19,10 @@
 <td>CV / README:
 <ul>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/resume/resume.html">Resume
+href="https://cameronrutherford.quarto.pub/camerons-git-site//resume/resume.html">Resume
 / CV PDF Download</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/index.html">GitHub
+href="https://cameronrutherford.quarto.pub/camerons-git-site/">GitHub
 Pages Homepage</a></li>
 <li><a
 href="https://github.com/cameronrutherford/cameronrutherford">GitHub
@@ -31,17 +31,17 @@ repository</a></li>
 Documentation:
 <ul>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/quickstart.html">Quickstart</a></li>
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/quickstart.html">Quickstart</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/devcontainer.html">Docker
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/devcontainer.html">Docker
 / Devcontainer</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/pre-commit.html">pre-commit</a></li>
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/pre-commit.html">pre-commit</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/github-actions.html">github
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/github-actions.html">github
 actions</a></li>
 <li><a
-href="https://cameronrutherford.github.io/cameronrutherford/config/quarto.html">quarto</a></li>
+href="https://cameronrutherford.quarto.pub/camerons-git-site/config/quarto.html">quarto</a></li>
 </ul></td>
 <td><p><a href="https://quarto.org/" style="float: left;"
 target="_blank" rel="noreferrer"><img
