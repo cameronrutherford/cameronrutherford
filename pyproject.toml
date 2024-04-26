@@ -1,0 +1,5 @@
+[tool.poetry]
+package-mode = false # Since we are just using this for poethepoet for now, this helps minimize scripts...
+
+[tool.poe.tasks]
+test         = "echo hello wordl"                         # a simple command task
