@@ -12,7 +12,7 @@ profile:
 
 format:
   html:
-    theme: vapor
+    theme: slate
     default: true
     toc: true
     toc-depth: 4
