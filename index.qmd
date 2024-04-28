@@ -26,7 +26,7 @@ format:
       <td>
         CV / README:
         <ul>
-          <li><a href="https://cameronrutherford.quarto.pub/camerons-git-site//resume/resume.html">Resume / CV PDF Download</a></li>
+          <li><a href="https://cameronrutherford.quarto.pub/camerons-git-site/resume/resume.html">Resume / CV PDF Download</a></li>
           <li><a href="https://cameronrutherford.quarto.pub/camerons-git-site/">GitHub Pages Homepage</a></li>
           <li><a href="https://github.com/cameronrutherford/cameronrutherford">GitHub repository</a></li>
         </ul>

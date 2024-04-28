@@ -19,7 +19,7 @@
 <td>CV / README:
 <ul>
 <li><a
-href="https://cameronrutherford.quarto.pub/camerons-git-site//resume/resume.html">Resume
+href="https://cameronrutherford.quarto.pub/camerons-git-site/resume/resume.html">Resume
 / CV PDF Download</a></li>
 <li><a
 href="https://cameronrutherford.quarto.pub/camerons-git-site/">GitHub
