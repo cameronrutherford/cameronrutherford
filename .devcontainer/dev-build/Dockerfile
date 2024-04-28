@@ -11,7 +11,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # Install Tex Live - this isn't 100% reproducible, but the build will always work and update...
-RUN wget --progress=dot:giga https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+RUN  curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN zcat < install-tl-unx.tar.gz | tar xf -
 RUN rm install-tl-unx.tar.gz
@@ -55,7 +55,7 @@ end_aliases
 
 
 # Install quarto
-RUN wget --progress=dot:giga https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
+RUN curl -L -o quarto-${QUARTO_VERSION}-linux-amd64.tar.gz  https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
 
