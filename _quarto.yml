@@ -12,7 +12,9 @@ profile:
 
 format:
   html:
-    theme: darkly
+    theme:
+      light: flatly
+      dark: darkly
     default: true
     toc: true
     toc-depth: 4
