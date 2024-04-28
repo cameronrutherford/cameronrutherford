@@ -12,7 +12,7 @@ profile:
 
 format:
   html:
-    theme: slate
+    theme: darkly
     default: true
     toc: true
     toc-depth: 4
