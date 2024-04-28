@@ -1,3 +1,4 @@
+---
 project:
   render:
     - "resume/cpp_resume.qmd"

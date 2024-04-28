@@ -1,3 +1,4 @@
+---
 project:
   render:
     - "resume/python_resume.qmd"

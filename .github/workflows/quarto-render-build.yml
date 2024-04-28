@@ -1,8 +1,10 @@
-name: 'Quarto Render / Container Rebuild'
-on: [pull_request]
+---
+name: "Quarto Render / Container Rebuild"
+"on": [pull_request]
 
 jobs:
   # JOB to run change detection
+  # yamllint disable-line rule:line-length
   # This is all to include / exclude running this when devtcontainer config changes
   changes:
     runs-on: ubuntu-latest
@@ -13,13 +15,13 @@ jobs:
     outputs:
       devcontainer: ${{ steps.filter.outputs.devcontainer }}
     steps:
-    # For pull requests it's not necessary to checkout the code
-    - uses: dorny/paths-filter@v2
-      id: filter
-      with:
-        filters: |
-          devcontainer:
-            - '.devcontainer/dev-build/**'
+      # For pull requests it's not necessary to checkout the code
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            devcontainer:
+              - '.devcontainer/dev-build/**'
 
   # Only run this if no devcontainer changes detected...
   no-build-quarto-render:
@@ -27,12 +29,11 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'false' }}
     runs-on: ubuntu-latest
     container:
-        image: ghcr.io/cameronrutherford/quarto-ci
-        credentials:
-            username: ${{ github.repository_owner }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+      image: ghcr.io/cameronrutherford/quarto-ci
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
-
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
         with:
@@ -51,6 +52,7 @@ jobs:
         run: quarto render
 
       - name: Fix Permissions
+        # yamllint disable-line rule:line-length
         run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
 
       - uses: EndBug/add-and-commit@v9
@@ -67,7 +69,6 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'true' }}
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout (GitHub)
         uses: actions/checkout@v3
         with:
@@ -84,21 +85,27 @@ jobs:
         run: npm install -g @devcontainers/cli
 
       - name: Build & start dev container
+        # yamllint disable-line rule:line-length
         run: devcontainer up --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
 
       - name: Quartor render (cpp)
+        # yamllint disable-line rule:line-length
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile cpp
 
       - name: Quartor render (python)
+        # yamllint disable-line rule:line-length
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile python
 
       - name: Quartor render (devops)
+        # yamllint disable-line rule:line-length
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile devops
 
       - name: Quartor render
+        # yamllint disable-line rule:line-length
         run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render
 
       - name: Fix Permissions
+        # yamllint disable-line rule:line-length
         run: git config --global --add safe.directory /__w/cameronrutherford/cameronrutherford
 
       - uses: EndBug/add-and-commit@v9
