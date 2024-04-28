@@ -1,0 +1,22 @@
+[tool.poetry]
+package-mode = false # Since we are just using this for poethepoet for now, this helps minimize scripts...
+
+[tool.poe.tasks.build]
+help = "Builds devcontainer locally for use in other tasks"
+cmd = "docker build -t cameron_rutherford -f ./.devcontainer/dev-build/Dockerfile ."
+
+[tool.poe.tasks.local-shell]
+help = "Run an interactive shell in the container built locally"
+cmd = "docker run -it --rm -p 8080:8080 -u vscode -v $PWD:/home/app -w /home/app cameron_rutherford /bin/bash"
+
+[tool.poe.tasks.local-preview]
+help = "Run quarto render and quarto preview in the container that was built locally"
+cmd = "docker run -it --rm -p 8080:8080 -u vscode -v $PWD:/home/app -w /home/app cameron_rutherford ./render.sh"
+
+[tool.poe.tasks.shell]
+help = "Run an interactive shell in the container built in CI"
+cmd = "docker run -it --rm -p 8080:8080 -u vscode -v $PWD:/home/app -w /home/app ghcr.io/cameronrutherford/quarto-ci:latest /bin/bash"
+
+[tool.poe.tasks.preview]
+help = "Run quarto render and quarto preview in the container that was built in CI"
+cmd = "docker run -it --rm -p 8080:8080 -u vscode -v $PWD:/home/app -w /home/app ghcr.io/cameronrutherford/quarto-ci:latest ./render.sh"

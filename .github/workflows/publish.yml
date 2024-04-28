@@ -1,12 +1,15 @@
+---
 name: Container / Documentation Publish
 
-on:
+"on":
   workflow_dispatch:
   push:
-    branches: main
+    branches:
+      - main
 
 jobs:
   # JOB to run change detection
+  # yamllint disable-line rule:line-length
   # This is all to include / exclude running jobs when devtcontainer config changes
   changes:
     runs-on: ubuntu-latest
@@ -17,15 +20,14 @@ jobs:
     outputs:
       devcontainer: ${{ steps.filter.outputs.devcontainer }}
     steps:
-    - name: Checkout source code
-      uses: actions/checkout@v4
-    - uses: dorny/paths-filter@v2
-      id: filter
-      with:
-        filters: |
-          devcontainer:
-            - '.devcontainer/dev-build/**'
-
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            devcontainer:
+              - '.devcontainer/dev-build/**'
 
   publish-devcontainer:
     needs: changes
@@ -37,7 +39,6 @@ jobs:
       packages: write
 
     steps:
-
       - name: Checkout (GitHub)
         uses: actions/checkout@v4
 
@@ -59,6 +60,7 @@ jobs:
         run: npm install -g @devcontainers/cli
 
       - name: Build and push devcontainer
+        # yamllint disable-line rule:line-length
         run: devcontainer build --push true --image-name ghcr.io/cameronrutherford/quarto-ci --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
 
   publish-docs:
@@ -67,10 +69,10 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'true' }}
     runs-on: ubuntu-latest
     container:
-        image: ghcr.io/cameronrutherford/quarto-ci
-        credentials:
-            username: ${{ github.repository_owner }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+      image: ghcr.io/cameronrutherford/quarto-ci
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
     steps:
@@ -102,10 +104,10 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'false' }}
     runs-on: ubuntu-latest
     container:
-        image: ghcr.io/cameronrutherford/quarto-ci
-        credentials:
-            username: ${{ github.repository_owner }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+      image: ghcr.io/cameronrutherford/quarto-ci
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
     steps:

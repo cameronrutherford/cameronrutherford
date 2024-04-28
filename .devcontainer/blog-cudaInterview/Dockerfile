@@ -13,15 +13,9 @@ FROM nvidia/cuda:${CUDA_VERSION}-devel-${VARIANT}
 
 RUN mkdir -p /home/app
 
-# Let's get Python into the container
-RUN apt-get -yqq update && \
-    apt-get -yqq upgrade && \
-    apt-get -yqq install python3-pip && \
-    rm -rf /var/lib/apt/lists/*
-
 # Install poetry
 ARG POETRY_VERSION="1.7.0"
-RUN pip3 install poetry==${POETRY_VERSION}
+RUN pip3 install --no-cache-dir poetry==${POETRY_VERSION}
 
 # Install CUDA deps outside of poetry
 # RUN pip3 install \
@@ -58,13 +52,10 @@ ENV POETRY_CACHE_DIR=~/poetry-cache
 RUN echo "poetry shell" >> ~/.bashrc
 
 # Since we aren't packaging anything, just adding dependencies
-RUN poetry install --no-root --no-interaction --no-directory
-
-# Install ipykernel so it's available to jupyter
-RUN poetry run python3 -m ipykernel install \
-        --name py311-cuda12.2-interview \
-        --display-name "CUDA ipykernel" \
-        --prefix=$(which jupyter)
+RUN poetry install --no-root --no-interaction --no-directory && "poetry run python3 -m ipykernel install \
+  --name py311-cuda12.2-interview \
+  --display-name "CUDA ipykernel" \
+  --prefix=$(which jupyter)"
 
 # Configure aliases with a heredoc
 COPY <<-"end_aliases" ~/.bash_aliases

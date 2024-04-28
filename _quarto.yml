@@ -1,3 +1,4 @@
+---
 project:
   type: website
   title: "Cameron's git-site"
@@ -12,7 +13,9 @@ profile:
 
 format:
   html:
-    theme: vapor
+    theme:
+      light: flatly
+      dark: darkly
     default: true
     toc: true
     toc-depth: 4

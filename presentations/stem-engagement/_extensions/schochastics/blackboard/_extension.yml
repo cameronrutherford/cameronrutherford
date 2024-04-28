@@ -1,3 +1,4 @@
+---
 title: Blackboard Theme
 author: David Schoch
 version: 1.0.0
@@ -11,6 +12,6 @@ contributes:
       theme: [default, blackboard.scss]
       css: theme.css
       footer: |
-              <a href="https://mr.schochastics.net">theme by schochastics</a>
+        <a href="https://mr.schochastics.net">theme by schochastics</a>
       title-slide-attributes:
         data-background-image: blackboard.png

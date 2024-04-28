@@ -1,0 +1,12 @@
+
+# Poetry / Poe the Poet config
+
+## WSL
+
+Installed poetry with `brew install pipx` and `pipx install poetry`.
+
+Then installed poethepoet with `brew tap nat-n/poethepoet && brew install nat-n/poethepoet/poethepoet`
+
+On Jan 30, poetry introduced a non-package based option for their files, reducing the metadata that you need to store which is only arguably useful.
+
+[See this GitHub issue](https://github.com/python-poetry/poetry/issues/1132#issuecomment-1917420654).

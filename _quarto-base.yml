@@ -1,8 +1,10 @@
+---
 project:
   render:
     - "*.qmd"
     - "*.ipynb"
     - "!*.out.*"
+    # yamllint disable-line rule:line-length
     # No need to render files in more than one place - these files are just included in another
     - "!resume/old_resume.qmd"
     - "!resume/conferences.qmd"
@@ -16,4 +18,5 @@ project:
     - "!resume/devops_resume.qmd"
   post-render:
     - cp docs/README.md README.md
+    # yamllint disable-line rule:line-length
     - cp presentations/math-magic/presentation.reveal-speaker.html docs/presentations/math-magic/presentation.reveal-speaker.html
