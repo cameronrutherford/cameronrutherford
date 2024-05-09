@@ -1,5 +1,6 @@
 ---
 format: onepager-pdf
+summary: Experienced HPC/ML/Q Research Software Engineer with 4+ years of expertise in deploying, optimizing, and teaching scientific software on diverse computing systems, including the world's largest supercomputers.
 ---
 
 {{< include experience.qmd >}}
