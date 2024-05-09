@@ -2,6 +2,7 @@
 
 # Conferences
 
+### PRESENTER: National Laboratories Information Technology (NLIT) Summit: 2024
 ### Practice and Experience in Advanced Research Computing (PEARC): 2023
 ### Pacific Northwest National Laboratory (PNNL) Tech Fest: 2021-2023
 ### Energy Exascale Earth System Model (E3SM) Annual Meeting: 2023
