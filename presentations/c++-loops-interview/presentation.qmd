@@ -1,0 +1,236 @@
+---
+title: "C++ Loops"
+subtitle: "CS1 Lecture 3(?)"
+date-format: "dddd, [the] D[<sup style='font-size:65%;font-style:italic;'>th</sup>] [of] MMMM, YYYY"
+date: today
+fig-cap-location: top
+author:
+  - Cameron Rutherford
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-line-numbers: true
+  revealjs:
+    slide-number: true
+    theme: dark
+    # This is a buggy bug
+    output-ext: reveal.html
+    smaller: true
+    toc: true
+    toc-depth: 2
+    menu: true
+    slide-level: 3
+    code-line-numbers: true
+revealjs-plugins:
+  - confetti
+filters:
+  - include-code-files
+---
+
+## Intro
+
+### Covered so far
+
+- Hello world! Building and running from the command line
+- Vi / Emacs basics, and familiarity with your IDE of choice
+- Some other basic C++ I/O techniques (`std::cout` and `std::cin`)
+- Intro to what C++ standards are
+- Control flow and basic conditionals
+
+### Covering today
+
+- Loops
+  - While
+  - Do-While
+  - For
+  - Range-based for loop (C++11)
+- Examples of each
+- Debugging
+
+### What's next?
+
+- Math Libraries
+- Data Structures
+- Pointers
+- Object Oriented Programming
+
+## While Loops
+
+### Motivation
+
+Say we have our basic hello world program (compiled with `gcc main.cpp -lstdc++ -o a.out`):
+
+```{.cpp include="hello-world.cpp" code-line-numbers="true"}
+```
+What if we want to print `Hello World!`:
+
+- 5 times?
+- 10 times?
+- A variable amount of times (read through standard input)
+
+### Copy and Paste?
+
+```cpp
+#include <iostream>
+
+int main() {
+  std::cout << "Hello World!\n";
+  std::cout << "Hello World!\n";
+  std::cout << "Hello World!\n";
+  // ...
+  std::cout << "Hello World!\n";
+  std::cout << "Hello World!\n";
+  return 0;
+}
+```
+
+What's wrong with this approach?
+
+1. Hard to read!
+1. Labor intensive
+1. Hard to maintain
+
+### First while loop
+
+Lets take a look as a while loop that prints `Hello World` 5 times:
+
+```{.cpp include="while.cpp" code-line-numbers="true"}
+```
+
+### While control flow
+
+![](https://education.launchcode.org/lchs/_images/while-loop-flow.png)
+
+### This while loop is equivalent to...
+
+```{.cpp include="goto-while.cpp" code-line-numbers="true"}
+```
+
+Notice that this is:
+
+- Arguably, harder to read than a while loop
+- Contains a `goto` statement - these should be used sparingly
+- Scope of variables is the same
+
+### Infinite Loops!?
+
+```{.cpp include="infinite-while.cpp" code-line-numbers="true"}
+```
+
+- What do you expect the output of this program to be?
+- How do you terminate a stray running program? (CTRL + C)
+- Are there other ways that we can control loop execution?
+
+### To Continue or To Break, that is the question
+
+- Say we want to print the numbers 1-10, but we don't want to print 4!
+- Lets also do this without a condition for the while loop
+
+```{.cpp include="continue-break-while.cpp" code-line-numbers="true"}
+```
+
+Continue / break is not unique to this style of loop, and is applicable to all loops.
+
+## Do-While Loops
+
+Lets do a side-by-side conparison of the while and do-while loop styles:
+
+:::: {.columns}
+
+::: {.column}
+
+```{.cpp include="do-while.cpp" code-line-numbers="true"}
+```
+
+:::
+
+::: {.column}
+
+```{.cpp include="while.cpp" code-line-numbers="true"}
+```
+
+:::
+
+::::
+
+Both programs produce the same output, and use roughly the same lines of code.
+
+### Do-While use cases
+
+From [this SO post](https://stackoverflow.com/questions/3347001/do-while-vs-while):
+
+> I've been programming for a while now (2 years work + 4.5 years degree + 1 year pre-college), and I've never used a do-while loop short of being forced to in the Introduction to Programming course. I have a growing feeling that I'm doing programming wrong if I never run into something so fundamental.
+
+So, when should we use a do-while loop?
+
+- When you want to try something once, and then retry until it succeeds / you give up
+- Display / do something while waiting for an exit signal (embedded systems / applications)
+- If the code should always execute at least once
+- Your initial conditions would cause a while loop to terminate
+
+### Do-While control flow
+
+![](https://codeforwin.org/wp-content/uploads/2017/09/do-while-loop-flowchart.png)
+
+## For Loops
+
+Here is our same "Hello World" program using a traditional C++ for loop:
+
+```{.cpp include="for.cpp" code-line-numbers="true"}
+```
+
+Notice the different components separated via `;`:
+- Init-statement
+- Condition
+- Expression
+- Loop body / statement
+
+You can include multiple / zero expressions within each component. Expressions are separated via `,`
+
+### Could this be a while loop?
+
+:::: {.columns}
+
+::: {.column}
+
+```{.cpp include="for.cpp" code-line-numbers="true"}
+```
+
+:::
+
+::: {.column}
+
+```{.cpp include="while.cpp" code-line-numbers="true"}
+```
+
+:::
+
+::::
+
+- What are the key differences between these two approaches?
+- Do you think that one is more / less readable than the other?
+- What do you prefer?
+
+### For loops can be infinite as well!
+
+```{.cpp include="infinite-for.cpp" code-line-numbers="true"}
+```
+
+- This is perhaps the most space efficient way to write an infinite loop
+- I call this a "spider" inifinite loop because `(;;)` kind of looks like a spider...
+
+### Technically Hello World
+
+```{.cpp include="short-for.cpp" code-line-numbers="true"}
+```
+
+## Range-based Loops
+
+TODO
+
+## Debugging
+
+TODO
+
+## Questions?
