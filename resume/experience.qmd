@@ -4,7 +4,6 @@
 - HPC MLOps offering lead, maintaing container and spack module stacks for users
 - Continued work on previous and new projects, with DevOps support as needed
 
-
 ### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - 2023
 
 ::: {.content-visible when-profile="cpp"}
@@ -133,7 +132,9 @@
 - Taught other project developers about RAJA, GPUs and best practices learned
 :::
 
+::: {.content-visible when-profile="onepager"}
 ### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+:::
 
 ::: {.content-visible when-profile="cpp"}
 ### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
