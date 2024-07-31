@@ -102,7 +102,7 @@
 - Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
 - Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
 - Successfully scaled ExaSGD C++ / MPI software to Summit (top500 #7, former #1)
-- Benchmarked C / MPI communication collectives across compilers and backends, optimized and packaged product
+- Benchmarked C / MPI communication collectives across compilers and MPI providers
 :::
 
 ::: {.content-visible when-profile="onepager"}
