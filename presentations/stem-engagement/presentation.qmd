@@ -18,7 +18,7 @@ format:
     toc-depth: 2
     menu: true
     chalkboard: false
-    slide-level: 3
+    slide-level: 4
 revealjs-plugins:
   - confetti
 ---
