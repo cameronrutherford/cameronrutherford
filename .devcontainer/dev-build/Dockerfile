@@ -3,8 +3,7 @@
 # Lets use the latest Python (3.11 was latest at the time)
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
-ENV QUARTO_VERSION=1.4.533
-
+ENV QUARTO_VERSION=1.6.11
 RUN apt-get update && \
   apt-get install -y --no-install-recommends fontconfig=2.14.1-4 && \
   apt-get clean && \
