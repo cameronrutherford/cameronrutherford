@@ -1,5 +1,8 @@
 ---
-name: Container / Documentation Publish
+name: Container / Documentation Publish\
+
+env:
+  DEBUG_IMAGE_SHA: ghcr.io/cameronrutherford/quarto-ci@sha256:e711e6271819961e0ab79265da7eed0f16c42803eda87e6155eea8f164f31477
 
 "on":
   workflow_dispatch:
@@ -69,7 +72,7 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'true' }}
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/cameronrutherford/quarto-ci
+      image: ${{ env.DEBUG_IMAGE_SHA }}
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -104,7 +107,7 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'false' }}
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/cameronrutherford/quarto-ci
+      image: ${{ env.DEBUG_IMAGE_SHA }}
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
