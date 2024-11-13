@@ -2,6 +2,7 @@
 name: Container / Documentation Publish\
 
 env:
+  # yamllint disable-line rule:line-length
   DEBUG_IMAGE_SHA: ghcr.io/cameronrutherford/quarto-ci@sha256:e711e6271819961e0ab79265da7eed0f16c42803eda87e6155eea8f164f31477
 
 "on":
