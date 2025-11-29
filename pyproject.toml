@@ -1,6 +1,10 @@
 [tool.poetry]
 package-mode = false # Since we are just using this for poethepoet for now, this helps minimize scripts...
 
+[tool.poetry.dependencies]
+python = ">= 3.12 <4"
+poethepoet = "*"
+
 [tool.poe.tasks.build]
 help = "Builds devcontainer locally for use in other tasks"
 cmd = "docker build -t cameron_rutherford -f ./.devcontainer/dev-build/Dockerfile ."
