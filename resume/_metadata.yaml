@@ -1,11 +1,8 @@
 ---
-title: HPC/ML/Q Research Software Engineer
+title: Systems Development Engineer
 name: (Robert) Cameron Rutherford
-# yamllint disable-line rule:line-length
-summary: Experienced HPC/ML/Q Research Software Engineer with 4+ years of expertise in deploying, optimizing, and teaching scientific software on diverse computing systems, including the world's largest supercomputers and quantum computers. Proven track record in end-to-end solution delivery, project leadership, and effective team coordination, while adept at managing social engineering challenges in software development processes.
-
 contact:
-  location: Manhattan, NY
+  location: San Francisco, CA
   phone: (509) 218-1818
   email: cameron.rutherford@me.com
 portfolio:

@@ -1,10 +1,18 @@
 # Experience
 
-### Sofware Engineer III HPC/ML/Q, PNNL (Virtual): 2024 - Present
-- HPC MLOps offering lead, maintaing container and spack module stacks for users
-- Continued work on previous and new projects, with DevOps support as needed
+### L5 Systems Development Engineer, AWS CQC (San Francisco, CA): 2025 - Present
 
-### Software Engineer II HPC/ML/Q, PNNL (Virtual): 2022 - 2023
+- Scale-Out Computing on AWS (SOCA) Administrator for the Centre for Quantum Computing (CQC)
+- Supported Palace (PArallel LArge-scale Computational Electromagnetics) DevOps with Spack
+
+### HPC Operations Team Lead, PNNL (Virtual): 2024
+- Managed staff in support of PNNLs HPC Clusters supporting various projects
+- Lead HPC MLOps offering, and pioneered internal diataxis based Quarto documentation
+
+### Adjunct Professor, CISC Department, Fordham (Manhattan, NY): 2024
+- Taught CISC2200 for Fall '24 Semester. Updated Syllabus from C++17 to C++23
+
+### Tech Student 4, Post-Bachelors RA, Software Engineer I/II/III, PNNL (Virtual): 2020 - 2024
 
 ::: {.content-visible when-profile="cpp"}
 - Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (top500 #1)
@@ -43,8 +51,6 @@
 - Led lab-wide tutorials on HPC MLOps utilizing containerization and Open On Demand
 :::
 
-### Software Engineer I HPC/ML/Q, PNNL (Virtual): 2021 - 2022
-
 ::: {.content-visible when-profile="cpp"}
 - Received PNNL's highest performance award (OPA) for a second year in a row
 - Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
@@ -77,8 +83,6 @@
 - Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
 :::
 
-### Post-Bachelors Research Associate HPC/ML/Q, PNNL (Virtual): 2020 - 2021
-
 ::: {.content-visible when-profile="cpp"}
 - Received PNNL's highest performance award (OPA)
 - Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Custom)
@@ -109,9 +113,6 @@
 - Developed open-source MLFlow offering to save lab $200k per project contract on WandB subscription
 - Collaborated on C2QA project research on IBMQ platform, upskilled scientists in Quantum computing
 :::
-
-
-### Tech Student 4 Optimization and Control Group, PNNL (Virtual): 2020
 
 ::: {.content-visible when-profile="python"}
 - Deployed C++ / RAJA MDS linear algebra kernels in HiOp as well as designing unit tests

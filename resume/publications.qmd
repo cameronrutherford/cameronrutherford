@@ -1,6 +1,7 @@
 # Publications
 
-- C.S. Oehmen, S. Peles, K. Swirydowicz, C.G. Petra, S.G. Abhyankar, W. Jones, M. Reynolds, **R.C. Rutherford**, **_Advanced Computing Is at the Forefront of a New "Moonshot" Revolutionizing the North American Power Grid_** (IEEE CSE 2024)
-- S. Abhyankar, S. Peles, T. Becejac, J. Holzer, A. Mancinelli, **C. Rutherford**, **_Exascale Grid Optimization (ExaGO) toolkit: An open-source high-performance package for solving large-scale grid optizmization problems_** (2022)
-- S. Abhyankar, S. Peles, **R. Rutherford**, A. Mancinelli, **_Evaluation of AC optimal power flow on graphical processing units._** (IEEE PESGM 2021)
-- S. Peles, M. Alam, A. J. Mancinelli, K. Perumalla, **R. C. Rutherford**, J. Ryan, C. G. Petra, **_Porting the Nonlinear Optimization Library HiOp to Accelerator-Based Hardware Architectures_** (2021)
+- ..., **C. Rutherford**, **_eagles-project/haero: A toolbox for constructing performance portable aerosol packages_** (2025 - Part of E3SM Fortan -> C++ Port)
+- ..., **R.C. Rutherford**, **_Advanced Computing Is at the Forefront of a New "Moonshot" Revolutionizing the North American Power Grid_** (IEEE CSE 2024)
+- ..., **C. Rutherford**, **_(ExaGO) toolkit: An open-source high-performance package for solving large-scale grid optizmization problems_** (2022)
+- ..., **R. Rutherford**, **_Evaluation of AC (OPF) on graphical processing units._** (IEEE PESGM 2021)
+- ..., **R. C. Rutherford**, **_Porting ... HiOp to Accelerator-Based Hardware Architectures_** (2021)

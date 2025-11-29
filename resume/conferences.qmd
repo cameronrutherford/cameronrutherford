@@ -2,13 +2,7 @@
 
 # Conferences
 
-### PRESENTER: National Laboratories Information Technology (NLIT) Summit: 2024
-### Practice and Experience in Advanced Research Computing (PEARC): 2023
-### Pacific Northwest National Laboratory (PNNL) Tech Fest: 2021-2023
-### Energy Exascale Earth System Model (E3SM) Annual Meeting: 2023
-### Sustainable Tools Ecosystem Project (STEP) East Coast Town Hall: 2023
-### Exascale Computing Project (ECP) Annual Meeting: 2021-2023
-### Pacific Northwest National Laboratory (PNNL) Innovation Summit: 2022
-### Co-Design Centre for Quantum Advantage (C2QA) Annual Meeting: 2022
-
+### HPSF Inaugral Meeting, CQC All-Hands: 2025
+### PRESENTER - Unlikely success of the ExaSGD project, NLIT: 2024
+### PEARC, PNNL Tech Fest, E3SM AM, STEP Town Hall, ECP AM, C2QA AM: 2021-2023
 :::
