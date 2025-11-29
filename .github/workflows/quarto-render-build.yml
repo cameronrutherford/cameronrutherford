@@ -39,17 +39,8 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Quartor render (cpp)
-        run: quarto render --profile cpp
-
-      - name: Quartor render (python)
-        run: quarto render --profile python
-
-      - name: Quartor render (devops)
-        run: quarto render --profile devops
-
       - name: Quarto Render
-        run: quarto render
+        run: quarto render --profile onepager && quarto render
 
       - name: Fix Permissions
         # yamllint disable-line rule:line-length
@@ -88,17 +79,9 @@ jobs:
         # yamllint disable-line rule:line-length
         run: devcontainer up --config .devcontainer/dev-build/devcontainer.json --workspace-folder .
 
-      - name: Quartor render (cpp)
+      - name: Quartor render (PDF)
         # yamllint disable-line rule:line-length
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile cpp
-
-      - name: Quartor render (python)
-        # yamllint disable-line rule:line-length
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile python
-
-      - name: Quartor render (devops)
-        # yamllint disable-line rule:line-length
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile devops
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile onepager
 
       - name: Quartor render
         # yamllint disable-line rule:line-length

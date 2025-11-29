@@ -1,13 +1,4 @@
-
-::: {.content-visible unless-profile="onepager"}
-
 # Other Activities
 
-### Sustainable Horizons Institute HPC Mentor: 2022, 2023
-### Quantum Information Science / HPC STEM Mentor: 2022 - Present
-### Whitworth Chess Club President: 2019 - 2020
-### Pine Codes Hackathon Winner: 2019
-### SpokAnimal Shelter Volunteer: 2019
-### Whitworth Men's Basketball Team: 2016 - 2019
-
-:::
+### Minds Matter Bay Area Mentor: 2025 - Present
+### SRI HPC Mentor, QIS HPC STEM Mentor: 2022-2023

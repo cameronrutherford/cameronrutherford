@@ -1,12 +1,5 @@
 # Education
 
-::: {.content-visible unless-profile="onepager"}
-
-### Scientist & Engineer Rising Leader Learning Journey: 2023
-### Cyber Security & National Security Seminar Series, PNNL: 2021 - 2022
-
-:::
-
 ```{=html}
 <table>
     <thead>
@@ -16,9 +9,19 @@
     </thead>
     <tbody>
       <tr>
-        <td> Outstanding Mathematics Major '20 </td>
+        <td> Outstanding Math Major '20 </td>
         <td> ICPC PNW Site Winner '18 </td>
         <td> Howard R. Gage Scholarship '17, '18, '19 </td>
+      </tr>
+      <tr>
+        <td> Sports Events Coordinator '19-'20 </td>
+        <td> Men's Basketball Team '16-'18 </td>
+        <td> Calculus Grader, Math Tutor '17-'18 </td>
+      </tr>
+      <tr>
+        <td> Chess Club President '19-'20 </td>
+        <td> Pine Codes Winner '19 </td>
+        <td> Spokanimal Volunteer '19 </td>
       </tr>
     </tbody>
 </table>

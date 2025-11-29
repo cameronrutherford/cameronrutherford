@@ -11,3 +11,5 @@ site_libs
 *.tex
 *.pdf
 resume/resume_files
+
+**/*.quarto_ipynb

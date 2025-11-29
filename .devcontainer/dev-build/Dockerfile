@@ -3,35 +3,42 @@
 # Lets use the latest Python (3.11 was latest at the time)
 # https://github.com/devcontainers/images/tree/main/src/python
 FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
-ENV QUARTO_VERSION=1.6.11
+
+# Need fontconfig for Quarto, and then jq to help with auto-getting latest version
+# hadolint ignore=DL3008
 RUN apt-get update && \
-  apt-get install -y --no-install-recommends fontconfig=2.14.1-4 && \
+  apt-get install -y --no-install-recommends \
+  fontconfig \
+  jq && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
-# Install Tex Live - this isn't 100% reproducible, but the build will always work and update...
-RUN  curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+# Install Tex Live
+RUN curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN zcat < install-tl-unx.tar.gz | tar xf -
 RUN rm install-tl-unx.tar.gz
 RUN mv "$(find . -maxdepth 1 -type d -regex ".*install-tl.*")" ./install-tlmgr
 WORKDIR /install-tlmgr
 RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
-# 2024 might break first
-ENV PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+# hadolint ignore=SC2046
+RUN echo 'export PATH='$PATH':/usr/local/texlive/'$(date +%Y)'/bin/x86_64-linux' >> /home/vscode/.bashrc
 WORKDIR /
 
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
 # Also install any other extensions that are used
 #   - This was trial and error as far as I can tell
-RUN tlmgr update --self --all && \
-  tlmgr install tcolorbox \
-  environ \
-  tikzfill \
-  titlesec \
-  xstring \
-  pdfcol \
-  fontawesome5
+# hadolint ignore=SC2046
+RUN /usr/local/texlive/$(date +%Y)/bin/x86_64-linux/tlmgr \
+  update --self --all && \
+  /usr/local/texlive/$(date +%Y)/bin/x86_64-linux/tlmgr install \
+    tcolorbox \
+    environ \
+    tikzfill \
+    titlesec \
+    xstring \
+    pdfcol \
+    fontawesome5
 
 # Install pre-commit CLI
 RUN pip install --no-cache-dir pre-commit==3.7.0
@@ -52,14 +59,14 @@ alias grs="git reset --hard"
 alias qrp="quarto render && quarto preview"
 end_aliases
 
-
 # Install quarto
-RUN curl -L -o quarto-${QUARTO_VERSION}-linux-amd64.tar.gz  https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
+# Just get the latest version
+# hadolint ignore=SC2086
+RUN QUARTO_VERSION=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version') \
+  && curl -L -o quarto-${QUARTO_VERSION}-linux-amd64.tar.gz  https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
-  && rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz
-
-# Configure PATH
-ENV PATH=$PATH:/quarto-${QUARTO_VERSION}/bin
+  && rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
+  && echo 'export PATH=$PATH:/quarto-'${QUARTO_VERSION}'/bin' >> /home/vscode/.bashrc
 
 # When running locally, we really need to expose a port
 EXPOSE 8080
