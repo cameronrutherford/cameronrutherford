@@ -21,6 +21,8 @@ RUN rm install-tl-unx.tar.gz
 RUN mv "$(find . -maxdepth 1 -type d -regex ".*install-tl.*")" ./install-tlmgr
 WORKDIR /install-tlmgr
 RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
+# hadolint ignore=SC2046
+RUN echo 'export PATH='$PATH':/usr/local/texlive/'$(date +%Y)'/bin/x86_64-linux' >> /home/vscode/.bashrc
 WORKDIR /
 
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
@@ -60,7 +62,7 @@ end_aliases
 # Install quarto
 # Just get the latest version
 # hadolint ignore=SC2086
-RUN QUARTO_VERSION=$(curl -q -O - https://quarto.org/docs/download/_download.json | jq -r '.version') \
+RUN QUARTO_VERSION=$(curl https://quarto.org/docs/download/_download.json | jq -r '.version') \
   && curl -L -o quarto-${QUARTO_VERSION}-linux-amd64.tar.gz  https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \

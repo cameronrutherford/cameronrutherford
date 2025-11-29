@@ -11,8 +11,6 @@ format:
     toc: true
     toc-depth: 3
   revealjs:
-    multiplex:
-      url: 'https://reveal-multiplex.glitch.me/'
     output-ext: reveal.html
     smaller: true
     toc: true
