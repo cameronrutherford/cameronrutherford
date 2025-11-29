@@ -81,7 +81,7 @@ jobs:
 
       - name: Quartor render (PDF)
         # yamllint disable-line rule:line-length
-        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile onepager && \
+        run: devcontainer exec --config .devcontainer/dev-build/devcontainer.json --workspace-folder . quarto render --profile onepager
 
       - name: Quartor render
         # yamllint disable-line rule:line-length
