@@ -22,7 +22,7 @@ RUN mv "$(find . -maxdepth 1 -type d -regex ".*install-tl.*")" ./install-tlmgr
 WORKDIR /install-tlmgr
 RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install
 # hadolint ignore=SC2046
-RUN echo 'export PATH='$PATH':/usr/local/texlive/'$(date +%Y)'/bin/x86_64-linux' >> /home/vscode/.bashrc
+RUN echo 'export PATH='$PATH':/usr/local/texlive/'$(date +%Y)'/bin/x86_64-linux' >> /etc/bash.bashrc
 WORKDIR /
 
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
@@ -66,7 +66,7 @@ RUN QUARTO_VERSION=$(curl https://quarto.org/docs/download/_download.json | jq -
   && curl -L -o quarto-${QUARTO_VERSION}-linux-amd64.tar.gz  https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
-  && echo 'export PATH=$PATH:/quarto-'${QUARTO_VERSION}'/bin' >> /home/vscode/.bashrc
+  && echo 'export PATH=$PATH:/quarto-'${QUARTO_VERSION}'/bin' >> /etc/bash.bashrc
 
 # When running locally, we really need to expose a port
 EXPOSE 8080
