@@ -76,8 +76,10 @@ jobs:
     permissions:
       contents: write
     steps:
+
       - name: Check out repository
         uses: actions/checkout@v4
+
       - name: Quarto Render (with resume profiles)
         run: |
           quarto render --profile onepager
