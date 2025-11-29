@@ -1,9 +1,5 @@
 ---
-name: Container / Documentation Publish\
-
-env:
-  # yamllint disable-line rule:line-length
-  DEBUG_IMAGE_SHA: ghcr.io/cameronrutherford/quarto-ci@sha256:e711e6271819961e0ab79265da7eed0f16c42803eda87e6155eea8f164f31477
+name: Container / Documentation Publish
 
 "on":
   workflow_dispatch:
@@ -73,7 +69,7 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'true' }}
     runs-on: ubuntu-latest
     container:
-      image: ${{ env.DEBUG_IMAGE_SHA }}
+      image: ghcr.io/cameronrutherford/quarto-ci
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -84,16 +80,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Quarto Render (with resume profiles)
         run: |
+          quarto render --profile onepager \
           quarto render
-          mkdir ./quarto-cache
-          rm -rf ./quarto-cache && mv ./docs ./quarto-cache
-          quarto render resume/cpp_resume.qmd --profile cpp
-          mv ./docs/resume/cpp_resume.pdf ./quarto-cache/resume
-          quarto render resume/python_resume.qmd --profile python
-          mv ./docs/resume/python_resume.pdf ./quarto-cache/resume
-          quarto render resume/devops_resume.qmd --profile devops
-          mv ./docs/resume/devops_resume.pdf ./quarto-cache/resume
-          rm -rf ./docs && mv ./quarto-cache ./docs && rm -rf ./quarto-cache
 
       - name: Quarto Publish
         uses: quarto-dev/quarto-actions/publish@v2
@@ -108,7 +96,7 @@ jobs:
     if: ${{ needs.changes.outputs.devcontainer == 'false' }}
     runs-on: ubuntu-latest
     container:
-      image: ${{ env.DEBUG_IMAGE_SHA }}
+      image: ghcr.io/cameronrutherford/quarto-ci
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -120,18 +108,8 @@ jobs:
 
       - name: Quarto Render (with resume profiles)
         run: |
+          quarto render --profile onepager &&
           quarto render
-          mkdir ./quarto-cache
-          rm -rf ./quarto-cache && mv ./docs ./quarto-cache
-          quarto render resume/cpp_resume.qmd --profile cpp
-          mv ./docs/resume/cpp_resume.pdf ./quarto-cache/resume
-          quarto render resume/onepager_resume.qmd --profile onepager
-          mv ./docs/resume/onepager_resume.pdf ./quarto-cache/resume
-          quarto render resume/python_resume.qmd --profile python
-          mv ./docs/resume/python_resume.pdf ./quarto-cache/resume
-          quarto render resume/devops_resume.qmd --profile devops
-          mv ./docs/resume/devops_resume.pdf ./quarto-cache/resume
-          rm -rf ./docs && mv ./quarto-cache ./docs && rm -rf ./quarto-cache
 
       - name: Quarto Publish
         uses: quarto-dev/quarto-actions/publish@v2
