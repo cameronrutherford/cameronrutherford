@@ -78,7 +78,7 @@ jobs:
     steps:
 
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Quarto Render (with resume profiles)
         run: |
@@ -106,7 +106,7 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Quarto Render (with resume profiles)
         run: |
