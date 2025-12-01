@@ -22,16 +22,17 @@ RUN mv "$(find . -maxdepth 1 -type d -regex ".*install-tl.*")" ./install-tlmgr
 WORKDIR /install-tlmgr
 # hadolint ignore=SC2046
 RUN perl ./install-tl --no-interaction --scheme=small --no-doc-install --no-src-install && \
-    echo "export PATH=${PATH}:/usr/local/texlive/$(date +%Y)/bin/x86_64-linux" >> /etc/bash.bashrc
+      ln -s /usr/local/texlive/$(date +%Y) /usr/local/texlive/latest
+ENV PATH=${PATH}:/usr/local/texlive/latest/bin/x86_64-linux
 WORKDIR /
 
 # Update tlmgr - https://www.tug.org/texlive/tlmgr.html
 # Also install any other extensions that are used
 #   - This was trial and error as far as I can tell
 # hadolint ignore=SC2046
-RUN /usr/local/texlive/$(date +%Y)/bin/x86_64-linux/tlmgr \
+RUN /usr/local/texlive/latest/bin/x86_64-linux/tlmgr \
   update --self --all && \
-  /usr/local/texlive/$(date +%Y)/bin/x86_64-linux/tlmgr install \
+  /usr/local/texlive/latest/bin/x86_64-linux/tlmgr install \
     tcolorbox \
     environ \
     tikzfill \
@@ -66,7 +67,8 @@ RUN QUARTO_VERSION=$(curl https://quarto.org/docs/download/_download.json | jq -
   && curl -L -o quarto-${QUARTO_VERSION}-linux-amd64.tar.gz  https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && tar -xvzf quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
   && rm quarto-${QUARTO_VERSION}-linux-amd64.tar.gz \
-  && echo "export PATH=${PATH}:/quarto-${QUARTO_VERSION}/bin" >> /etc/bash.bashrc
+  && ln -s /quarto-${QUARTO_VERSION} /quarto
+ENV PATH=${PATH}:/quarto/bin
 
 # When running locally, we really need to expose a port
 EXPOSE 8080
