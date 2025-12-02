@@ -15,4 +15,4 @@ format:
 
 ## Git Integration
 
-This pdfs is rendered during `quarto render`, and then hosted in GitHub pages. Since the pdfs seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
+This pdf is rendered during `quarto render`, and then hosted in GitHub pages. Since the pdf seems to have a git delta whenever you re-render, it ended up being much easier to leave this as auto-generated as opposed to committing it to git. This does mean that you can't view it within the GitHub web UI, but the GitHub pages are easier to theme and look better anyway.
