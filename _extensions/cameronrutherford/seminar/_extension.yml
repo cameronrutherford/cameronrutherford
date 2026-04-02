@@ -13,5 +13,5 @@ contributes:
         seminar:
           server: "http://localhost:4433"
           room: "minds-matter"
-          hash: "PLACEHOLDER_HASH"
+          hash: "$2b$10$ZroObJf7lXr/NMT85BZV8ui67H9ghALFtWpk6.hBW/fwbYUKhvE/2"
           autoJoin: true
