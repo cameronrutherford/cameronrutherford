@@ -1,0 +1,87 @@
+---
+title: "My Journey in STEM"
+subtitle: "From Sydney to San Francisco — HPC, Cloud, and Quantum"
+date: today
+date-format: "MMMM D, YYYY"
+author: Cameron Rutherford
+format:
+  revealjs:
+    output-ext: reveal.html
+    theme: night
+    smaller: true
+    toc: true
+    toc-depth: 2
+    menu: true
+    chalkboard: false
+    slide-level: 3
+  html:
+    toc: true
+revealjs-plugins:
+  - confetti
+---
+
+### Welcome!
+
+Scan the QR code or visit the link to follow along:
+
+{{< qrcode https://cameronrutherford.quarto.pub/camerons-git-site/presentations/minds-matter/presentation.reveal.html follow-along >}}
+
+## Growing Up
+
+### Australian / American Dual Citizenship
+
+*[Photo placeholder]*
+
+### Basketball
+
+*[Photo placeholder]*
+
+## High School
+
+### Sydney Grammar School
+
+*[Photo placeholder]*
+
+### ATAR & HSC
+
+*[Content placeholder — the stress, the system, the scores]*
+
+## College
+
+### Whitworth University
+
+*[Photo placeholder]*
+
+### Academics & Basketball
+
+*[Content placeholder]*
+
+## Career
+
+### PNNL — National Lab Research
+
+*[Content placeholder — ExaGO, E3SM, supercomputers]*
+
+### AWS — Cloud & Quantum
+
+*[Content placeholder — current role, CQC]*
+
+## What is HPC / Cloud / Quantum?
+
+### High Performance Computing
+
+*[Content placeholder]*
+
+### Cloud Computing & AWS
+
+*[Content placeholder]*
+
+### Quantum Computing
+
+*[Content placeholder]*
+
+## Thank You!
+
+### Questions?
+
+*[Q&A section]*
