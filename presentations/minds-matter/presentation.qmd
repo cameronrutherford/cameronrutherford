@@ -20,6 +20,7 @@ revealjs-plugins:
   - confetti
   - seminar
   - poll
+  - questions
 ---
 
 ### Welcome!
