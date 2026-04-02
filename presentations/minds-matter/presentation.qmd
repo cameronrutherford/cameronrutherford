@@ -19,6 +19,7 @@ format:
 revealjs-plugins:
   - confetti
   - seminar
+  - poll
 ---
 
 ### Welcome!
@@ -80,6 +81,22 @@ Scan the QR code or visit the link to follow along:
 ### Quantum Computing
 
 *[Content placeholder]*
+
+### Quick Poll: What interests you most?
+
+<div class="poll" data-poll="interest">
+  <button data-value="HPC">High Performance Computing</button>
+  <button data-value="Cloud">Cloud / AWS</button>
+  <button data-value="Quantum">Quantum Computing</button>
+  <button data-value="AI">AI / Machine Learning</button>
+</div>
+
+Results: <span class="voters" data-poll="interest">0</span> votes
+
+- HPC: <span class="results" data-poll="interest"><span data-value="HPC">0</span></span>
+- Cloud: <span class="results" data-poll="interest"><span data-value="Cloud">0</span></span>
+- Quantum: <span class="results" data-poll="interest"><span data-value="Quantum">0</span></span>
+- AI: <span class="results" data-poll="interest"><span data-value="AI">0</span></span>
 
 ## Thank You!
 
