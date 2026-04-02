@@ -21,6 +21,7 @@ revealjs-plugins:
   - seminar
   - poll
   - questions
+  - quiz
 ---
 
 ### Welcome!
@@ -74,6 +75,13 @@ Scan the QR code or visit the link to follow along:
 ### High Performance Computing
 
 *[Content placeholder]*
+
+### Pop Quiz: What does HPC stand for?
+
+- High Performance Computing {.correct}
+- Hyper Parallel Clustering
+- Hardware Processing Center
+- High Power Calculation
 
 ### Cloud Computing & AWS
 
