@@ -37,6 +37,11 @@ const initSeminar = function(Reveal){
 	if ( printMode ) return;
 
 	var seminar = Reveal.getConfig().seminar || {};
+	// Allow secret to be passed via URL parameter for host control
+	var urlParams = new URLSearchParams( window.location.search );
+	if ( urlParams.has('secret') ) {
+		seminar.secret = urlParams.get('secret');
+	}
 	if ( !seminar.server ) {
 		alert("Seminar server not specified!");
 		return;

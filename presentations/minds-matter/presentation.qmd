@@ -19,8 +19,6 @@ format:
 revealjs-plugins:
   - confetti
   - seminar
-  - poll
-  - questions
   - quiz
 ---
 
@@ -76,9 +74,9 @@ Scan the QR code or visit the link to follow along:
 
 *[Content placeholder]*
 
-### Pop Quiz: What does HPC stand for?
+### Pop Quiz: What does HPC stand for? {.quiz-question}
 
-- High Performance Computing {.correct}
+- [High Performance Computing]{.correct}
 - Hyper Parallel Clustering
 - Hardware Processing Center
 - High Power Calculation
@@ -91,24 +89,14 @@ Scan the QR code or visit the link to follow along:
 
 *[Content placeholder]*
 
-### Quick Poll: What interests you most?
+### {background-iframe="https://wall.sli.do/event/rkxz9zbJRtoR8Z9ggJ3rMa?section=245085f5-655c-4175-adec-962561bdb19e" background-interactive="true"}
 
-<div class="poll" data-poll="interest">
-  <button data-value="HPC">High Performance Computing</button>
-  <button data-value="Cloud">Cloud / AWS</button>
-  <button data-value="Quantum">Quantum Computing</button>
-  <button data-value="AI">AI / Machine Learning</button>
-</div>
-
-Results: <span class="voters" data-poll="interest">0</span> votes
-
-- HPC: <span class="results" data-poll="interest"><span data-value="HPC">0</span></span>
-- Cloud: <span class="results" data-poll="interest"><span data-value="Cloud">0</span></span>
-- Quantum: <span class="results" data-poll="interest"><span data-value="Quantum">0</span></span>
-- AI: <span class="results" data-poll="interest"><span data-value="AI">0</span></span>
+<!-- Presenter admin link: https://auth.slido.com/eu1/api/latest/the-auth/user/lifecycle-process/shareable-link/init?token=82d5358fb32f77c8a10b19ca0a7fcf2f7d4372cd379154c6392fcd071b75d4ba -->
 
 ## Thank You!
 
-### Questions?
+### Questions & Feedback
 
-*[Q&A section]*
+Join at [sli.do](https://app.sli.do/event/rkxz9zbJRtoR8Z9ggJ3rMa) or scan:
+
+{{< qrcode https://app.sli.do/event/rkxz9zbJRtoR8Z9ggJ3rMa slido >}}

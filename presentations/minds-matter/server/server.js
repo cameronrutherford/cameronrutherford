@@ -26,7 +26,12 @@ else {
   server = https.createServer(credentials,app);
 }
 
-const io = socketio(server);
+const io = socketio(server, {
+  cors: {
+    origin: true,
+    credentials: true
+  }
+});
 
 
 
