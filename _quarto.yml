@@ -62,6 +62,7 @@ website:
           - blog/CUDA-coding-interview/01-testConfiguration.ipynb
       - text: "Presentations"
         menu:
+          - presentations/minds-matter/presentation.qmd
           - presentations/stem-engagement/presentation.qmd
           - presentations/math-magic/presentation.qmd
           - presentations/c++-loops-interview/presentation.qmd
