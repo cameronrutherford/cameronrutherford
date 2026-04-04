@@ -6,6 +6,7 @@ project:
 
 resources:
   - "presentations/math-magic/videos/*"
+  - "presentations/minds-matter/presentation.reveal-speaker.html"
 
 profile:
   group:

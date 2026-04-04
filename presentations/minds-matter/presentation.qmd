@@ -14,11 +14,14 @@ format:
     menu: true
     chalkboard: false
     slide-level: 3
+    multiplex:
+      url: 'https://multiplex.up.railway.app/'
+      id: '531bb4bf829734f5f816c23553f23e4515fec56a59b26650298cc56d6dc28e2f'
+      secret: 'a823ed9af3d86c9a61751a86071f12b6'
   html:
     toc: true
 revealjs-plugins:
   - confetti
-  - seminar
 ---
 
 ### Welcome!
