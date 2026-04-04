@@ -113,6 +113,10 @@ This is relevant to Mind's Matter students — you're navigating college admissi
 I could have stayed in Australia, gone to a big university. Instead I picked a tiny school in Spokane, Washington that most people have never heard of. It was the best decision I ever made. Small classes, great professors who knew my name, and I got to play basketball.
 :::
 
+### The Game Winner
+
+{{< video images/game-winner.mov height="550" >}}
+
 ### Storming the Court
 
 ![Conference championship game winner!](images/whitworth-courtstorm.jpeg){fig-align="center" height="450"}
@@ -146,6 +150,26 @@ Study abroad program called "Technology and Culture" — traveled through Southe
 ### Club Basketball
 
 ![NIRSA Championship Series](images/nirsa-championship.jpeg){fig-align="center" height="400"}
+
+### Near Space Research (2017)
+
+<p align="center">
+<img src="https://web.archive.org/web/20230401171017im_/https://whitworthnearspace.org/mw2020/images/thumb/Sphere_in_Box.jpeg/600px-Sphere_in_Box.jpeg" height="350">
+</p>
+
+Built and launched research payloads to the edge of space (~100,000 ft) with the Whitworth Near Space program.
+
+### Parallel Computing & The Mandelbrot Set
+
+![Mandelbrot Zoom — generated with GPU parallel computing](images/mandelbrot.gif){fig-align="center" height="350"}
+
+My parallel computing class is where I fell in love with GPUs. We learned to split massive calculations across thousands of cores — this Mandelbrot fractal zoom was my final project.
+
+### Embedded Systems — Bomb Defusal Game
+
+{{< video images/bomb-defusal.mp4 height="550" >}}
+
+Built a physical bomb defusal game using embedded systems — wires, switches, timers, the whole thing.
 
 ## Life in the US
 
@@ -213,6 +237,14 @@ I presented at PNNL's annual science festival three years running.
 ### My PNNL Desk
 
 ![Multi-monitor setup for serious work](images/pnnl-desk-setup.jpeg){fig-align="center" height="400"}
+
+### Adjunct Professor — Fordham University (2024)
+
+![My teaching assistant](images/cat-on-books.jpeg){fig-align="center" height="300"}
+
+Taught **CISC2200 — Data Structures** in the Fall '24 semester at Fordham in Manhattan. Updated the syllabus from C++17 to C++23.
+
+[Course site: dsm.fordham.edu/~rrutherford4](https://www.dsm.fordham.edu/~rrutherford4/)
 
 ### AWS — Centre for Quantum Computing
 
