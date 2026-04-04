@@ -82,7 +82,7 @@ Your **ATAR** (Australian Tertiary Admission Rank) is a percentile rank from 0-9
 - I chose to come to the US instead
 :::
 ::: {.column width="40%"}
-{{< video https://www.youtube.com/embed/T65Lm70PP24 height="350" >}}
+{{< video https://www.youtube.com/embed/T65Lm70PP24?autoplay=1&mute=1 height="350" >}}
 :::
 ::::
 
@@ -118,7 +118,7 @@ I could have stayed in Australia, gone to a big university. Instead I picked a t
 
 ### The Game Winner
 
-{{< video https://www.youtube.com/embed/mpMOMI23ZI0 height="550" >}}
+{{< video https://www.youtube.com/embed/mpMOMI23ZI0?autoplay=1&mute=1 height="550" >}}
 
 ### Storming the Court
 
@@ -170,7 +170,7 @@ My parallel computing class is where I fell in love with GPUs. We learned to spl
 
 ### Embedded Systems — Bomb Defusal Game
 
-{{< video https://www.youtube.com/embed/FFC4n6HNuoo height="550" >}}
+{{< video https://www.youtube.com/embed/FFC4n6HNuoo?autoplay=1&mute=1 height="550" >}}
 
 Built a physical bomb defusal game using embedded systems — wires, switches, timers, the whole thing.
 
