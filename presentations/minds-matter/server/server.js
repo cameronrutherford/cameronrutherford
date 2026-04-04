@@ -124,7 +124,7 @@ console.log(`${socket.id} checked in with name "${name}"`);
 		if ( !authorise( hash, secret ) ) {
 			if ( callback ) callback("Authorisation failed");
 			return false;
-		}	
+		}
 		return true;
 	}
 
@@ -202,7 +202,7 @@ console.log(`${socket.id} enters room "${rooms[i].venue}|${rooms[i].name}|${room
 			return false;
 		}
 
-		participants[i].push(user);	
+		participants[i].push(user);
 
 		socket.join( label(rooms[i]) );
 		socket.broadcast.to( label(rooms[i]) ).emit( 'entered_room', { room: rooms[i], user } ); // send to everyone else in room
@@ -237,12 +237,12 @@ console.log(`${socket.id} enters room "${rooms[i].venue}|${rooms[i].name}|${room
 		}
 		else {
 			if ( callback ) callback("Only participants can leave a room");
-			return false;		
+			return false;
 		}
 
 		if ( !hosts[i].length ) {
 console.log(`${socket.id} closes room "${rooms[i].venue}|${rooms[i].name}|${rooms[i].hash}"`);
-			// close room because user was the last host 
+			// close room because user was the last host
 			socket.broadcast.to( label(rooms[i]) ).emit( 'kicked_out', rooms[i] ); // send to everyone else in room
 			socket.leave( label(rooms[i]) );
 
@@ -253,7 +253,7 @@ console.log(`${socket.id} closes room "${rooms[i].venue}|${rooms[i].name}|${room
 console.log(`${socket.id} leaves room "${rooms[i].venue}|${rooms[i].name}|${rooms[i].hash}"`);
 			socket.leave( label(rooms[i]) );
 			// broadcast to everyone in room
-			io.to( label(rooms[i]) ).emit( 'left_room', { room: rooms[i], user } ); 
+			io.to( label(rooms[i]) ).emit( 'left_room', { room: rooms[i], user } );
 			if ( chair ) {
 				io.to( hosts[i][0].id ).emit( 'chair', room ); // tell first of the remaining hosts to chair the room
 			}

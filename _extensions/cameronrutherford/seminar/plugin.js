@@ -14,13 +14,13 @@ window.RevealSeminar = window.RevealSeminar || {
     init: function(deck) {
         initSeminar(deck);
     },
-    open_or_join_room: function( secret, username ) { 
+    open_or_join_room: function( secret, username ) {
 	checkin( username );
-	open_or_join_room( secret ); 
+	open_or_join_room( secret );
     },
     join_room: function( username ) {
 	checkin( username );
-	join_room(); 
+	join_room();
     },
     leave_room: function() { leave_room(); },
     close_room: function( secret ) { close_room( secret ); },
@@ -46,7 +46,7 @@ const initSeminar = function(Reveal){
 		alert("Seminar server not specified!");
 		return;
 	}
-	seminar.url = seminar.url || window.location.host; 
+	seminar.url = seminar.url || window.location.host;
 	seminar.room = seminar.room || seminar.url;
 	if ( !seminar.hash ) {
 		alert("Hash not specified!");
@@ -89,7 +89,7 @@ const initSeminar = function(Reveal){
 	var wakeLock = null; // null -> Wake Lock API not supported
 
 	if ( 'wakeLock' in navigator ) {
-		wakeLock = false; 
+		wakeLock = false;
 		console.log("Screen Wake Lock API supported");
 //		logger("Screen Wake Lock API supported");
 	}
@@ -109,7 +109,7 @@ const initSeminar = function(Reveal){
 			} catch (err) {
   				// The Wake Lock request has failed - usually system related, such as battery.
 				console.warn(`${err.name}, ${err.message}`);
-				wakeLock = false; 
+				wakeLock = false;
 			}
 		}
 	}
@@ -173,7 +173,7 @@ const initSeminar = function(Reveal){
 				logger( error );
 			}
 			else {
-				// assume that room is opened and change status later if another host is chair 
+				// assume that room is opened and change status later if another host is chair
 				status = Math.max(status, STATUS.HOSTING);
 				dispatchStatus();
 				logger( `host room "${seminar.url}|${seminar.room}|${seminar.hash}"` );
@@ -238,7 +238,7 @@ const initSeminar = function(Reveal){
 	function send( evt, recipient, cc ) {
 		// send a message to recipient
 	}
-*/	
+*/
 /*
 	function receive( message ) {
 		// receive and process a message
@@ -257,11 +257,11 @@ const initSeminar = function(Reveal){
 	function sendMessage( evt ) {
 		// send message w/o copy
 		var data = {
-			venue: seminar.url, 
+			venue: seminar.url,
 			name: seminar.room,
-			hash: seminar.hash, 
+			hash: seminar.hash,
 			recipient: (evt.content || {}).recipient,
-			copy: (evt.content || {}).copy, 
+			copy: (evt.content || {}).copy,
 			content: evt.content
 		};
 		if ( data.content ) {
@@ -274,20 +274,20 @@ const initSeminar = function(Reveal){
 
 
 	function subscribe() {
-		document.addEventListener( 'send', function( evt ) { 
+		document.addEventListener( 'send', function( evt ) {
 			if ( !evt ) return;
 			// send custom events which are sent by other plugins
-			sendMessage(evt); 
+			sendMessage(evt);
 		});
 	}
 
 	function broadcastState( evt ) {
 		var data = {
-			venue: seminar.url, 
+			venue: seminar.url,
 			name: seminar.room,
-			hash: seminar.hash, 
+			hash: seminar.hash,
 			recipient: null,
-			copy: (evt.content || {}).copy, 
+			copy: (evt.content || {}).copy,
 			content: { state: Reveal.getState(), custom: (evt || {}).content }
 		};
 		if ( data.content ) {
@@ -299,7 +299,7 @@ const initSeminar = function(Reveal){
 
 	function stateChange( state ) {
 		var current = Reveal.getState();
-		return ( !state || !( 
+		return ( !state || !(
                      current.indexh == state.indexh &&
                      current.indexv == state.indexv &&
                      current.indexf == state.indexf &&
@@ -311,11 +311,11 @@ const initSeminar = function(Reveal){
 
 	function broadcastStateChange( evt ) {
 		if ( stateChange( receivedState ) ) {
-			// broadcast state change 
+			// broadcast state change
 			broadcastState( evt );
 		}
 		else {
-			// ignore state change if the state is the same as the last state received 
+			// ignore state change if the state is the same as the last state received
 			receivedState = null;
 		}
 	}
@@ -328,16 +328,16 @@ const initSeminar = function(Reveal){
 		// Monitor events that trigger a change in state
 		Reveal.on( 'slidechanged', broadcastStateChange );
 		Reveal.on( 'fragmentshown', broadcastStateChange );
-	
+
 		Reveal.on( 'fragmenthidden', broadcastStateChange );
 		Reveal.on( 'overviewhidden', broadcastStateChange );
 		Reveal.on( 'overviewshown', broadcastStateChange );
 		Reveal.on( 'paused', broadcastStateChange );
 		Reveal.on( 'resumed', broadcastStateChange );
-		document.addEventListener( 'broadcast', function( evt ) { 
+		document.addEventListener( 'broadcast', function( evt ) {
 			// broadcast custom events w/o recipient which are sent by other plugins
 			if ( evt && !evt.recipient ) {
-				broadcastState(evt); 
+				broadcastState(evt);
 			}
 		});
 	}
@@ -378,7 +378,7 @@ console.log(rooms);
 
 	socket.on('participants', ({ room, hosts, participants }) => {
 		// make sure to only accept messages within same scope (should not be necessary)
-		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return; 
+		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return;
 
 		// inform other plugins about participants
 		var event = new CustomEvent('participants');
@@ -388,7 +388,7 @@ console.log(rooms);
 
 	socket.on('entered_room', ({ room, user }) => {
 		// make sure to only accept messages within same scope (should not be necessary)
-		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return; 
+		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return;
 		logger(`${user.id} entered room "${room.venue}|${room.name}|${room.hash}"` );
 
 		if ( status == STATUS.CHAIRING ) {
@@ -403,7 +403,7 @@ console.log(rooms);
 	socket.on('announcement', (  { time, room, sender, content } ) => {
 //console.log("Received message: ", content );
 		// make sure to only accept messages within same scope (should not be necessary)
-		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return; 
+		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return;
 
 		if ( content.state && stateChange( content.state ) ) {
 			// change slide if necessary
@@ -422,7 +422,7 @@ console.log(rooms);
 	socket.on('message', (  { time, room, sender, content } ) => {
 //console.log(`received message: ", content );
 		// make sure to only accept messages within same scope (should not be necessary)
-		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return; 
+		if ( room.venue != seminar.url || room.name != seminar.room || room.hash != seminar.hash ) return;
 
 		if ( content ) {
 			// forward custom events to other plugins
@@ -431,7 +431,7 @@ console.log(rooms);
 			document.dispatchEvent( event );
 		}
 	});
-	
+
 	// automatically join room as participant if data is provided
 	if ( seminar.autoJoin && seminar.url && seminar.room && seminar.hash ) {
 		checkin();
