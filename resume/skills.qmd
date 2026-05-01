@@ -148,6 +148,53 @@
 
 :::
 
+::: {.content-visible when-profile="hrt"}
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th font-weight="bold">Linux / Systems</th>
+            <th font-weight="bold">HPC / Networking</th>
+            <th font-weight="bold">GPU / Performance</th>
+            <th font-weight="bold">Automation</th>
+            <th font-weight="bold">Other</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> Ubuntu/Debian, RHEL
+                <p> systemd, cgroups
+                <p> AMI builds, PXE
+            </td>
+            <td>
+                <p> MPI, EFA, InfiniBand
+                <p> PBS, SLURM, Lustre
+                <p> NFS, FSx, S3
+            </td>
+            <td>
+                <p> CUDA, HIP, RAJA
+                <p> CPU/GPU Profiling
+                <p> NVIDIA, AMD MI250X
+            </td>
+            <td>
+                <p> Bash, Python, Go
+                <p> Git[Hub/Lab] CI/CD
+                <p> Spack, CMake, CDK
+            </td>
+            <td>
+                <p> AWS (EC2/IAM/CDK)
+                <p> vim/tmux, SSH
+                <p> Containers, Ansible
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+:::
+
 ::: {.content-visible when-profile="onepager"}
 
 ```{=html}
