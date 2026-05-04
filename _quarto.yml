@@ -10,7 +10,7 @@ resources:
 
 profile:
   group:
-    - [base, cpp, python, devops, onepager]
+    - [base, cpp, python, devops, onepager, hrt]
 
 format:
   html:

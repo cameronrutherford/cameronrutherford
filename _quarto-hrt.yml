@@ -1,0 +1,4 @@
+---
+project:
+  render:
+    - "resume/hrt_resume.qmd"
