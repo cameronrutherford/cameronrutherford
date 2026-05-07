@@ -2,7 +2,7 @@
 
 ::: {.content-visible when-profile="cpp"}
 
-```{=html}
+```
 <table>
     <thead>
         <tr>
