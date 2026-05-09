@@ -3,19 +3,20 @@
 
 <p> <a href="https://cameronrutherford.quarto.pub/camerons-git-site/" target="_blank" rel="noreferrer"> <img src="./config/qr-code.svg" width="50%"/> </a>
 &#10;
+
 <table data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th data-quarto-table-cell-role="th">Quick Links</th>
 <th data-quarto-table-cell-role="th">Tech Stack</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>CV / README:
 <ul>
 <li><a
@@ -68,7 +69,7 @@ target="_blank" rel="noreferrer"><img
 src="https://upload.wikimedia.org/wikipedia/commons/4/45/LaTeX_project_logo_bird.svg"
 width="160" /></a></p></td>
 </tr>
-<tr class="even">
+<tr>
 <td colspan="2"><p>This is an HTML table written in quarto, rendered
 into GitHub flavored markdown in my `README.md`, redered into HTML with
 CSS, hosted in GitHub pages, run using a Docker image that I build and

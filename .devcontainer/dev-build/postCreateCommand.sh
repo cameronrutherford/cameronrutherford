@@ -9,3 +9,6 @@ git config --global user.name "cameronrutherford"
 cd /home/app
 # If poetry is installed, run with that. Otherwise just try running
 poetry run pre-commit install --install-hooks || pre-commit install --install-hooks
+
+# Fixup redner.sh
+sed "s/CHARLIECLOUD=true/CHARLIECLOUD=false/g" render.sh
