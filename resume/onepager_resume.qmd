@@ -1,9 +1,241 @@
 ---
 format: onepager-pdf
-summary: Experienced Systems Development Engineer with 6+ years of expertise in deploying, optimizing, and teaching scientific software on diverse computing systems, including the world's largest supercomputers. Most recently administered 5 production HPC clusters across 3 AWS regions for quantum computing research, designing SSO architecture and automated deploy/test pipelines.
+summary: "Systems Development Engineer with 6+ years of expertise
+          in deploying, optimizing, and teaching scientific software on diverse
+          computing systems, including the world's largest supercomputers. Most
+          recently administered 5 production HPC clusters across 3 AWS regions
+          for quantum computing research, designing SSO architecture and
+          automated deploy/test pipelines."
 ---
 
-{{< include experience.qmd >}}
+# Experience
+
+### Systems Development Engineer, AWS CQC (San Francisco, CA): 2025 - 2026
+
+::: {.content-visible when-profile="onepager"}
+- SOCA administrator for 5 production HPC clusters across 3 AWS regions, supporting quantum computing research
+- Designed and implemented SSO architecture (Cognito + Federate/Midway + CDK ALB) replacing manual LDAP user management
+- Built automated deploy/test framework validating MPI scaling to 256 nodes (16,384 cores) on Graviton with EFA
+- Authored versioning and release strategy adopted by team for SOCA fork lifecycle management
+:::
+
+::: {.content-visible when-profile="devops"}
+- Sole SOCA administrator for 5 production HPC clusters (Blue, Green, Orange, Purple, Yellow) across us-east-1, us-east-2, us-west-2
+- Designed SSO architecture replacing OpenLDAP with Cognito + Amazon Federate, deployed via CDK stacks (IAM, Cognito, ALB)
+- Built deploy/test automation framework (test.sh): MPI scaling validation, DCV API testing, IAM policy verification, PBS hook deployment
+- Validated MPI scaling to 256 nodes (16,384 cores) on Graviton r7g.16xlarge with EFA fabric
+- Diagnosed and resolved slapd file descriptor exhaustion under 1000+ node Managed AD scale
+- Authored SOCA release strategy: fork versioning (CQC-YY.MM.PATCH), ALB-based blue/green cutover, cluster YAML configs
+- Led security code review of 36-commit SOCA fork (68 files, +1866/-662 lines) covering JWT verification, IAM policy scope, shell injection
+- Managed 14+ concurrent merge requests across soca-config-utils, scale-out-computing-on-aws, and das-handbook repos
+:::
+
+::: {.content-visible when-profile="cpp"}
+- Sole SOCA administrator for 5 production HPC clusters across 3 AWS regions, supporting quantum computing simulations
+- Built deploy/test framework automating MPI scaling validation to 256 nodes on Graviton with EFA
+- Supported Palace (PArallel LArge-scale Computational Electromagnetics) builds and job orchestration via Spack and PBS
+- Diagnosed PBS Python version mismatches and CFLAGS compilation issues across custom AMIs
+- Implemented per-user PBS job limit hooks with automatic held-job release scheduling
+:::
+
+::: {.content-visible when-profile="python"}
+- Sole SOCA administrator for 5 production HPC clusters across 3 AWS regions
+- Designed SSO architecture (Cognito + Federate/Midway) with CDK infrastructure-as-code deployment
+- Built Python-based deploy/test automation framework for cluster validation and MPI scaling
+- Implemented PBS queuejob hooks in Python for per-user job limits and automated held-job release
+- Diagnosed and patched dispatcher retry logic, run_command error handling, and DCV API integration issues
+- Led security review identifying JWT verification gaps, shell injection in job notifications, and IAM policy scope issues
+:::
+
+::: {.content-visible when-profile="hrt"}
+- Administered 5 production HPC clusters (Ubuntu 22.04) across 3 AWS regions, maintaining 24/7 availability for quantum computing research workloads
+- Authored 100+ merge requests across 7 repositories (primary contributor at 70% of team's infrastructure codebase), reviewed 28 MRs from 6 engineers
+- Built automation tooling (Bash/Python) for cluster deployment, patch management, MPI scaling validation, and remote administration via SSH/SSM
+- Validated MPI performance to 256 nodes (16,384 cores) on Graviton ARM with EFA high-speed fabric; diagnosed EC2 network-level issues (noisy neighbor RX UDMA drops affecting co-located instances)
+- Diagnosed and resolved Linux system-level failures: slapd file descriptor exhaustion at 1000+ concurrent connections, PBS bootstrap races, compute node dual-NIC routing conflicts, kernel D-state hangs on Lustre mount timeouts
+- Managed custom Ubuntu AMI builds, compiled OpenMPI 5.0.8 with GCC 14 and EFA libfabric, maintained Spack-based scientific software stacks (Palace EM solver, Intel oneAPI, CUDA toolchains)
+- Contributed upstream to open-source Spack package manager and awslabs/palace: 12 PRs for CI pipeline optimization, build system fixes, and Spack package releases
+- Performance-tuned FSxL Lustre storage: identified throughput gaps across filesystem generations, optimized compression and per-unit-storage-throughput across petabyte-scale filesystems
+- Authored 27 technical documentation pages (admin runbooks, architecture decisions, debugging guides) adopted as team's single source of truth
+:::
+
+
+### HPC Operations Team Lead, PNNL (Virtual): 2024
+
+::: {.content-visible when-profile="hrt"}
+- Led team supporting PNNL's HPC clusters (Constance, Deception, Marianas) used by 2000+ researchers across national security, energy, and science missions
+- Managed hardware lifecycle, OS upgrades, and job scheduler (SLURM) configuration for multi-thousand-node Linux clusters
+- Built MLOps platform offering: containerized GPU workflows (Singularity/Apptainer), Jupyter integration, Open OnDemand portal
+- Established documentation standards (Diataxis framework) enabling self-service for researchers, reducing support tickets
+:::
+
+::: {.content-visible unless-profile="hrt"}
+- Managed staff in support of PNNLs HPC Clusters supporting various projects
+- Lead HPC MLOps offering, and pioneered internal diataxis based Quarto documentation
+:::
+
+### Adjunct Professor, CISC Department, Fordham (Manhattan, NY): 2024
+- Taught CISC2200 for Fall '24 Semester. Updated Syllabus from C++17 to C++23
+
+### Tech Student 4, Post-Bachelors RA, Software Engineer I/II/III, PNNL (Virtual): 2020 - 2024
+
+::: {.content-visible when-profile="hrt"}
+- Scaled ExaSGD C++/MPI application to Frontier (Top500 #1, 8.7M AMD MI250X cores) and Summit (#7, 27,648 NVIDIA V100 GPUs)
+- Optimized GPU kernels using CUDA, HIP, and RAJA for sparse linear algebra on NVIDIA and AMD hardware (26 PRs merged on HiOp GPU solver)
+- Deployed CI/CD across 6 architecture/GPU combinations: [x86_64/amd64/ppc64le] x [AMD/NVIDIA] with Spack buildcache for reproducible builds
+- Benchmarked MPI communication collectives (allreduce, alltoall) across compilers and MPI implementations; packaged optimized configurations
+- Profiled CUDA/MPI/OpenMP hybrid applications to identify bottlenecks; tuned for Summit's NVLink and Frontier's Infinity Fabric interconnects
+- Owned Spack package management and CMake build systems across 4 national labs (PNNL, LLNL, ORNL, NREL), authored 22 merged PRs on ExaGO CI/CD
+- Received PNNL's highest performance award (Outstanding Performance Award) two consecutive years
+- Developed open-source MLFlow platform saving $200k/year vs. commercial WandB contracts
+- Led lab-wide HPC MLOps tutorials: containerization (Singularity/Docker), GPU workflows, Open OnDemand portal integration
+:::
+
+::: {.content-visible when-profile="cpp"}
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (top500 #1)
+- Aided development of C++ / CUDA / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
+:::
+
+::: {.content-visible when-profile="python"}
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (top500 #1)
+- Aided development of C++ / CUDA / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
+:::
+
+::: {.content-visible when-profile="devops"}
+- Led Software Stack for ExaSGD project to Frontiner deployment C++ / HIP (top500 #1)
+- Aided development of C++ / CUD / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- MLOps internal offering leader developing containerisation and MLOps best practices community
+- Facilitated deployment of ExaGO application to the cloud with OpenAI integration on AWS
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
+- Led lab-wide tutorial on HPC MLOps utilizing containers and Open On Demand
+:::
+
+::: {.content-visible when-profile="onepager"}
+- Led ExaSGD to exascale on Frontiner (top500 #1), fully automated CI/CD, custom sparse lin. solv.
+- Prototyped ExaGO on AWS using lambda, with OpenAI/PSQL integration for React data viz.
+- Deployed CI/CD for Fortan (CPU) -> C++ (GPU) conversion within E3SM project
+- Led lab-wide tutorials on HPC MLOps utilizing containerization and Open On Demand
+:::
+
+::: {.content-visible when-profile="cpp"}
+- Received PNNL's highest performance award (OPA) for a second year in a row
+- Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
+- Deployed ExaSGD CI/CD across [x86_64/amd64/ppcle] x [AMD/NVIDIA], learned HIP/AMD
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Led tutorials and boot camps for PNNL staff on using JAX, Qiskit, and other parallel ML/computing concepts
+:::
+
+::: {.content-visible when-profile="python"}
+- Received PNNL's highest performance award (OPA) for a second year in a row
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+- Led tutorials and boot camps for PNNL staff on using JAX, Qiskit, and other parallel ML/computing concepts
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
+- Deployed ExaSGD CI/CD across [x86_64/amd64/ppcle] x [AMD/NVIDIA], learned HIP/AMD
+:::
+
+::: {.content-visible when-profile="devops"}
+- Received PNNL's highest performance award (OPA) for a second year in a row
+- Transitioned into leadrership of ExaSGD software stack across LLNL, ORNL, PNNL and NREL
+- Deployed ExaSGD CI/CD across [x86_64/amd64/ppcle] x [AMD/NVIDIA], learned HIP/AMD
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Led tutorials and boot camps for PNNL staff on using JAX, Qiskit, and other parallel ML/computing concepts
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+:::
+
+::: {.content-visible when-profile="onepager"}
+- Led software stack of ExaSGD supporting [x86_64/amd64/ppcle] x [AMD/NVIDIA], across 3 natl. labs
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+:::
+
+::: {.content-visible when-profile="cpp"}
+- Received PNNL's highest performance award (OPA)
+- Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Custom)
+- Successfully scaled ExaSGD C++ / MPI software to Summit (top500 #7, former #1)
+- Benchmarked C / MPI communication collectives across compilers and backends, optimized and packaged product
+- Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
+:::
+
+::: {.content-visible when-profile="python"}
+- Received PNNL's highest performance award (OPA)
+- Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Custom)
+- Deployed CI/CD for ML Python package neuromancer, testing deployment on PNNL HPC
+- Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
+- Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
+- Successfully scaled ExaSGD C++ / MPI software to Summit (top500 #7, former #1)
+:::
+
+::: {.content-visible when-profile="devops"}
+- Received PNNL's highest performance award (OPA)
+- Moved to internal HPC team supporting all lab hardware and projects using compute (HPC/Q/Quantum)
+- Worked on open-source MLFlow offering to save lab $200k per project contract on WandB subscription
+- Learned Quantum Computing basics to enable C2QA project research on IBM Quantum platform
+- Successfully scaled ExaSGD C++ / MPI software to Summit (top500 #7, former #1)
+- Benchmarked C / MPI communication collectives across compilers and MPI providers
+:::
+
+::: {.content-visible when-profile="onepager"}
+- Developed open-source MLFlow offering to save lab $200k per project contract on WandB subscription
+- Collaborated on C2QA project research on IBMQ platform, upskilled scientists in Quantum computing
+:::
+
+::: {.content-visible when-profile="python"}
+- Deployed C++ / RAJA MDS linear algebra kernels in HiOp as well as designing unit tests
+- Learned CMake, Spack, GitHub/GitLab pipelines and QA/testing of C++ codebases
+- Developed skills in performance profiling of CUDA, MPI, OpenMP and hybrid applications
+- Taught other project developers about RAJA, GPUs and best practices learned
+:::
+::: {.content-visible when-profile="devops"}
+- Deployed C++ / RAJA MDS linear algebra kernels in HiOp as well as designing unit tests
+- Learned CMake, Spack, GitHub/GitLab pipelines and QA/testing of C++ codebases
+- Developed skills in performance profiling of CUDA, MPI, OpenMP and hybrid applications
+- Taught other project developers about RAJA, GPUs and best practices learned
+:::
+::: {.content-visible when-profile="cpp"}
+- Deployed C++ / RAJA MDS linear algebra kernels in HiOp as well as designing unit tests
+- Learned CMake, Spack, GitHub/GitLab pipelines and QA/testing of C++ codebases
+- Developed skills in performance profiling of CUDA, MPI, OpenMP and hybrid applications
+- Taught other project developers about RAJA, GPUs and best practices learned
+:::
+
+::: {.content-visible when-profile="hrt"}
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+:::
+
+::: {.content-visible when-profile="onepager"}
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+:::
+
+::: {.content-visible when-profile="cpp"}
+### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+### Calculus III Grader / Mathematics Tutor, Whitworth University (Spokane, WA): 2017, 2019
+### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
+:::
+::: {.content-visible when-profile="python"}
+### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+### Calculus III Grader / Mathematics Tutor, Whitworth University (Spokane, WA): 2017, 2019
+### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
+:::
+::: {.content-visible when-profile="devops"}
+### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+### Calculus III Grader / Mathematics Tutor, Whitworth University (Spokane, WA): 2017, 2019
+### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
+:::
 {{< include publications.qmd >}}
 {{< include conferences.qmd >}}
 {{< include education.qmd >}}
