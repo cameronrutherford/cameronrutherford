@@ -1,12 +1,18 @@
 #!/bin/bash
 
-if [[ $1 -eq "-f" ]]; then
-  rm -rf ./docs
-fi
+case $1 in
+-q)
+  CMDS=("quarto render --profile onepager")
+  PRVW=("cmd.exe /C start $(wslpath -w $(realpath ./docs/resume/onepager_resume.pdf))")
+  ;;
+*)
+  CMDS=("quarto render" "quarto preview --port 8080 --host localhost")
+  echo "Doing a full render"
+  ;;
+esac
 
 PULL=false
 CHARLIECLOUD=true
-CMDS=("quarto render --profile onepager" "quarto render" "quarto preview --port 8080 --no-browser --host 0.0.0.0")
 
 if $PULL == "true"; then
   ch-image pull ghcr.io/cameronrutherford/quarto-ci
@@ -23,3 +29,7 @@ for CMD in "${CMDS[@]}"; do
     $CMD
   fi
 done
+
+if [ -n "$PRVW" ]; then
+  $PRVW
+fi
