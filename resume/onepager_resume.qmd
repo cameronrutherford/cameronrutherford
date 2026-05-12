@@ -1,10 +1,153 @@
 ---
 format: onepager-pdf
-summary: Experienced Systems Development Engineer with 6+ years of expertise in deploying, optimizing, and teaching scientific software on diverse computing systems, including the world's largest supercomputers. Most recently administered 5 production HPC clusters across 3 AWS regions for quantum computing research, designing SSO architecture and automated deploy/test pipelines.
+summary: "System Development Engineer with 6+ years of expertise in deploying, optimizing, and teaching
+          scientific software on diverse computing systems. This includes using
+          the world's largest supercomputers for power grid simulation, as well
+          as enginerring testing and deployment infrastructure for hardware agnostic
+          deployments. Recently the system administrator for 5 prod HPC clusters
+          in 3 AWS regions for quantum computing reserach, deploying
+          secure sign on, testing, and system image patches to maintain and upgrade the systems
+          and the associated software required for operational excellence, including optimizing
+          the systems for performance."
 ---
 
-{{< include experience.qmd >}}
-{{< include publications.qmd >}}
-{{< include conferences.qmd >}}
+# Experience
+
+### SysDE, Amazon Center for Quantum Computing (San Francisco, CA): 2025 - 2026
+
+- Engineered SSO (Cognito + Federate/Midway + CDK ALB) for passwordless auth replacing OpenLDAP
+- Built automated deploy/test framework for valdiating MPI perf to 256+ nodes for key software (Palace)
+- Reduced CI builds from 1hr20m to 15m through Spack caching, and prototyped ECR as OCI storage
+- Enabled containerization at the system and application level, as well as optimizing workflows for throughput
+- Fixed several system scaling challenges, authoring release and versioning strategy to avoid future issues
+
+<!--
+::: {.content-visible when-profile="devops"}
+- Diversified Ubuntu AMIs to reduce load times from 20m to <5m, and added support for all AWS GPUs
+- Sole SOCA administrator for 5 production HPC clusters (Blue, Green, Orange, Purple, Yellow) across us-east-1, us-east-2, us-west-2
+- Designed SSO architecture replacing OpenLDAP with Cognito + Amazon Federate, deployed via CDK stacks (IAM, Cognito, ALB)
+- Built deploy/test automation framework (test.sh): MPI scaling validation, DCV API testing, IAM policy verification, PBS hook deployment
+- Validated MPI scaling to 256 nodes (16,384 cores) on Graviton r7g.16xlarge with EFA fabric
+- Diagnosed and resolved slapd file descriptor exhaustion under 1000+ node Managed AD scale
+- Authored SOCA release strategy: fork versioning (CQC-YY.MM.PATCH), ALB-based blue/green cutover, cluster YAML configs
+- Led security code review of 36-commit SOCA fork (68 files, +1866/-662 lines) covering JWT verification, IAM policy scope, shell injection
+- Managed 14+ concurrent merge requests across soca-config-utils, scale-out-computing-on-aws, and das-handbook repos
+:::
+
+::: {.content-visible when-profile="cpp"}
+- Sole SOCA administrator for 5 production HPC clusters across 3 AWS regions, supporting quantum computing simulations
+- Built deploy/test framework automating MPI scaling validation to 256 nodes on Graviton with EFA
+- Supported Palace (PArallel LArge-scale Computational Electromagnetics) builds and job orchestration via Spack and PBS
+- Diagnosed PBS Python version mismatches and CFLAGS compilation issues across custom AMIs
+- Implemented per-user PBS job limit hooks with automatic held-job release scheduling
+:::
+
+::: {.content-visible when-profile="python"}
+- Sole SOCA administrator for 5 production HPC clusters across 3 AWS regions
+- Designed SSO architecture (Cognito + Federate/Midway) with CDK infrastructure-as-code deployment
+- Built Python-based deploy/test automation framework for cluster validation and MPI scaling
+- Implemented PBS queuejob hooks in Python for per-user job limits and automated held-job release
+- Diagnosed and patched dispatcher retry logic, run_command error handling, and DCV API integration issues
+- Led security review identifying JWT verification gaps, shell injection in job notifications, and IAM policy scope issues
+:::
+
+::: {.content-visible when-profile="hrt"}
+- Administered 5 production HPC clusters (Ubuntu 22.04) across 3 AWS regions, maintaining 24/7 availability for quantum computing research workloads
+- Authored 100+ merge requests across 7 repositories (primary contributor at 70% of team's infrastructure codebase), reviewed 28 MRs from 6 engineers
+- Built automation tooling (Bash/Python) for cluster deployment, patch management, MPI scaling validation, and remote administration via SSH/SSM
+- Validated MPI performance to 256 nodes (16,384 cores) on Graviton ARM with EFA high-speed fabric; diagnosed EC2 network-level issues (noisy neighbor RX UDMA drops affecting co-located instances)
+- Diagnosed and resolved Linux system-level failures: slapd file descriptor exhaustion at 1000+ concurrent connections, PBS bootstrap races, compute node dual-NIC routing conflicts, kernel D-state hangs on Lustre mount timeouts
+- Managed custom Ubuntu AMI builds, compiled OpenMPI 5.0.8 with GCC 14 and EFA libfabric, maintained Spack-based scientific software stacks (Palace EM solver, Intel oneAPI, CUDA toolchains)
+- Contributed upstream to open-source Spack package manager and awslabs/palace: 12 PRs for CI pipeline optimization, build system fixes, and Spack package releases
+- Performance-tuned FSxL Lustre storage: identified throughput gaps across filesystem generations, optimized compression and per-unit-storage-throughput across petabyte-scale filesystems
+- Authored 27 technical documentation pages (admin runbooks, architecture decisions, debugging guides) adopted as team's single source of truth
+:::
+-->
+
+### HPC Operations Team Lead (~10 staff), Pacific Northwest National Laboratory (Virtual): 2024
+
+- Established documentation standards enabling self-service for researchers, reducing support tickets
+
+### Adjunct Professor, CISC Department, Fordham (Manhattan, NY): 2024
+- Taught CISC2200 for Fall '24 Semester. Updated Syllabus from C++17 to C++23 w/ devcontainer support
+
+### Software Engineer I/II/III, Pacific Northwest Natinoal Laboratory (Virtual): 2021 - 2024
+
+- Deployed CI/CD [x86_64/amd64/ppc64le] x [AMD/NVIDIA] w/ Spack buildcache across 4 national labs
+- Built MLOps offering: tutorials, containerization (Singularity/Apptainer), Jupyter, Open OnDemand
+- Developed open-source MLFlow platform saving $200k/year vs. commercial WandB contracts
+- Led Privacy Preserving ML project to explore FHE, FL, DP and SMC applications in PNNL mission space
+- Collaborated on C2QA project research on IBMQ platform, upskilled scientists in Quantum computing
+
+<!--
+- Aided development of C++ / CUDA / HIP targetted Sparse GPU solver tailored for use case with HiOp
+- Assisted in Fortan (CPU) -> C++ (GPU) conversion for E3SM project through CI/CD
+- Maintained CI/CD for several ML projects and supported novel library exploration/development
+- Learned CMake, Spack, GitHub/GitLab pipelines and QA/testing of C++ codebases
+- Taught other project developers about RAJA, GPUs and best practices learned
+- Succeeded in sourcing $30M+ in funding over 5 years through ExaGO / E3SM follow on project
+- Deployed CI/CD for ML Python package neuromancer, testing deployment on PNNL HPC
+- Developed skills in performance profiling of CUDA, MPI, OpenMP and hybrid applications
+- Prototyped ExaGO on AWS using lambda, with OpenAI/PSQL integration for React data viz.
+- Received PNNL's highest performance award (Outstanding Performance Award) two consecutive years
+-->
+
+### Tech Studnet 4, Pacific Northwest National Laboratory (virtual): 2020
+- Deployed C++ / RAJA MDS linear algebra kernels in HiOp as well as designing unit tests for CUDA / HIP
+
+### Sports Events Coordinator, Whitworth University (Spokane, WA): 2019 - 2020
+- Planned pep rally events for all sports managing 10k yearly budget, participating in student government
+
+### IT Intern, Mac Management, Keysight Technologies (Colorado Springs, CO): 2018
+- Led JAMF + Intune integration for unified device management, debugging integrations across vendors
+
+### Calculus III Grader / Mathematics Tutor, Whitworth University (Spokane, WA): 2017, 2019
+### Basketball Coach, S.G.S. & M.L.C (Sydney, AUS): 2015
+###
+
+# Skills
+
+```{=html}
+<table>
+    <thead>
+        <tr>
+            <th> <b> C / C++23 </b> </th>
+            <th> <b> DevOps </b> </th>
+            <th> <b> Python </b> </th>
+            <th> <b> ML </b> </th>
+            <th> <b> Other </b> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p> CUDA, HIP, MPI
+                <p> CPU/GPU Profiling
+                <p> CMake, Spack
+            </td>
+            <td>
+                <p> Git[Hub/Lab], AWS
+                <p> SLURM, LSF, PBS
+                <p> Bash, Go, Ansible
+            </td>
+            <td>
+                <p> torch, JAX, pyg
+                <p> mpi4py, pybind11
+                <p> conda, poetry, uv
+            </td>
+            <td>
+                <p> LLMs, RL, NTK
+                <p> FL, DP, SMC
+                <p> GNNs, PINNs
+            </td>
+            <td>
+                <p> Go, Rust, Fortran
+                <p> Graph DBs, SQL
+                <p> Qiskit, Containers
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
 {{< include education.qmd >}}
 {{< include other.qmd >}}
