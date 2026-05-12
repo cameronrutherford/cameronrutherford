@@ -121,33 +121,34 @@ summary: "System Development Engineer with 6+ years of expertise in deploying, o
     <tbody>
         <tr>
             <td>
-                <p> CUDA, HIP, MPI
-                <p> CPU/GPU Profiling
-                <p> CMake, Spack
+                <p> CUDA, HIP, MPI </p>
+                <p> CPU/GPU Profiling </p>
+                <p> CMake, Spack </p>
             </td>
             <td>
-                <p> Git[Hub/Lab], AWS
-                <p> SLURM, LSF, PBS
-                <p> Bash, Go, Ansible
+                <p> Git[Hub/Lab], AWS </p>
+                <p> SLURM, LSF, PBS </p>
+                <p> Bash, Go, Ansible </p>
             </td>
             <td>
-                <p> torch, JAX, pyg
-                <p> mpi4py, pybind11
-                <p> conda, poetry, uv
+                <p> torch, JAX, pyg </p>
+                <p> mpi4py, pybind11 </p>
+                <p> conda, poetry, uv </p>
             </td>
             <td>
-                <p> LLMs, RL, NTK
-                <p> FL, DP, SMC
-                <p> GNNs, PINNs
+                <p> LLMs, RL, NTK </p>
+                <p> FL, DP, SMC </p>
+                <p> GNNs, PINNs </p>
             </td>
             <td>
-                <p> Go, Rust, Fortran
-                <p> Graph DBs, SQL
-                <p> Qiskit, Containers
+                <p> Go, Rust, Fortran </p>
+                <p> Graph DBs, SQL </p>
+                <p> Qiskit, Containers </p>
             </td>
         </tr>
     </tbody>
 </table>
 ```
+
 {{< include education.qmd >}}
 {{< include other.qmd >}}
