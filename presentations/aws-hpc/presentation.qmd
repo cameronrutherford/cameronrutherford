@@ -1,0 +1,60 @@
+---
+title: "HPC in the Cloud"
+subtitle: "Designing Quantum Computers using AWS"
+date: today
+date-format: "MMMM D, YYYY"
+author: Cameron Rutherford
+format:
+  revealjs:
+    output-ext: reveal.html
+    theme: night
+    smaller: true
+    toc: true
+    toc-depth: 2
+    menu: true
+    chalkboard: false
+    slide-level: 3
+  html:
+    toc: true
+revealjs-plugins:
+  - confetti
+---
+
+### Welcome!
+
+- Spot instances, and chasing availability
+  - Need to access two different internal dashboards
+  - Worked to test / connect users with an MCP to chase instances
+  - Ended up reverse engineering MCP calls to create function call for same thing
+- Desktops, updating to Ubuntu
+  - Needed to update since we needed newer glibc for VSCode
+  - UX was different, but needed to update to use gnome and help users
+- Issues with transferring workloads between regions:
+  - Data / Simulations
+  - Dotfiles / Home directories
+- Security
+  - Responding to incidents
+  - Understanding claude code misconfiguration issues
+  - Moving from static username / password to password less SSO
+  - Security in the context of AI agents
+  - VPC Network logging
+- Improvements the system needed
+  - Filesystem performance issues
+  - Containerization and not using root for that
+  - GCC updates for utilizing latest instances
+  - Desktop load time improvements through pre-baking AMIs
+  - Moving to latest version of code + decoupling scheduler from LDAP host
+- User workflow improvements
+- Getting them to use scratch storage
+  - Minimizing number of jobs in the queue
+  - Paladin - submit jobs from anywhere to compute backends across regions
+  - AI
+    - Skills for using the service / seeing availability
+    - VSCode + Tmux for auto-reconnecting to long running sessions
+    - Creating own personal agent memory / rules to better debug sessions
+    - Slowly working with AI to debug complex live issues
+- Infrastructure improvements
+  - Building AMIs in one region, and transferring between them
+  - Adding the proper return codes to build scripts so we can actually catch errors
+  - Scaling tests to actually catch system regressions and verify fixes at scale
+  - Preventing people overloaded the queue through default limits
