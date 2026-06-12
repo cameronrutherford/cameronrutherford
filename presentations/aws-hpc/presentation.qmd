@@ -20,12 +20,17 @@ revealjs-plugins:
   - confetti
 ---
 
+### Blurb
+
+High-performance computing is rapidly becoming a foundation for next-generation scientific discovery, and the cloud is reshaping how we support that work. In this talk, I’ll share my experience building and evolving an AWS-based HPC environment for superconducting qubit research, with Palace as a key part of the workflow. I’ll discuss how I approached infrastructure design, user experience, security, automation, and operational resilience while helping researchers move from ambitious ideas to reliable, scalable execution. The focus is not just on the technology, but on the practical decisions that make advanced computing environments effective in the real world.
+
 ### Welcome!
 
 - Spot instances, and chasing availability
   - Need to access two different internal dashboards
   - Worked to test / connect users with an MCP to chase instances
   - Ended up reverse engineering MCP calls to create function call for same thing
+  - Noisy neighbor issue where we needed to chase instances with dedicated NIC
 - Desktops, updating to Ubuntu
   - Needed to update since we needed newer glibc for VSCode
   - UX was different, but needed to update to use gnome and help users
@@ -35,9 +40,10 @@ revealjs-plugins:
 - Security
   - Responding to incidents
   - Understanding claude code misconfiguration issues
-  - Moving from static username / password to password less SSO
+  - Moving from static username / password to password-less SSO
   - Security in the context of AI agents
   - VPC Network logging
+  - EC2 Noisy Neighbor issues
 - Improvements the system needed
   - Filesystem performance issues
   - Containerization and not using root for that
@@ -45,7 +51,7 @@ revealjs-plugins:
   - Desktop load time improvements through pre-baking AMIs
   - Moving to latest version of code + decoupling scheduler from LDAP host
 - User workflow improvements
-- Getting them to use scratch storage
+  - Getting them to use scratch storage
   - Minimizing number of jobs in the queue
   - Paladin - submit jobs from anywhere to compute backends across regions
   - AI
@@ -58,3 +64,8 @@ revealjs-plugins:
   - Adding the proper return codes to build scripts so we can actually catch errors
   - Scaling tests to actually catch system regressions and verify fixes at scale
   - Preventing people overloaded the queue through default limits
+- Palace imporvements
+  - Updating to support Spack as opposed to CMake super build
+  - Speed up GitHub actions from 1hr 15minutes to 15minutes
+  - Prototype and support ECR for OCI storage of Palace binaries
+  - Support palace on GPUs
