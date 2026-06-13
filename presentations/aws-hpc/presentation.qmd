@@ -1,6 +1,6 @@
 ---
 title: "HPC in the Cloud"
-subtitle: "Designing Quantum Computers using AWS"
+subtitle: "Building an AWS environment for quantum-device simulation"
 date: today
 date-format: "MMMM D, YYYY"
 author: Cameron Rutherford
@@ -20,52 +20,147 @@ revealjs-plugins:
   - confetti
 ---
 
-### Blurb
 
-High-performance computing is rapidly becoming a foundation for next-generation scientific discovery, and the cloud is reshaping how we support that work. In this talk, I’ll share my experience building and evolving an AWS-based HPC environment for superconducting qubit research, with Palace as a key part of the workflow. I’ll discuss how I approached infrastructure design, user experience, security, automation, and operational resilience while helping researchers move from ambitious ideas to reliable, scalable execution. The focus is not just on the technology, but on the practical decisions that make advanced computing environments effective in the real world.
+### Who I Am
 
-### Welcome!
+I worked at Amazon supporting the Center for Quantum Computing (CQC).
 
-- Spot instances, and chasing availability
-  - Need to access two different internal dashboards
-  - Worked to test / connect users with an MCP to chase instances
-  - Ended up reverse engineering MCP calls to create function call for same thing
-  - Noisy neighbor issue where we needed to chase instances with dedicated NIC
-- Desktops, updating to Ubuntu
-  - Needed to update since we needed newer glibc for VSCode
-  - UX was different, but needed to update to use gnome and help users
-- Issues with transferring workloads between regions:
-  - Data / Simulations
-  - Dotfiles / Home directories
-- Security
-  - Responding to incidents
-  - Understanding claude code misconfiguration issues
-  - Moving from static username / password to password-less SSO
-  - Security in the context of AI agents
-  - VPC Network logging
-  - EC2 Noisy Neighbor issues
-- Improvements the system needed
-  - Filesystem performance issues
-  - Containerization and not using root for that
-  - GCC updates for utilizing latest instances
-  - Desktop load time improvements through pre-baking AMIs
-  - Moving to latest version of code + decoupling scheduler from LDAP host
-- User workflow improvements
-  - Getting them to use scratch storage
-  - Minimizing number of jobs in the queue
-  - Paladin - submit jobs from anywhere to compute backends across regions
-  - AI
-    - Skills for using the service / seeing availability
-    - VSCode + Tmux for auto-reconnecting to long running sessions
-    - Creating own personal agent memory / rules to better debug sessions
-    - Slowly working with AI to debug complex live issues
-- Infrastructure improvements
-  - Building AMIs in one region, and transferring between them
-  - Adding the proper return codes to build scripts so we can actually catch errors
-  - Scaling tests to actually catch system regressions and verify fixes at scale
-  - Preventing people overloaded the queue through default limits
-- Palace imporvements
-  - Updating to support Spack as opposed to CMake super build
-  - Speed up GitHub actions from 1hr 15minutes to 15minutes
-  - Prototype and support ECR for OCI storage of Palace binaries
-  - Support palace on GPUs
+My background is a mix of:
+
+- Mathematics and Computer science
+- Research Computing at national labs
+- HPC workflows and cloud infrastructure
+
+My role was not just to write software. It was to make an environment that researchers could actually depend on.
+
+### Amazon CQC
+
+![Ocelot Chip](https://cdn.amazon.science/dims4/default/b238da5/2147483647/strip/true/crop/1920x1080+0+0/resize/1748x983!/format/webp/quality/90/?url=https%3A%2F%2Famzn-science-production-science.s3.us-east-1.amazonaws.com%2Fscience%2F62%2F38%2F3d19a9f2413182783e247470b1fd%2F1920x1080-ocelot.jpg)
+
+### Designing Superconducting Qubit Chips
+
+![](images/qc-design-workflow-circular.svg){fig-align="center" width="90%"}s
+
+### Palace
+
+![](https://awslabs.github.io/palace/stable/assets/logo-dark.png)
+
+> Palace, for PArallel LArge-scale Computational Electromagnetics, is an open-source, parallel finite element code for full-wave 3D electromagnetic simulations in the frequency or time domain, using the MFEM finite element discretization library and libCEED library for efficient exascale discretizations.
+
+### Palace (Meshing)
+
+![Single Transmon Mesh](https://awslabs.github.io/palace/stable/assets/examples/transmon-1.png)
+
+### Palace (Simulation)
+
+![Single Transmon Simulation](https://awslabs.github.io/palace/stable/assets/examples/transmon-2.png)
+
+### Intro
+
+How do we design an HPC environment on AWS for quantum-device simulation?
+
+Requirements:
+
+::: {.fragment .fade-up}
+1. On-demand compute for bursty workloads
+:::
+
+::: {.fragment .fade-up}
+2. HPC Scheduler / Queue for Palace simulations and other workflows
+:::
+
+::: {.fragment .fade-up}
+3. Interactive desktops for analysis and visualization
+:::
+
+::: {.fragment .fade-up}
+4. Secure and reliable environment for real research
+:::
+
+### Burtsy Workloads
+
+A key constraint was that workloads were bursty.
+
+Researchers often needed:
+
+- Large instances on short notice (100+ c7gn nodes per simulation)
+- Interactive desktops for analysis and visualization
+- GPU capacity for visualization and related work
+- Shared software environments for HPC and desktop work
+
+Always on nodes would have been too expensive, and the demand was not predictable enough to rely on reserved capacity.
+
+### SOCA Architecture
+
+![Outdated / Slightly Inaccurate](https://docs.aws.amazon.com/images/solutions/scale-out-computing-on-aws/images/scale-out-computing-on-aws-1.png)
+
+### SOCA Improvements
+
+Generally five categories of improvements were needed:
+
+- Better AMI images and build process
+- Architectural improvements through updating the codebase
+- Security and authentication improvements
+- AI / workflow improvements
+- Palace / Spack improvements
+
+### Amazon Machine Image (AMI) Improvements
+
+1. AMI builder scripts didn't have `set -x`, so I added that for better debugging and visibility of build steps
+2. Some gnuutils libraries are blocked in us-east-1, so we had to move to building AMIs in us-east-2, and copying them to to other regions
+3. GPU support was added, requiring navigation of NVDIA drivers (propietary vs open source drivers)
+4. We had x86/arm64 support, but needed split for GRID / TESLA and desktop vs compute nodes
+5. To speed up load times, needed to modify SOCA code to prevent runtime installation of some packages
+6. Updating things like gcc and other packages to support newer instance types
+
+### Architectural Improvements
+
+1. Moving from AL2 to Ubuntu 22.04 for better VSCode support and more up-to-date software packages. Moving LDAP from one scheduler to another was non-trivial, but necessary to shutdown old system.
+2. Moving to using EC2 Fleet instead of EC2 ASG for better spot capacity management and availability.
+3. Increase filesystem capacity and OST count to reduce high IOPs contention in addition to alerting
+4. Queue default limits to reduce impact of problem users and improve reliability
+5. ODCR for desktops for improved UX when Insufficient Capacity Error (ICE) occurs
+6. Windows desktop support for better visualization and analysis experience for some users
+
+### Security and Authentication Improvements
+
+1. Transition from on-scheduler OpenLDAP to AWS Managed Microsoft AD for better security and separation of concerns
+2. Clearing virtual desktops from AD when they are terminated to prevent duplicate computer objects and other issues
+3. Moving to integration of SSO / Midway credentials for passwordless authentication and better security posture
+4. Better security postrure around removing sudo for containers / profiling in addition to supporting this in AMIs
+5. Improved filesystem permissions and guidance for users to avoid security issues with shared filesystems and scratch usage
+6. JSON based AD infromation to remove the need for compute nodes to AD join, which was a bottleneck
+7. Move ALB for SSO to be in Typescript based CDK for better maintainability and security posture, removing plaintext secrets
+
+### AI / Workflow Improvementss
+
+1. Paladin for cross-region workflow management using SOCA REST API, allowing users to move workloads between regions based on capacity and other factors
+2. Better gnome desktop experience with GPU support for visualization and analysis work, which is an important part of the research workflow
+3. SOCA AI skills for AI driven debugging and workflow opttimizaiton, as well as aiding movement between regions
+4. VSCode + Tmux support for re-connecting to sessions with long running agents / julia workflows
+5. CCMT MCP prototyping and reverse engineering for programmatic support within Paladin
+6. For loops within jobs as opposed to for loops around jobs, prototyping flux integration for future workflows
+7. Cross account VPC peering for Palace on EKS, with better containerization for Palace
+
+### Spack / Palace Containerizaiton
+
+1. Integration of Spack into build system to reduce number of dependenecies configured through archaic super-build
+2. GHCR integration for 1hr 15min -> 15min build times for Palace in CI
+3. Spack ECR as OCI storage prototyping for better integration with AWS services and improved security posture
+4. `/scratch` for on-node simulation data to improve simulation time
+5. Testing of containers across EKS and EC2 to verify comparable performance
+6. EC2 Noisy Neigbour isssue - moved from shared NIC instances to single tenant instances for better performance and reliability for Palace workloads
+
+### Lessons Learned
+
+The biggest lesson was that infrastructure is not just about machines. It is about enabling a scientific workflow, and making user's lives easier.
+
+That means paying attention to:
+
+- What the current limitations of the infrastructure are, and how they impact users
+- Security and reliability concerns
+- The overall research workflow, and how infrastructure can support it
+
+### Questions
+
+Thank you.
