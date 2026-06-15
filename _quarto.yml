@@ -37,8 +37,8 @@ website:
   navbar:
     search: true
     left:
-      - text: "CV"
-        file: resume/resume.qmd
+      # - text: "CV"
+      #  file: resume/resume.qmd
       - text: "Site Configuration"
         menu:
           - config/devcontainer.qmd
