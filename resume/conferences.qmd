@@ -1,8 +1,0 @@
-::: {.content-visible unless-profile="onepager"}
-
-# Conferences
-
-### HPSF Inaugral Meeting, CQC All-Hands: 2025
-### PRESENTER - Unlikely success of the ExaSGD project, NLIT: 2024
-### PEARC, PNNL Tech Fest, E3SM AM, STEP Town Hall, ECP AM, C2QA AM: 2021-2023
-:::
