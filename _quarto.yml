@@ -67,6 +67,7 @@ website:
           - presentations/stem-engagement/presentation.qmd
           - presentations/math-magic/presentation.qmd
           - presentations/c++-loops-interview/presentation.qmd
+          - presentations/aws-hpc/presentation.qmd
     tools:
       - icon: twitter
         href: https://twitter.com/cam_rutherford_

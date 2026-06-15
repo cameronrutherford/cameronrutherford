@@ -1,0 +1,29 @@
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" fill="#111827"/>
+  <circle cx="450" cy="260" r="190" fill="none" stroke="#4b5563" stroke-width="2"/>
+
+  <circle cx="450" cy="110" r="74" fill="#2563eb"/>
+  <text x="450" y="102" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22">Design</text>
+  <text x="450" y="130" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Ideas &amp; layout</text>
+
+  <circle cx="650" cy="175" r="74" fill="#0ea5e9"/>
+  <text x="650" y="167" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22">Simulation</text>
+  <text x="650" y="195" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Palace / HPC</text>
+
+  <circle cx="650" cy="345" r="74" fill="#10b981"/>
+  <text x="650" y="337" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22">Fabrication</text>
+  <text x="650" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Build the device</text>
+
+  <circle cx="450" cy="430" r="74" fill="#8b5cf6"/>
+  <text x="450" y="422" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22">Testing</text>
+  <text x="450" y="450" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Characterize results</text>
+
+  <circle cx="250" cy="345" r="74" fill="#f59e0b"/>
+  <text x="250" y="337" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22">Analysis</text>
+  <text x="250" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Interpret data</text>
+
+  <circle cx="250" cy="175" r="74" fill="#ef4444"/>
+  <text x="250" y="167" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="22">Iteration</text>
+  <text x="250" y="195" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Refine design</text>
+
+</svg>
