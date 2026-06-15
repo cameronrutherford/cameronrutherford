@@ -4,10 +4,6 @@ project:
   title: "Cameron's git-site"
   output-dir: docs
 
-resources:
-  - "presentations/math-magic/videos/*"
-  - "presentations/minds-matter/presentation.reveal-speaker.html"
-
 profile:
   group:
     - [base, cpp, python, devops, onepager, hrt]
@@ -46,27 +42,8 @@ website:
           - config/pre-commit.qmd
           - config/quickstart.qmd
           - config/quarto.qmd
-      - text: "C++ Coding Interview"
-        menu:
-          - blog/cpp-coding-interview/00-gettingStarted.qmd
-          - blog/cpp-coding-interview/01-testConfiguration.ipynb
-          - blog/cpp-coding-interview/02-leetCode1095.ipynb
-          - blog/cpp-coding-interview/03-leetCode2742.ipynb
-      - text: "Python Coding Interview"
-        menu:
-          - blog/python-coding-interview/00-gettingStarted.qmd
-          - blog/python-coding-interview/01-testConfiguration.ipynb
-          - blog/python-coding-interview/02-leetCode1425.ipynb
-          - blog/python-coding-interview/03-leetCode1793.ipynb
-      - text: "CUDA Coding Interview"
-        menu:
-          - blog/CUDA-coding-interview/01-testConfiguration.ipynb
       - text: "Presentations"
         menu:
-          - presentations/minds-matter/presentation.qmd
-          - presentations/stem-engagement/presentation.qmd
-          - presentations/math-magic/presentation.qmd
-          - presentations/c++-loops-interview/presentation.qmd
           - presentations/aws-hpc/presentation.qmd
     tools:
       - icon: twitter

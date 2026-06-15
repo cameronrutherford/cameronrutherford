@@ -26,7 +26,7 @@ revealjs-plugins:
 
 I worked at Amazon supporting the Center for Quantum Computing (CQC).
 
-![Split Keyboard == True Programmer](../minds-matter/images/aws-desk.jpeg){fig-align="center"}
+![Split Keyboard == True Programmer](images/aws-desk.jpeg){fig-align="center"}
 
 ### Amazon CQC
 
@@ -177,7 +177,7 @@ Generally five categories of improvements were needed:
 :::
 
 ::: {.fragment .fade-in-then-out}
-- Adding rootless container runtimes to SOCA, allowing for POLP
+- Adding rootless container runtimes / profiling to SOCA, allowing for POLP
 - Improving filesystem permissions to use linux groups, not `r-x` everywhere
 :::
 
@@ -225,7 +225,6 @@ Generally five categories of improvements were needed:
 ::: {.fragment .fade-in-then-out}
 - Spack OCI builds allowed container generation in GitHub CI
 - Paladin for cross-region workflows using REST API + EKS backends
-- Cross account VPC peering necessary for EKS integration
 :::
 
 ::: {.fragment .fade-up}
@@ -235,7 +234,6 @@ Generally five categories of improvements were needed:
 ::: {.fragment .fade-in-then-out}
 - OOM tripwire for better UX when running simulations that are "too large"
 - Transition from shared to dedicated instances due to "noisy neighbour" issue
-- Enabled root-less profiling on all SOCA instances
 :::
 
 ### Lessons Learned
@@ -250,4 +248,4 @@ That means paying attention to:
 
 ### Questions?
 
-![Thank you for listening!](../stem-engagement/images/TechFest.png){fig-align="center"}
+![Thank you for listening!](images/TechFest.png){fig-align="center"}
